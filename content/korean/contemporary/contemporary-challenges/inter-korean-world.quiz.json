@@ -1,0 +1,66 @@
+{
+  "lessonId": "korean/contemporary/contemporary-challenges/inter-korean-world",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "1972년 남북이 자주·평화·민족 대단결 원칙에 합의한 문서는?",
+      "choices": [
+        { "id": "a", "text": "7·4 남북공동성명" },
+        { "id": "b", "text": "강화도 조약" },
+        { "id": "c", "text": "한일협정만으로 동일시" },
+        { "id": "d", "text": "정전 협정만으로 동일시" }
+      ],
+      "answer": "a",
+      "explanation": "7·4 남북공동성명은 분단 이후 최초의 남북 공동 성명이다."
+    },
+    {
+      "id": "q2",
+      "prompt": "1991년 화해·불가침·교류협력 등을 담은 합의는?",
+      "choices": [
+        { "id": "a", "text": "남북기본합의서" },
+        { "id": "b", "text": "사사오입 개헌" },
+        { "id": "c", "text": "긴급조치" },
+        { "id": "d", "text": "삼청교육대" }
+      ],
+      "answer": "a",
+      "explanation": "남북기본합의서는 화해와 교류의 틀을 문서로 남겼다."
+    },
+    {
+      "id": "q3",
+      "prompt": "2000년 남북 정상회담의 성과로 나온 선언은?",
+      "choices": [
+        { "id": "a", "text": "6·15 남북공동선언" },
+        { "id": "b", "text": "기미독립선언서" },
+        { "id": "c", "text": "6·29 선언만으로 동일시" },
+        { "id": "d", "text": "갑오개혁" }
+      ],
+      "answer": "a",
+      "explanation": "6·15는 2000년 정상회담의 공동선언이다."
+    },
+    {
+      "id": "q4",
+      "prompt": "남측 자본·기술과 북측 노동이 결합한 경협 단지는?",
+      "choices": [
+        { "id": "a", "text": "개성공단" },
+        { "id": "b", "text": "민립대학" },
+        { "id": "c", "text": "신간회" },
+        { "id": "d", "text": "근우회" }
+      ],
+      "answer": "a",
+      "explanation": "개성공단은 남북 경제 협력의 상징적 사례이다."
+    },
+    {
+      "id": "q5",
+      "prompt": "한반도 긴장을 고조시키며 제재와 협상이 교차하는 안보 현안은?",
+      "choices": [
+        { "id": "a", "text": "북핵" },
+        { "id": "b", "text": "물산장려" },
+        { "id": "c", "text": "산미 증식 계획" },
+        { "id": "d", "text": "창씨개명" }
+      ],
+      "answer": "a",
+      "explanation": "북핵은 남북·동아시아 안보의 핵심 현안이다."
+    }
+  ]
+}
