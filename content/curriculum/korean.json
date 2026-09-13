@@ -95,6 +95,36 @@
               "title": "신라의 삼국 통일 과정",
               "mdxPath": "korean/three-kingdoms-north-south/unification-north-south/silla-unification.mdx",
               "order": 0
+            },
+            {
+              "id": "unified-silla-society",
+              "title": "통일 신라의 통치와 사회",
+              "mdxPath": "korean/three-kingdoms-north-south/unification-north-south/unified-silla-society.mdx",
+              "order": 1
+            },
+            {
+              "id": "balhae-rise",
+              "title": "발해의 건국과 발전",
+              "mdxPath": "korean/three-kingdoms-north-south/unification-north-south/balhae-rise.mdx",
+              "order": 2
+            }
+          ]
+        },
+        {
+          "id": "ancient-economy-culture",
+          "title": "고대의 경제·사회·문화",
+          "lessons": [
+            {
+              "id": "ancient-economy-society",
+              "title": "고대의 경제와 사회 구조",
+              "mdxPath": "korean/three-kingdoms-north-south/ancient-economy-culture/ancient-economy-society.mdx",
+              "order": 0
+            },
+            {
+              "id": "ancient-thought-culture",
+              "title": "고대 사상과 문화",
+              "mdxPath": "korean/three-kingdoms-north-south/ancient-economy-culture/ancient-thought-culture.mdx",
+              "order": 1
             }
           ]
         }
@@ -114,6 +144,352 @@
               "title": "고려의 성립과 정치 변동",
               "mdxPath": "korean/goryeo/politics/goryeo-politics-overview.mdx",
               "order": 0
+            },
+            {
+              "id": "central-local-system",
+              "title": "중앙·지방 통치 체제 정비",
+              "mdxPath": "korean/goryeo/politics/central-local-system.mdx",
+              "order": 1
+            },
+            {
+              "id": "northern-policy",
+              "title": "대외 관계와 북방 정책",
+              "mdxPath": "korean/goryeo/politics/northern-policy.mdx",
+              "order": 2
+            }
+          ]
+        },
+        {
+          "id": "social-change",
+          "title": "고려 사회의 변동",
+          "lessons": [
+            {
+              "id": "aristocratic-rebellions",
+              "title": "문벌 귀족 사회와 이자겸·묘청의 난",
+              "mdxPath": "korean/goryeo/social-change/aristocratic-rebellions.mdx",
+              "order": 0
+            },
+            {
+              "id": "military-regime",
+              "title": "무신 정변과 무신 정권",
+              "mdxPath": "korean/goryeo/social-change/military-regime.mdx",
+              "order": 1
+            },
+            {
+              "id": "mongol-yuan",
+              "title": "몽골 침입과 원 간섭기",
+              "mdxPath": "korean/goryeo/social-change/mongol-yuan.mdx",
+              "order": 2
+            },
+            {
+              "id": "gongmin-reform",
+              "title": "공민왕의 개혁과 신진 사대부",
+              "mdxPath": "korean/goryeo/social-change/gongmin-reform.mdx",
+              "order": 3
+            }
+          ]
+        },
+        {
+          "id": "economy-culture",
+          "title": "고려의 경제·사회·문화",
+          "lessons": [
+            {
+              "id": "economy-status",
+              "title": "고려의 경제와 신분",
+              "mdxPath": "korean/goryeo/economy-culture/economy-status.mdx",
+              "order": 0
+            },
+            {
+              "id": "thought-culture",
+              "title": "고려의 사상과 문화",
+              "mdxPath": "korean/goryeo/economy-culture/thought-culture.mdx",
+              "order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "joseon-early",
+      "title": "조선 전기",
+      "description": "조선 건국부터 양난까지의 정치·사회 개요",
+      "units": [
+        {
+          "id": "foundation",
+          "title": "조선의 건국과 통치 체제",
+          "lessons": [
+            {
+              "id": "joseon-founding",
+              "title": "조선 건국과 한양 천도",
+              "mdxPath": "korean/joseon-early/foundation/joseon-founding.mdx",
+              "order": 0
+            },
+            {
+              "id": "administration-military",
+              "title": "중앙·지방 행정과 군사",
+              "mdxPath": "korean/joseon-early/foundation/administration-military.mdx",
+              "order": 1
+            },
+            {
+              "id": "sejong-policy-culture",
+              "title": "세종대의 정책과 문화",
+              "mdxPath": "korean/joseon-early/foundation/sejong-policy-culture.mdx",
+              "order": 2
+            }
+          ]
+        },
+        {
+          "id": "sarim-factions",
+          "title": "사림의 대두와 붕당",
+          "lessons": [
+            {
+              "id": "hungu-sarim-purges",
+              "title": "훈구와 사림, 사화",
+              "mdxPath": "korean/joseon-early/sarim-factions/hungu-sarim-purges.mdx",
+              "order": 0
+            },
+            {
+              "id": "factional-politics",
+              "title": "붕당 정치의 성립",
+              "mdxPath": "korean/joseon-early/sarim-factions/factional-politics.mdx",
+              "order": 1
+            }
+          ]
+        },
+        {
+          "id": "two-wars-society",
+          "title": "양난과 조선 전기 사회·문화",
+          "lessons": [
+            {
+              "id": "imjin-byeongja-wars",
+              "title": "임진왜란과 병자호란",
+              "mdxPath": "korean/joseon-early/two-wars-society/imjin-byeongja-wars.mdx",
+              "order": 0
+            },
+            {
+              "id": "early-joseon-society-culture",
+              "title": "조선 전기 경제·사회·문화",
+              "mdxPath": "korean/joseon-early/two-wars-society/early-joseon-society-culture.mdx",
+              "order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "joseon-late",
+      "title": "조선 후기",
+      "description": "붕당·탕평·세도 정치와 조선 후기 사회 변동",
+      "units": [
+        {
+          "id": "politics-change",
+          "title": "정치 운영의 변화",
+          "lessons": [
+            {
+              "id": "factional-politics-hwanguk",
+              "title": "붕당 정치의 전개와 환국",
+              "mdxPath": "korean/joseon-late/politics-change/factional-politics-hwanguk.mdx",
+              "order": 0
+            },
+            {
+              "id": "tangpyeong-politics",
+              "title": "탕평 정치",
+              "mdxPath": "korean/joseon-late/politics-change/tangpyeong-politics.mdx",
+              "order": 1
+            },
+            {
+              "id": "sedo-peasant-uprisings",
+              "title": "세도 정치와 농민 봉기",
+              "mdxPath": "korean/joseon-late/politics-change/sedo-peasant-uprisings.mdx",
+              "order": 2
+            },
+            {
+              "id": "heungseon-reform",
+              "title": "흥선 대원군의 개혁",
+              "mdxPath": "korean/joseon-late/politics-change/heungseon-reform.mdx",
+              "order": 3
+            }
+          ]
+        },
+        {
+          "id": "economy-society-thought",
+          "title": "조선 후기 경제·사회·사상",
+          "lessons": [
+            {
+              "id": "commercial-money-economy",
+              "title": "상품 화폐 경제의 발달",
+              "mdxPath": "korean/joseon-late/economy-society-thought/commercial-money-economy.mdx",
+              "order": 0
+            },
+            {
+              "id": "social-status-change",
+              "title": "사회 변동과 신분제 동요",
+              "mdxPath": "korean/joseon-late/economy-society-thought/social-status-change.mdx",
+              "order": 1
+            },
+            {
+              "id": "silhak-new-culture",
+              "title": "실학과 문화의 새 흐름",
+              "mdxPath": "korean/joseon-late/economy-society-thought/silhak-new-culture.mdx",
+              "order": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modern-colonial",
+      "title": "근대 개항~일제강점",
+      "description": "개항부터 일제 강점기 민족 운동까지의 근대사",
+      "units": [
+        {
+          "id": "opening-nation-building",
+          "title": "개항과 근대 국가 수립 노력",
+          "lessons": [
+            {
+              "id": "opening-unequal-treaties",
+              "title": "개항과 불평등 조약",
+              "mdxPath": "korean/modern-colonial/opening-nation-building/opening-unequal-treaties.mdx",
+              "order": 0
+            },
+            {
+              "id": "enlightenment-imogapshin",
+              "title": "개화 정책과 임오군란·갑신정변",
+              "mdxPath": "korean/modern-colonial/opening-nation-building/enlightenment-imogapshin.mdx",
+              "order": 1
+            },
+            {
+              "id": "donghak-gabo-reform",
+              "title": "동학 농민 운동과 갑오개혁·을미개혁",
+              "mdxPath": "korean/modern-colonial/opening-nation-building/donghak-gabo-reform.mdx",
+              "order": 2
+            },
+            {
+              "id": "korean-empire-salvation",
+              "title": "대한 제국과 구국 운동",
+              "mdxPath": "korean/modern-colonial/opening-nation-building/korean-empire-salvation.mdx",
+              "order": 3
+            }
+          ]
+        },
+        {
+          "id": "colonial-rule-resistance",
+          "title": "일제 식민 통치와 민족 운동",
+          "lessons": [
+            {
+              "id": "1910s-military-rule",
+              "title": "1910년대 무단 통치와 토지·자원 수탈",
+              "mdxPath": "korean/modern-colonial/colonial-rule-resistance/1910s-military-rule.mdx",
+              "order": 0
+            },
+            {
+              "id": "march-first-provisional-gov",
+              "title": "3·1 운동과 대한민국 임시 정부",
+              "mdxPath": "korean/modern-colonial/colonial-rule-resistance/march-first-provisional-gov.mdx",
+              "order": 1
+            },
+            {
+              "id": "1920s-cultural-rule",
+              "title": "1920년대 문화 통치와 국내 민족 운동",
+              "mdxPath": "korean/modern-colonial/colonial-rule-resistance/1920s-cultural-rule.mdx",
+              "order": 2
+            },
+            {
+              "id": "1930s-40s-independence",
+              "title": "1930~40년대 민족 말살·전시 동원과 무장 독립 운동",
+              "mdxPath": "korean/modern-colonial/colonial-rule-resistance/1930s-40s-independence.mdx",
+              "order": 3
+            },
+            {
+              "id": "modern-colonial-society",
+              "title": "사회·경제·문화 변동(개항~일제)",
+              "mdxPath": "korean/modern-colonial/colonial-rule-resistance/modern-colonial-society.mdx",
+              "order": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contemporary",
+      "title": "광복·대한민국 수립~현대",
+      "description": "광복과 정부 수립부터 민주화·산업화와 현대 과제까지",
+      "units": [
+        {
+          "id": "liberation-government",
+          "title": "광복과 대한민국 정부 수립",
+          "lessons": [
+            {
+              "id": "liberation-occupation",
+              "title": "광복과 좌우 대립, 미·소 점령",
+              "mdxPath": "korean/contemporary/liberation-government/liberation-occupation.mdx",
+              "order": 0
+            },
+            {
+              "id": "government-division",
+              "title": "대한민국 정부 수립과 분단",
+              "mdxPath": "korean/contemporary/liberation-government/government-division.mdx",
+              "order": 1
+            }
+          ]
+        },
+        {
+          "id": "korean-war-aftermath",
+          "title": "6·25 전쟁과 전후 체제",
+          "lessons": [
+            {
+              "id": "korean-war",
+              "title": "6·25 전쟁의 전개와 영향",
+              "mdxPath": "korean/contemporary/korean-war-aftermath/korean-war.mdx",
+              "order": 0
+            },
+            {
+              "id": "rhee-april-revolution",
+              "title": "이승만 정부와 4·19 혁명",
+              "mdxPath": "korean/contemporary/korean-war-aftermath/rhee-april-revolution.mdx",
+              "order": 1
+            }
+          ]
+        },
+        {
+          "id": "authoritarianism-democratization",
+          "title": "권위주의 체제와 민주화·산업화",
+          "lessons": [
+            {
+              "id": "park-industrialization",
+              "title": "5·16과 박정희 정부, 산업화",
+              "mdxPath": "korean/contemporary/authoritarianism-democratization/park-industrialization.mdx",
+              "order": 0
+            },
+            {
+              "id": "gwangju-june-uprising",
+              "title": "5·18과 전두환 정부, 6월 민주 항쟁",
+              "mdxPath": "korean/contemporary/authoritarianism-democratization/gwangju-june-uprising.mdx",
+              "order": 1
+            },
+            {
+              "id": "civilian-government-change",
+              "title": "문민 정부 이후의 민주화와 사회 변화",
+              "mdxPath": "korean/contemporary/authoritarianism-democratization/civilian-government-change.mdx",
+              "order": 2
+            }
+          ]
+        },
+        {
+          "id": "contemporary-challenges",
+          "title": "현대 한국의 과제",
+          "lessons": [
+            {
+              "id": "growth-social-change",
+              "title": "경제 성장과 사회·문화 변동",
+              "mdxPath": "korean/contemporary/contemporary-challenges/growth-social-change.mdx",
+              "order": 0
+            },
+            {
+              "id": "inter-korean-world",
+              "title": "남북 관계와 동아시아·세계",
+              "mdxPath": "korean/contemporary/contemporary-challenges/inter-korean-world.mdx",
+              "order": 1
             }
           ]
         }
