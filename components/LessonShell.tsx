@@ -36,7 +36,7 @@ export function LessonShell({
   trackHref: string;
 }) {
   return (
-    <div className="mx-auto flex max-w-7xl gap-8 px-4 py-8">
+    <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-6 sm:gap-6 sm:py-8 lg:flex-row lg:gap-8">
       <CurriculumNav curriculum={curriculum} current={current} />
       <article className="min-w-0 flex-1">
         <Breadcrumb
@@ -49,7 +49,7 @@ export function LessonShell({
           ]}
         />
         <header className="mb-6">
-          <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+          <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-slate-50">
             {lessonTitle}
           </h1>
           {description && (
@@ -60,33 +60,33 @@ export function LessonShell({
           </div>
         </header>
         <LessonToc />
-        <div className="prose prose-neutral max-w-none prose-headings:scroll-mt-28 dark:prose-invert">
+        <div className="prose prose-base prose-neutral max-w-none prose-headings:scroll-mt-28 prose-p:leading-relaxed dark:prose-invert sm:prose-lg">
           <MdxContent source={content} />
         </div>
         {quiz && <QuizPanel quiz={quiz} lessonKey={lessonKey} />}
         <nav
-          className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-slate-200 pt-6 dark:border-slate-800"
+          className="mt-10 flex flex-col gap-3 border-t border-slate-200 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-4 dark:border-slate-800"
           aria-label="이전 다음 차시"
         >
           {adjacent.prev ? (
             <Link
               href={adjacent.prev.href}
-              className="min-h-11 rounded-lg border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50 dark:border-slate-600 dark:hover:bg-slate-900"
+              className="inline-flex min-h-11 w-full items-center justify-center rounded-lg border border-slate-300 px-4 py-2 text-sm sm:w-auto sm:justify-start hover:bg-slate-50 dark:border-slate-600 dark:hover:bg-slate-900"
             >
               ← {adjacent.prev.title}
             </Link>
           ) : (
-            <span />
+            <span className="hidden sm:block" />
           )}
           {adjacent.next ? (
             <Link
               href={adjacent.next.href}
-              className="min-h-11 rounded-lg border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50 dark:border-slate-600 dark:hover:bg-slate-900"
+              className="inline-flex min-h-11 w-full items-center justify-center rounded-lg border border-slate-300 px-4 py-2 text-sm sm:w-auto sm:justify-start hover:bg-slate-50 dark:border-slate-600 dark:hover:bg-slate-900"
             >
               {adjacent.next.title} →
             </Link>
           ) : (
-            <span />
+            <span className="hidden sm:block" />
           )}
         </nav>
       </article>

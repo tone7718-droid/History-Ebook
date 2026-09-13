@@ -9,8 +9,8 @@ export default function WorldTrackPage() {
   const lessons = getFlatLessons("world");
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-10">
-      <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-50">
+    <div className="mx-auto max-w-4xl px-4 py-6 sm:py-10">
+      <h1 className="text-2xl font-bold text-slate-900 sm:text-3xl dark:text-slate-50">
         {curriculum.trackLabel}
       </h1>
       <p className="mt-2 text-slate-600 dark:text-slate-400">
@@ -21,7 +21,7 @@ export default function WorldTrackPage() {
         {curriculum.eras.map((era) => (
           <section
             key={era.id}
-            className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-950"
+            className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-6 dark:border-slate-800 dark:bg-slate-950"
           >
             <h2 className="text-xl font-semibold">{era.title}</h2>
             {era.description && (
@@ -40,7 +40,7 @@ export default function WorldTrackPage() {
                       <li key={lesson.id}>
                         <Link
                           href={lessonHref("world", era.id, unit.id, lesson.id)}
-                          className="text-indigo-700 hover:underline dark:text-indigo-300"
+                          className="inline-flex min-h-11 items-center py-1 text-indigo-700 hover:underline dark:text-indigo-300"
                         >
                           {lesson.title}
                         </Link>

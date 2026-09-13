@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { CurriculumFile } from "@/lib/types";
 import { lessonHref, lessonKey, cn } from "@/lib/utils";
 import { ProgressBadge } from "./ProgressBadge";
@@ -14,6 +14,24 @@ export function CurriculumNav({
   current?: { era: string; unit: string; lesson: string };
 }) {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
 
   const tree = (
     <nav aria-label="커리큘럼" className="space-y-4 text-sm">
@@ -29,7 +47,7 @@ export function CurriculumNav({
             {era.units.map((unit) => (
               <li key={unit.id}>
                 <p className="mb-1 text-slate-600 dark:text-slate-400">{unit.title}</p>
-                <ul className="space-y-1">
+                <ul className="space-y-0.5">
                   {unit.lessons.map((lesson) => {
                     const href = lessonHref(
                       curriculum.track,
@@ -53,7 +71,7 @@ export function CurriculumNav({
                           href={href}
                           onClick={() => setOpen(false)}
                           className={cn(
-                            "block rounded-md px-2 py-1.5 hover:bg-slate-100 dark:hover:bg-slate-800",
+                            "block rounded-md px-2 py-2.5 hover:bg-slate-100 dark:hover:bg-slate-800",
                             active &&
                               "bg-slate-200 font-medium text-slate-900 dark:bg-slate-700 dark:text-white"
                           )}
@@ -75,10 +93,10 @@ export function CurriculumNav({
 
   return (
     <>
-      <div className="mb-4 lg:hidden">
+      <div className="w-full shrink-0 lg:hidden">
         <button
           type="button"
-          className="min-h-11 w-full rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium dark:border-slate-600"
+          className="min-h-11 w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm font-medium dark:border-slate-600"
           onClick={() => setOpen(true)}
           aria-expanded={open}
         >
@@ -94,18 +112,18 @@ export function CurriculumNav({
             aria-label="닫기"
             onClick={() => setOpen(false)}
           />
-          <div className="absolute inset-y-0 left-0 w-[min(100%,20rem)] overflow-y-auto bg-white p-4 shadow-xl dark:bg-slate-950">
-            <div className="mb-4 flex items-center justify-between">
+          <div className="absolute inset-y-0 left-0 flex w-[min(100%,20rem)] flex-col bg-white shadow-xl dark:bg-slate-950 pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]">
+            <div className="flex shrink-0 items-center justify-between border-b border-slate-200 px-4 py-3 dark:border-slate-800">
               <h2 className="font-semibold">커리큘럼</h2>
               <button
                 type="button"
-                className="min-h-11 rounded-lg px-3"
+                className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg"
                 onClick={() => setOpen(false)}
               >
                 닫기
               </button>
             </div>
-            {tree}
+            <div className="flex-1 overflow-y-auto p-4">{tree}</div>
           </div>
         </div>
       )}

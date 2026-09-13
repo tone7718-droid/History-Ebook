@@ -13,16 +13,16 @@ export default function HomePage() {
   );
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-10">
+    <div className="mx-auto max-w-5xl px-4 py-6 sm:py-10">
       <section className="mb-10">
-        <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-slate-50">
           역사 e-book
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-slate-600 dark:text-slate-400">
           한국사와 세계사를 시대 → 단원 → 차시로 읽고, 퀴즈로 복습하고, 브라우저에
           진도를 저장하는 학습용 e-book입니다.
         </p>
-        <div className="mt-6 max-w-xl">
+        <div className="mt-6 w-full max-w-xl">
           <SearchBox />
         </div>
       </section>
@@ -31,7 +31,7 @@ export default function HomePage() {
         <ContinueLearning hrefByKey={hrefByKey} />
       </section>
 
-      <section className="grid gap-4 md:grid-cols-2">
+      <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <Link
           href="/korean"
           className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-slate-400 dark:border-slate-800 dark:bg-slate-950 dark:hover:border-slate-600"

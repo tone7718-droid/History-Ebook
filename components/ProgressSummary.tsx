@@ -65,7 +65,7 @@ export function ProgressSummary({ lessons }: { lessons: LessonMeta[] }) {
   };
 
   return (
-    <div className="grid gap-4 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
       <Card title="한국사" data={korean} />
       <Card title="세계사" data={world} />
     </div>

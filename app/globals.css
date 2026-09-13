@@ -25,6 +25,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -37,11 +38,21 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-noto), "Noto Sans KR", "Pretendard", system-ui, sans-serif;
-  line-height: 1.7;
+  line-height: 1.75;
   font-size: 16px;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
 }
 
 :focus-visible {
   outline: 2px solid #6366f1;
   outline-offset: 2px;
+}
+
+/* Prose tables: allow horizontal scroll on narrow screens */
+.prose :where(table) {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
