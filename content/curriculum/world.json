@@ -1,0 +1,25 @@
+{
+  "track": "world",
+  "trackLabel": "세계사",
+  "eras": [
+    {
+      "id": "west-asia",
+      "title": "서아시아·이슬람",
+      "description": "이슬람 세계의 형성과 칼리프·술탄 체제",
+      "units": [
+        {
+          "id": "islam",
+          "title": "이슬람 세계의 형성",
+          "lessons": [
+            {
+              "id": "islam-formation",
+              "title": "이슬람 세계의 형성",
+              "mdxPath": "world/west-asia/islam/islam-formation.mdx",
+              "order": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

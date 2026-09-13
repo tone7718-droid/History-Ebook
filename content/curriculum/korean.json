@@ -1,0 +1,25 @@
+{
+  "track": "korean",
+  "trackLabel": "한국사",
+  "eras": [
+    {
+      "id": "goryeo",
+      "title": "고려",
+      "description": "후삼국 통일부터 신진 사대부까지 고려 정치·대외 관계의 큰 흐름",
+      "units": [
+        {
+          "id": "politics",
+          "title": "고려의 성립과 통치 체제",
+          "lessons": [
+            {
+              "id": "goryeo-politics-overview",
+              "title": "고려의 성립과 정치 변동",
+              "mdxPath": "korean/goryeo/politics/goryeo-politics-overview.mdx",
+              "order": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
