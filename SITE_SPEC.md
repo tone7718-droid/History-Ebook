@@ -51,7 +51,7 @@
 
 본문 H2 고정 순서:
 
-1. `시## 학습목표`
+1. `## 학습목표`
 2. `## 배경`
 3. `## 핵심사건(연표)`
 4. `## 인물`
@@ -70,7 +70,7 @@
 
 ## 5. 검색
 
-런타임에 MDX를 파싱해 FlexSearch + 문자열 매칭을 쓴다.
+런타임에 MDX를 파싱해 FlexSearch + 문자열 매칭을 쓰다.
 선택: `npm run build:search` → `public/search-index.json`.
 API: `GET /api/search?q=`.
 
@@ -99,7 +99,7 @@ type ProgressStore = {
 
 - 차시당 3–5문항 MCQ, sibling `*.quiz.json`
 - 제출 후 점수·해설, 오답만 다시 풀기
-- 화면에서 선택지 순서를 석어 보여, JSON의 정답 문자가 항상 첫 번째가 되지 않게 한다
+- 화면에서 선택지 순서를 섞어 보여, JSON의 정답 문자가 항상 첫 번째가 되지 않게 한다
 
 ## 8. 품질 검사
 
