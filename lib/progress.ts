@@ -28,6 +28,14 @@ export function writeProgress(store: ProgressStore) {
   window.dispatchEvent(new Event("history-ebook:progress"));
 }
 
+export function clearProgress() {
+  if (typeof window === "undefined") return emptyStore();
+  localStorage.removeItem(PROGRESS_KEY);
+  const next = emptyStore();
+  window.dispatchEvent(new Event("history-ebook:progress"));
+  return next;
+}
+
 export function getLessonProgress(lessonKey: string): LessonProgress | undefined {
   return readProgress().lessons[lessonKey];
 }
@@ -68,6 +76,5 @@ export function recordQuizScore(lessonKey: string, score: number) {
 }
 
 export function useProgressStore() {
-  // lightweight subscribe helper for client components
-  return { readProgress, writeProgress, PROGRESS_KEY };
+  return { readProgress, writeProgress, clearProgress, PROGRESS_KEY };
 }
