@@ -1,0 +1,66 @@
+{
+  "lessonId": "korean/joseon-late/economy-society-thought/silhak-new-culture",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "『반계수록』 등으로 토지·제도 개혁을 구상한 실학의 선구는?",
+      "choices": [
+        { "id": "a", "text": "유형원" },
+        { "id": "b", "text": "이순신" },
+        { "id": "c", "text": "흥선 대원군" },
+        { "id": "d", "text": "안중근" }
+      ],
+      "answer": "a",
+      "explanation": "유형원은 반계수록으로 실학의 선구로 학습된다."
+    },
+    {
+      "id": "q2",
+      "prompt": "『목민심서』·『경세유표』 등으로 목민·제도론을 집대성한 실학자는?",
+      "choices": [
+        { "id": "a", "text": "정약용" },
+        { "id": "b", "text": "정도전" },
+        { "id": "c", "text": "최충헌" },
+        { "id": "d", "text": "왕건" }
+      ],
+      "answer": "a",
+      "explanation": "정약용(다산)은 조선 후기 실학의 대표로 목민과 경세를 논했다."
+    },
+    {
+      "id": "q3",
+      "prompt": "청의 문물·통상·기술을 배우자고 주장한 학풍을 가리키는 말은?",
+      "choices": [
+        { "id": "a", "text": "북학" },
+        { "id": "b", "text": "척화만으로 동일시" },
+        { "id": "c", "text": "위정척사만으로 동일시" },
+        { "id": "d", "text": "과전법" }
+      ],
+      "answer": "a",
+      "explanation": "북학은 박지원·박제가 등이 청 문물 수용과 이용후생을 강조한 흐름이다."
+    },
+    {
+      "id": "q4",
+      "prompt": "이중환이 지리·생업·풍속을 기록한 저서는?",
+      "choices": [
+        { "id": "a", "text": "택리지" },
+        { "id": "b", "text": "삼국사기" },
+        { "id": "c", "text": "훈민정음" },
+        { "id": "d", "text": "경국대전" }
+      ],
+      "answer": "a",
+      "explanation": "택리지는 살 만한 땅과 삶을 살핀 지리·생활 기록이다."
+    },
+    {
+      "id": "q5",
+      "prompt": "우리 산천의 실제 풍경을 그린 회화 경향은?",
+      "choices": [
+        { "id": "a", "text": "진경산수" },
+        { "id": "b", "text": "병인양요" },
+        { "id": "c", "text": "호포제" },
+        { "id": "d", "text": "사창제" }
+      ],
+      "answer": "a",
+      "explanation": "진경산수는 실제 산수를 그린 경향으로, 풍속화와 구분하여 학습한다."
+    }
+  ]
+}
