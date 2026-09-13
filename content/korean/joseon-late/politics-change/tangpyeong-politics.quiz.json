@@ -1,0 +1,66 @@
+{
+  "lessonId": "korean/joseon-late/politics-change/tangpyeong-politics",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "영조가 당파를 고르게 등용해 왕권을 세우려 내건 정책은?",
+      "choices": [
+        { "id": "a", "text": "탕평책" },
+        { "id": "b", "text": "인조반정" },
+        { "id": "c", "text": "경신환국" },
+        { "id": "d", "text": "삼전도 항복" }
+      ],
+      "answer": "a",
+      "explanation": "탕평책은 환국식 극단 대립을 줄이고 국왕 중심으로 인재를 쓰려는 정책이다."
+    },
+    {
+      "id": "q2",
+      "prompt": "여러 당을 폭넓게 안아 균형을 맞추려는 탕평의 결로 알맞은 것은?",
+      "choices": [
+        { "id": "a", "text": "완론 탕평" },
+        { "id": "b", "text": "준론만의 배제와 동일시" },
+        { "id": "c", "text": "세도 정치" },
+        { "id": "d", "text": "예송 논쟁" }
+      ],
+      "answer": "a",
+      "explanation": "완론은 포용적 균형, 준론은 원칙·명분 중시에 가깝다."
+    },
+    {
+      "id": "q3",
+      "prompt": "정조가 왕실 학문·정책 참모 기구로 강화한 것은?",
+      "choices": [
+        { "id": "a", "text": "규장각" },
+        { "id": "b", "text": "비변사만으로 동일시" },
+        { "id": "c", "text": "교정도감" },
+        { "id": "d", "text": "벽란도" }
+      ],
+      "answer": "a",
+      "explanation": "규장각은 정조대 국왕 중심 학문·정책의 상징적 기구이다."
+    },
+    {
+      "id": "q4",
+      "prompt": "젊은 문신을 불러 강학·시험으로 재교육한 제도는?",
+      "choices": [
+        { "id": "a", "text": "초계문신" },
+        { "id": "b", "text": "과전법" },
+        { "id": "c", "text": "공납" },
+        { "id": "d", "text": "갑술환국" }
+      ],
+      "answer": "a",
+      "explanation": "초계문신제는 정조가 인재를 직접 키우며 왕권과 관료를 이은 제도이다."
+    },
+    {
+      "id": "q5",
+      "prompt": "영조 대 양인의 군포 부담을 줄이려 추진한 개혁은?",
+      "choices": [
+        { "id": "a", "text": "균역법" },
+        { "id": "b", "text": "정유재란" },
+        { "id": "c", "text": "병자호란" },
+        { "id": "d", "text": "홍경래의 난" }
+      ],
+      "answer": "a",
+      "explanation": "균역법은 군역·군포 부담을 조정해 민생과 재정을 다루려 한 개혁이다."
+    }
+  ]
+}
