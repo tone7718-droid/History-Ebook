@@ -5,6 +5,28 @@ import type { Quiz } from "@/lib/types";
 import { recordQuizScore } from "@/lib/progress";
 import { cn } from "@/lib/utils";
 
+function hashSeed(input: string) {
+  let h = 2166136261;
+  for (let i = 0; i < input.length; i += 1) {
+    h ^= input.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+function shuffle<T>(items: T[], seed: number) {
+  const next = [...items];
+  let s = seed || 1;
+  for (let i = next.length - 1; i > 0; i -= 1) {
+    s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
+    const j = s % (i + 1);
+    const tmp = next[i];
+    next[i] = next[j];
+    next[j] = tmp;
+  }
+  return next;
+}
+
 export function QuizPanel({
   quiz,
   lessonKey,
@@ -67,13 +89,14 @@ export function QuizPanel({
         {visible.map((q, idx) => {
           const chosen = answers[q.id];
           const isCorrect = chosen === q.answer;
+          const choices = shuffle(q.choices, hashSeed(`${lessonKey}:${q.id}`));
           return (
             <fieldset key={q.id} className="rounded-xl border border-slate-100 p-4 dark:border-slate-800">
               <legend className="mb-3 font-medium text-slate-900 dark:text-slate-100">
                 {idx + 1}. {q.prompt}
               </legend>
               <div className="space-y-2">
-                {q.choices.map((c) => {
+                {choices.map((c) => {
                   const selected = chosen === c.id;
                   let style = "border-slate-200 dark:border-slate-700";
                   if (submitted) {
