@@ -12,11 +12,18 @@ const noto = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://history-ebook.vercel.app"),
   title: {
     default: "역사 e-book",
     template: "%s | 역사 e-book",
   },
   description: "한국사·세계사 학습용 정적 콘텐츠 중심 e-book",
+  openGraph: {
+    title: "역사 e-book",
+    description: "한국사·세계사 학습용 정적 콘텐츠 중심 e-book",
+    locale: "ko_KR",
+    type: "website",
+  },
 };
 
 export const viewport: Viewport = {

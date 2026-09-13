@@ -43,8 +43,8 @@ export function LessonShell({
           items={[
             { label: "홈", href: "/" },
             { label: trackLabel, href: trackHref },
-            { label: eraTitle },
-            { label: unitTitle },
+            { label: eraTitle, href: `${trackHref}#era-${current.era}` },
+            { label: unitTitle, href: `${trackHref}#era-${current.era}` },
             { label: lessonTitle },
           ]}
         />

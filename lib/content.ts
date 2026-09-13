@@ -148,6 +148,9 @@ export async function getLesson(
   const eraMeta = curriculum.eras.find((e) => e.id === era);
   const unitMeta = eraMeta?.units.find((u) => u.id === unit);
   const lessonMeta = unitMeta?.lessons.find((l) => l.id === lesson);
+  if (!eraMeta || !unitMeta || !lessonMeta) {
+    return null;
+  }
 
   const quiz = loadQuiz(mdxAbs, frontmatter);
   const key = lessonKey(track, era, unit, lesson);
@@ -159,9 +162,9 @@ export async function getLesson(
     lessonKey: key,
     href: lessonHref(track, era, unit, lesson),
     trackLabel: curriculum.trackLabel,
-    eraTitle: eraMeta?.title ?? era,
-    unitTitle: unitMeta?.title ?? unit,
-    lessonTitle: frontmatter.title || lessonMeta?.title || lesson,
+    eraTitle: eraMeta.title,
+    unitTitle: unitMeta.title,
+    lessonTitle: frontmatter.title || lessonMeta.title || lesson,
   };
 }
 

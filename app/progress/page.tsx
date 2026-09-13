@@ -10,9 +10,8 @@ export default function ProgressPage() {
     <div className="mx-auto max-w-4xl px-4 py-6 sm:py-10">
       <h1 className="mb-2 text-2xl font-bold sm:text-3xl">내 진도</h1>
       <p className="mb-8 text-slate-600 dark:text-slate-400">
-        진도는 이 브라우저의 localStorage(
-        <code className="text-sm">history-ebook:progress:v1</code>)에만
-        저장됩니다. 서버 동기화는 없습니다.
+        진도는 이 브라우저에만 저장됩니다. 다른 기기나 서버와는 동기화되지
+        않습니다.
       </p>
       <ProgressSummary lessons={lessons} />
     </div>

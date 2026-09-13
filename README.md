@@ -3,7 +3,10 @@
 한국사·세계사 학습용 **정적 콘텐츠 중심 e-book** 웹앱입니다.  
 커리큘럼 트리(시대 → 단원 → 차시)로 이동하고, MDX 본문을 읽으며, localStorage 진도·검색·퀴즈로 복습합니다.
 
-UI와 시드 콘텐츠는 **한국어**입니다. 교과서·참고서 원문 복제는 하지 않으며, 교육용 **원작 요약**만 포함합니다.
+UI와 본문은 **한국어**입니다. 교과서·참고서 원문 복제는 하지 않으며, 교육용 **원작 요약**만 포함합니다.
+
+- 사이트: https://history-ebook.vercel.app
+- 저장소: https://github.com/tone7718-droid/History-Ebook
 
 ## 요구 환경
 
@@ -37,7 +40,7 @@ pnpm dev
 | `/search?q=` | 검색 |
 | `/progress` | 내 진도 |
 
-시드 예시:
+예시:
 
 - `/korean/goryeo/politics/goryeo-politics-overview`
 - `/world/west-asia/islam/islam-formation`
@@ -48,6 +51,7 @@ pnpm dev
 2. `content/<track>/<era>/<unit>/<lesson>.mdx`와 sibling `.quiz.json`을 추가합니다.
 3. `content/curriculum/korean.json` 또는 `world.json`에 노드를 등록합니다.
 4. `draft: false`로 두면 목록·SSG에 포함됩니다.
+5. `npm run validate:content`로 경로·H2·퀴즈 정합을 확인합니다.
 
 자세한 스키마: [`CONTENT_SCHEMA.md`](./CONTENT_SCHEMA.md)  
 제품·기술 명세: [`SITE_SPEC.md`](./SITE_SPEC.md)
@@ -67,7 +71,7 @@ API: `GET /api/search?q=`
 ## 진도 저장
 
 - 키: `history-ebook:progress:v1`
-- 스크롤 80% 또는 「읽음으로 표시」로 읽음 처리
+- 본문이 충분히 길 때 스크롤 80%, 또는 「읽음으로 표시」로 읽음 처리
 - 퀴즈 제출 시 최고 점수·시도 횟수 반영
 - 서버 동기화 없음 (브라우저별 독립)
 
@@ -77,9 +81,9 @@ API: `GET /api/search?q=`
 
 ## Vercel 배포
 
-1. GitHub 저장소 연결 (예: `tone7718-droid/history-ebook`)
+1. GitHub 저장소 연결 (`tone7718-droid/History-Ebook`)
 2. Framework Preset: **Next.js**
-3. Build Command: `npm run build` (또는 `pnpm build`)
+3. Build Command: `npm run build`
 4. Output: 기본
 5. 환경변수: v1 없음
 
@@ -90,7 +94,7 @@ API: `GET /api/search?q=`
 
 ## 라이선스
 
-- 코드: MIT
+- 코드: [MIT](./LICENSE)
 - 콘텐츠: 교육용 원작 요약 (별도 표기 가능)
 
 ## 스크립트
@@ -100,4 +104,6 @@ API: `GET /api/search?q=`
 | `npm run dev` | 개발 서버 |
 | `npm run build` | 프로덕션 빌드 |
 | `npm run start` | 빌드 결과 실행 |
+| `npm run lint` | ESLint |
+| `npm run validate:content` | 커리큘럼·MDX·퀴즈 정합 검사 |
 | `npm run build:search` | 검색 인덱스 JSON 생성 |

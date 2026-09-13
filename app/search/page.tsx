@@ -35,7 +35,7 @@ export default async function SearchPage({
               >
                 <Link
                   href={r.href}
-                  className="text-lg font-semibold text-indigo-700 hover:underline dark:text-indigo-300"
+                  className="text-lg font-semibold text-slate-900 underline-offset-2 hover:underline dark:text-slate-50"
                 >
                   {r.title}
                 </Link>

@@ -13,15 +13,15 @@ export function MarkReadButton({ lessonKey }: { lessonKey: string }) {
 
     const onScroll = () => {
       const doc = document.documentElement;
-      const scrolled =
-        (window.scrollY + window.innerHeight) / Math.max(doc.scrollHeight, 1);
-      if (scrolled >= 0.8) {
+      const scrollable = doc.scrollHeight - window.innerHeight;
+      if (scrollable < window.innerHeight * 0.4) return;
+      const ratio = window.scrollY / Math.max(scrollable, 1);
+      if (ratio >= 0.8) {
         markLessonRead(lessonKey);
         setRead(true);
       }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, [lessonKey]);
 
