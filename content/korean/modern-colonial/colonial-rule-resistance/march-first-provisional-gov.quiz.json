@@ -1,0 +1,66 @@
+{
+  "lessonId": "korean/modern-colonial/colonial-rule-resistance/march-first-provisional-gov",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "1919년 3월 1일 독립을 선언하며 전국으로 퍼진 만세 시위는?",
+      "choices": [
+        { "id": "a", "text": "3·1 운동" },
+        { "id": "b", "text": "갑신정변" },
+        { "id": "c", "text": "임오군란" },
+        { "id": "d", "text": "병인양요" }
+      ],
+      "answer": "a",
+      "explanation": "3·1 운동은 1919년 전 민족적 독립 시위이다."
+    },
+    {
+      "id": "q2",
+      "prompt": "3·1 운동 때 발표된 독립 선언서를 가리키는 말은?",
+      "choices": [
+        { "id": "a", "text": "기미독립선언서" },
+        { "id": "b", "text": "대동법" },
+        { "id": "c", "text": "경국대전" },
+        { "id": "d", "text": "훈민정음 서문만으로 동일시" }
+      ],
+      "answer": "a",
+      "explanation": "기미독립선언서는 1919년(기미년) 독립 선언 문서이다."
+    },
+    {
+      "id": "q3",
+      "prompt": "3·1 운동 이후 상하이 등에서 수립·정비된 망명 정부는?",
+      "choices": [
+        { "id": "a", "text": "대한민국 임시 정부" },
+        { "id": "b", "text": "조선총독부" },
+        { "id": "c", "text": "중추원(고려)" },
+        { "id": "d", "text": "의정부만으로 동일시" }
+      ],
+      "answer": "a",
+      "explanation": "대한민국 임시 정부는 민주 공화제를 표방한 독립운동의 구심이다."
+    },
+    {
+      "id": "q4",
+      "prompt": "대한민국 임시 정부가 내세운 국가 이념으로 가장 알맞은 것은?",
+      "choices": [
+        { "id": "a", "text": "민주 공화제" },
+        { "id": "b", "text": "절대 왕정 복고만으로 동일시" },
+        { "id": "c", "text": "봉건 영주제" },
+        { "id": "d", "text": "무단 통치" }
+      ],
+      "answer": "a",
+      "explanation": "임시 정부는 민주 공화제를 독립 국가의 방향으로 제시했다."
+    },
+    {
+      "id": "q5",
+      "prompt": "3·1 운동의 국제적 배경으로 자주 거론되는 원칙은?",
+      "choices": [
+        { "id": "a", "text": "민족자결" },
+        { "id": "b", "text": "위정척사만으로 동일시" },
+        { "id": "c", "text": "균역법" },
+        { "id": "d", "text": "호포제" }
+      ],
+      "answer": "a",
+      "explanation": "제1차 세계대전 후 민족자결 분위기가 독립 희망의 계기가 되었다."
+    }
+  ]
+}
