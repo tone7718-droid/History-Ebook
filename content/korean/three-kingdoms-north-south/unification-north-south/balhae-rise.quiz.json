@@ -1,0 +1,66 @@
+{
+  "lessonId": "korean/three-kingdoms-north-south/unification-north-south/balhae-rise",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "고구려 유민과 말갈 세력을 모아 발해를 건국한 인물은?",
+      "choices": [
+        { "id": "a", "text": "왕건" },
+        { "id": "b", "text": "대조영" },
+        { "id": "c", "text": "궁예" },
+        { "id": "d", "text": "장보고" }
+      ],
+      "answer": "b",
+      "explanation": "대조영이 698년경 발해를 세웠다."
+    },
+    {
+      "id": "q2",
+      "prompt": "문왕대 발해가 문화·외교로 불리던 별칭에 가까운 것은?",
+      "choices": [
+        { "id": "a", "text": "해동성국" },
+        { "id": "b", "text": "임나일본부" },
+        { "id": "c", "text": "한사군" },
+        { "id": "d", "text": "북원 소경만의 나라" }
+      ],
+      "answer": "a",
+      "explanation": "문왕대 전후 발해는 해동성국으로 평가되었다."
+    },
+    {
+      "id": "q3",
+      "prompt": "발해의 통치 구도로 알맞은 것은?",
+      "choices": [
+        { "id": "a", "text": "9주 5소경" },
+        { "id": "b", "text": "5경 15부" },
+        { "id": "c", "text": "8도" },
+        { "id": "d", "text": "23부제" }
+      ],
+      "answer": "b",
+      "explanation": "발해는 5경 15부로 영토를 다스렸다. 9주 5소경은 통일 신라이다."
+    },
+    {
+      "id": "q4",
+      "prompt": "발해가 활발히 교류한 상대로 알맞은 짝은?",
+      "choices": [
+        { "id": "a", "text": "당·일본" },
+        { "id": "b", "text": "로마·이집트" },
+        { "id": "c", "text": "몽골·청만" },
+        { "id": "d", "text": "가야·탐라만" }
+      ],
+      "answer": "a",
+      "explanation": "발해는 당과 일본에 사신을 보내고 문물을 교류했다."
+    },
+    {
+      "id": "q5",
+      "prompt": "926년 발해를 멸망시킨 세력은?",
+      "choices": [
+        { "id": "a", "text": "통일 신라" },
+        { "id": "b", "text": "거란(요)" },
+        { "id": "c", "text": "일본" },
+        { "id": "d", "text": "후백제" }
+      ],
+      "answer": "b",
+      "explanation": "거란(요)의 공격으로 발해가 멸망했다."
+    }
+  ]
+}

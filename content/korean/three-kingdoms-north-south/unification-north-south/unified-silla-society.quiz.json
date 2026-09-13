@@ -1,0 +1,66 @@
+{
+  "lessonId": "korean/three-kingdoms-north-south/unification-north-south/unified-silla-society",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "통일 신라의 지방 통치 체제로 알맞은 것은?",
+      "choices": [
+        { "id": "a", "text": "5경 15부" },
+        { "id": "b", "text": "9주 5소경" },
+        { "id": "c", "text": "8도제" },
+        { "id": "d", "text": "군현제만 있던 한 군현" }
+      ],
+      "answer": "b",
+      "explanation": "통일 신라는 9주 5소경으로 지방을 편성했다. 5경 15부는 발해이다."
+    },
+    {
+      "id": "q2",
+      "prompt": "귀족이 토지와 사람을 함께 거두던 제도에서 관리 토지 지급으로 바꾸려 한 흐름으로 알맞은 것은?",
+      "choices": [
+        { "id": "a", "text": "녹읍 → 관료전" },
+        { "id": "b", "text": "전시과 → 과전" },
+        { "id": "c", "text": "직전 → 녹읍" },
+        { "id": "d", "text": "식읍만 늘림" }
+      ],
+      "answer": "a",
+      "explanation": "왕권이 강할 때 녹읍을 줄이고 관료전으로 옮기려 했다."
+    },
+    {
+      "id": "q3",
+      "prompt": "788년경 유교 경전 이해도로 관리 능력을 보려 한 제도는?",
+      "choices": [
+        { "id": "a", "text": "과거제(광종)" },
+        { "id": "b", "text": "독서삼품과" },
+        { "id": "c", "text": "음서제" },
+        { "id": "d", "text": "호포제" }
+      ],
+      "answer": "b",
+      "explanation": "독서삼품과는 골품 폐지가 아니라 유학 학습 등급으로 인재를 가리려 한 장치이다."
+    },
+    {
+      "id": "q4",
+      "prompt": "청해진을 설치해 해상 교역과 치안을 장악한 인물은?",
+      "choices": [
+        { "id": "a", "text": "최치원" },
+        { "id": "b", "text": "장보고" },
+        { "id": "c", "text": "김유신" },
+        { "id": "d", "text": "대조영" }
+      ],
+      "answer": "b",
+      "explanation": "장보고가 청해진을 중심으로 서남 해상을 통제했다."
+    },
+    {
+      "id": "q5",
+      "prompt": "통일 신라 수도 경주 정비에 대한 설명으로 알맞은 것은?",
+      "choices": [
+        { "id": "a", "text": "당 장안성을 모방한 격자형 도성으로 가꿨다" },
+        { "id": "b", "text": "발해 상경을 그대로 옮겼다" },
+        { "id": "c", "text": "개경으로 천도했다" },
+        { "id": "d", "text": "한양에 궁궐만 지었다" }
+      ],
+      "answer": "a",
+      "explanation": "경주는 당 장안성을 본뜬 도성으로 정비되며 왕실·문화의 중심이 되었다."
+    }
+  ]
+}
