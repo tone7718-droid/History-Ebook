@@ -7,6 +7,7 @@ UI와 본문은 **한국어**입니다. 교과서·참고서 원문 복제는 �
 
 - 사이트: https://history-ebook.vercel.app
 - 저장소: https://github.com/tone7718-droid/History-Ebook
+- 공개 차시: 한국사 55 + 세계사 70
 
 ## 요구 환경
 
@@ -19,13 +20,6 @@ UI와 본문은 **한국어**입니다. 교과서·참고서 원문 복제는 �
 npm install
 npm run dev
 # http://localhost:3000
-```
-
-pnpm을 쓰는 경우:
-
-```bash
-pnpm install
-pnpm dev
 ```
 
 ## 주요 경로
@@ -58,8 +52,7 @@ pnpm dev
 
 ## 검색 인덱스
 
-검색은 런타임에 MDX를 파싱하는 FlexSearch(+ 단순 문자열 매칭)를 사용합니다.  
-선택적으로 정적 인덱스를 만들 수 있습니다.
+검색은 런타임에 MDX를 파싱하는 FlexSearch(+단순 문자열 매칭)를 사용합니다.
 
 ```bash
 npm run build:search
@@ -73,6 +66,7 @@ API: `GET /api/search?q=`
 - 키: `history-ebook:progress:v1`
 - 본문이 충분히 길 때 스크롤 80%, 또는 「읽음으로 표시」로 읽음 처리
 - 퀴즈 제출 시 최고 점수·시도 횟수 반영
+- `/progress`에서 기록 삭제 가능
 - 서버 동기화 없음 (브라우저별 독립)
 
 ## 다크 모드

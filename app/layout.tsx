@@ -20,9 +20,15 @@ export const metadata: Metadata = {
   description: "한국사·세계사 학습용 정적 콘텐츠 중심 e-book",
   openGraph: {
     title: "역사 e-book",
-    description: "한국사·세계사 학습용 정적 콘텐츠 중심 e-book",
+    description: "한국사 55차시·세계사 70차시 학습용 e-book",
     locale: "ko_KR",
     type: "website",
+    siteName: "역사 e-book",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "역사 e-book",
+    description: "한국사 55차시·세계사 70차시 학습용 e-book",
   },
 };
 

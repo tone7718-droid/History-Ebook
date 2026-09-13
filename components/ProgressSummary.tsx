@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { readProgress } from "@/lib/progress";
+import { clearProgress, readProgress } from "@/lib/progress";
 import type { LessonMeta } from "@/lib/types";
 
 export function ProgressSummary({ lessons }: { lessons: LessonMeta[] }) {
@@ -31,6 +31,12 @@ export function ProgressSummary({ lessons }: { lessons: LessonMeta[] }) {
   const korean = byTrack("korean");
   const world = byTrack("world");
   const hasAny = Object.keys(store.lessons).length > 0;
+
+  const onReset = () => {
+    if (!window.confirm("이 브라우저의 읽음·퀴즈 기록을 모두 지울까요?")) return;
+    clearProgress();
+    setStore(readProgress());
+  };
 
   if (!hasAny) {
     return (
@@ -74,9 +80,20 @@ export function ProgressSummary({ lessons }: { lessons: LessonMeta[] }) {
   };
 
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-      <Card title="한국사" data={korean} />
-      <Card title="세계사" data={world} />
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <Card title="한국사" data={korean} />
+        <Card title="세계사" data={world} />
+      </div>
+      <div className="flex justify-end">
+        <button
+          type="button"
+          onClick={onReset}
+          className="inline-flex min-h-11 items-center rounded-lg border border-slate-300 px-4 text-sm text-slate-700 hover:bg-slate-50 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-900"
+        >
+          기록 삭제
+        </button>
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { CurriculumFile } from "@/lib/types";
 import { lessonHref, lessonKey, cn } from "@/lib/utils";
 import { ProgressBadge } from "./ProgressBadge";
@@ -14,6 +14,20 @@ export function CurriculumNav({
   current?: { era: string; unit: string; lesson: string };
 }) {
   const [open, setOpen] = useState(false);
+  const activeRef = useRef<HTMLAnchorElement | null>(null);
+
+  const currentTitle = (() => {
+    if (!current) return null;
+    for (const era of curriculum.eras) {
+      for (const unit of era.units) {
+        const lesson = unit.lessons.find((item) => item.id === current.lesson);
+        if (era.id === current.era && unit.id === current.unit && lesson) {
+          return lesson.title;
+        }
+      }
+    }
+    return null;
+  })();
 
   useEffect(() => {
     if (!open) return;
@@ -32,6 +46,10 @@ export function CurriculumNav({
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
+
+  useEffect(() => {
+    activeRef.current?.scrollIntoView({ block: "center" });
+  }, [current?.era, current?.unit, current?.lesson, open]);
 
   const tree = (
     <nav aria-label="커리큘럼" className="space-y-4 text-sm">
@@ -68,6 +86,7 @@ export function CurriculumNav({
                     return (
                       <li key={lesson.id}>
                         <Link
+                          ref={active ? activeRef : undefined}
                           href={href}
                           onClick={() => setOpen(false)}
                           className={cn(
@@ -96,11 +115,12 @@ export function CurriculumNav({
       <div className="w-full shrink-0 lg:hidden">
         <button
           type="button"
-          className="min-h-11 w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm font-medium dark:border-slate-600"
+          className="min-h-11 w-full rounded-lg border border-slate-300 px-4 py-2.5 text-left text-sm font-medium dark:border-slate-600"
           onClick={() => setOpen(true)}
           aria-expanded={open}
         >
-          커리큘럼 열기
+          <span className="block text-xs font-normal text-slate-500">커리큘럼</span>
+          <span className="block truncate">{currentTitle ?? "차시 목차 열기"}</span>
         </button>
       </div>
 

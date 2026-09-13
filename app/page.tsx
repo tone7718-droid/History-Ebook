@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ContinueLearning } from "@/components/ContinueLearning";
 import { SearchBox } from "@/components/SearchBox";
 import { getCurriculum, getFlatLessons, getLessonCount } from "@/lib/content";
-import { lessonHref } from "@/lib/utils";
 
 export default function HomePage() {
   const lessons = getFlatLessons();
@@ -78,61 +77,42 @@ export default function HomePage() {
       </section>
 
       <section className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
-        <div>
-          <h2 className="mb-3 text-lg font-semibold text-slate-900 dark:text-slate-50">
-            한국사 시대
-          </h2>
-          <ul className="space-y-1">
-            {korean.eras.map((era) => {
-              const first = era.units[0]?.lessons[0];
-              return (
-                <li key={era.id}>
-                  <Link
-                    href={
-                      first
-                        ? lessonHref("korean", era.id, era.units[0].id, first.id)
-                        : "/korean"
-                    }
-                    className="inline-flex min-h-10 items-center text-slate-800 underline-offset-2 hover:underline dark:text-slate-100"
-                  >
-                    {era.title}
-                    <span className="ml-2 text-sm text-slate-500">
-                      {era.units.reduce((n, u) => n + u.lessons.length, 0)}차시
-                    </span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-        <div>
-          <h2 className="mb-3 text-lg font-semibold text-slate-900 dark:text-slate-50">
-            세계사 시대
-          </h2>
-          <ul className="space-y-1">
-            {world.eras.map((era) => {
-              const first = era.units[0]?.lessons[0];
-              return (
-                <li key={era.id}>
-                  <Link
-                    href={
-                      first
-                        ? lessonHref("world", era.id, era.units[0].id, first.id)
-                        : "/world"
-                    }
-                    className="inline-flex min-h-10 items-center text-slate-800 underline-offset-2 hover:underline dark:text-slate-100"
-                  >
-                    {era.title}
-                    <span className="ml-2 text-sm text-slate-500">
-                      {era.units.reduce((n, u) => n + u.lessons.length, 0)}차시
-                    </span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <EraList track="korean" title="한국사 시대" curriculum={korean} />
+        <EraList track="world" title="세계사 시대" curriculum={world} />
       </section>
+    </div>
+  );
+}
+
+function EraList({
+  track,
+  title,
+  curriculum,
+}: {
+  track: "korean" | "world";
+  title: string;
+  curriculum: ReturnType<typeof getCurriculum>;
+}) {
+  return (
+    <div>
+      <h2 className="mb-3 text-lg font-semibold text-slate-900 dark:text-slate-50">
+        {title}
+      </h2>
+      <ul className="space-y-1">
+        {curriculum.eras.map((era) => (
+          <li key={era.id}>
+            <Link
+              href={`/${track}#era-${era.id}`}
+              className="inline-flex min-h-10 items-center text-slate-800 underline-offset-2 hover:underline dark:text-slate-100"
+            >
+              {era.title}
+              <span className="ml-2 text-sm text-slate-500">
+                {era.units.reduce((n, u) => n + u.lessons.length, 0)}차시
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
