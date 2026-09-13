@@ -77,6 +77,24 @@
               "title": "신라의 발전과 중앙 집권화",
               "mdxPath": "korean/three-kingdoms-north-south/three-kingdoms-gaya/silla-centralization.mdx",
               "order": 2
+            },
+            {
+              "id": "gaya-confederacy",
+              "title": "가야 연맹의 성립과 변화",
+              "mdxPath": "korean/three-kingdoms-north-south/three-kingdoms-gaya/gaya-confederacy.mdx",
+              "order": 3
+            }
+          ]
+        },
+        {
+          "id": "unification-north-south",
+          "title": "삼국 통일과 남북국 시대",
+          "lessons": [
+            {
+              "id": "silla-unification",
+              "title": "신라의 삼국 통일 과정",
+              "mdxPath": "korean/three-kingdoms-north-south/unification-north-south/silla-unification.mdx",
+              "order": 0
             }
           ]
         }
