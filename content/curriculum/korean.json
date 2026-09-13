@@ -3,6 +3,86 @@
   "trackLabel": "한국사",
   "eras": [
     {
+      "id": "prehistoric-early",
+      "title": "선사·고조선·초기 국가",
+      "description": "구석기부터 고조선·부여·삼한까지 초기 국가의 성립",
+      "units": [
+        {
+          "id": "prehistoric-culture",
+          "title": "선사 문화의 전개",
+          "lessons": [
+            {
+              "id": "paleolithic-life",
+              "title": "구석기 문화와 생활",
+              "mdxPath": "korean/prehistoric-early/prehistoric-culture/paleolithic-life.mdx",
+              "order": 0
+            },
+            {
+              "id": "neolithic-life",
+              "title": "신석기 문화와 생활",
+              "mdxPath": "korean/prehistoric-early/prehistoric-culture/neolithic-life.mdx",
+              "order": 1
+            },
+            {
+              "id": "bronze-iron-culture",
+              "title": "청동기·철기 문화의 등장",
+              "mdxPath": "korean/prehistoric-early/prehistoric-culture/bronze-iron-culture.mdx",
+              "order": 2
+            }
+          ]
+        },
+        {
+          "id": "gojoseon-neighbors",
+          "title": "고조선과 여러 나라의 성장",
+          "lessons": [
+            {
+              "id": "gojoseon-rise",
+              "title": "고조선의 성립과 발전",
+              "mdxPath": "korean/prehistoric-early/gojoseon-neighbors/gojoseon-rise.mdx",
+              "order": 0
+            },
+            {
+              "id": "buyeo-samhan-states",
+              "title": "부여·옥저·동예·삼한",
+              "mdxPath": "korean/prehistoric-early/gojoseon-neighbors/buyeo-samhan-states.mdx",
+              "order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "three-kingdoms-north-south",
+      "title": "삼국·가야·남북국",
+      "description": "삼국과 가야의 성장부터 통일 신라·발해까지",
+      "units": [
+        {
+          "id": "three-kingdoms-gaya",
+          "title": "삼국과 가야의 성립·발전",
+          "lessons": [
+            {
+              "id": "goguryeo-growth",
+              "title": "고구려의 성장과 대외 관계",
+              "mdxPath": "korean/three-kingdoms-north-south/three-kingdoms-gaya/goguryeo-growth.mdx",
+              "order": 0
+            },
+            {
+              "id": "baekje-growth",
+              "title": "백제의 성장과 문화 교류",
+              "mdxPath": "korean/three-kingdoms-north-south/three-kingdoms-gaya/baekje-growth.mdx",
+              "order": 1
+            },
+            {
+              "id": "silla-centralization",
+              "title": "신라의 발전과 중앙 집권화",
+              "mdxPath": "korean/three-kingdoms-north-south/three-kingdoms-gaya/silla-centralization.mdx",
+              "order": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "goryeo",
       "title": "고려",
       "description": "후삼국 통일부터 신진 사대부까지 고려 정치·대외 관계의 큰 흐름",

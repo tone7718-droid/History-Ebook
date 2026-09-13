@@ -3,10 +3,240 @@
   "trackLabel": "세계사",
   "eras": [
     {
-      "id": "west-asia",
-      "title": "서아시아·이슬람",
-      "description": "이슬람 세계의 형성과 칼리프·술탄 체제",
+      "id": "origins",
+      "title": "인류의 출현과 문명의 발생",
+      "description": "세계사의 의미부터 선사 문화와 4대 문명까지",
       "units": [
+        {
+          "id": "world-history-meaning",
+          "title": "세계사의 의미",
+          "lessons": [
+            {
+              "id": "meaning-of-world-history",
+              "title": "세계사의 의미",
+              "mdxPath": "world/origins/world-history-meaning/meaning-of-world-history.mdx",
+              "order": 0
+            }
+          ]
+        },
+        {
+          "id": "prehistory",
+          "title": "인류의 출현과 선사 문화",
+          "lessons": [
+            {
+              "id": "human-origins",
+              "title": "인류의 출현과 선사 문화",
+              "mdxPath": "world/origins/prehistory/human-origins.mdx",
+              "order": 0
+            }
+          ]
+        },
+        {
+          "id": "mesopotamia",
+          "title": "메소포타미아",
+          "lessons": [
+            {
+              "id": "mesopotamia-civilization",
+              "title": "메소포타미아 문명",
+              "mdxPath": "world/origins/mesopotamia/mesopotamia-civilization.mdx",
+              "order": 0
+            }
+          ]
+        },
+        {
+          "id": "egypt",
+          "title": "이집트",
+          "lessons": [
+            {
+              "id": "egypt-civilization",
+              "title": "이집트 문명",
+              "mdxPath": "world/origins/egypt/egypt-civilization.mdx",
+              "order": 0
+            }
+          ]
+        },
+        {
+          "id": "mediterranean",
+          "title": "지중해 주변 세계",
+          "lessons": [
+            {
+              "id": "mediterranean-neighbors",
+              "title": "히타이트·페니키아·헤브라이",
+              "mdxPath": "world/origins/mediterranean/mediterranean-neighbors.mdx",
+              "order": 0
+            }
+          ]
+        },
+        {
+          "id": "indus",
+          "title": "인더스",
+          "lessons": [
+            {
+              "id": "indus-civilization",
+              "title": "인더스 문명과 아리아인",
+              "mdxPath": "world/origins/indus/indus-civilization.mdx",
+              "order": 0
+            }
+          ]
+        },
+        {
+          "id": "china",
+          "title": "중국",
+          "lessons": [
+            {
+              "id": "yellow-river-civilization",
+              "title": "황허 유역의 중국 문명",
+              "mdxPath": "world/origins/china/yellow-river-civilization.mdx",
+              "order": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "east-asia",
+      "title": "동아시아 지역의 역사",
+      "description": "춘추전국부터 명·청·에도까지 동아시아 세계의 형성과 변동",
+      "units": [
+        {
+          "id": "formation",
+          "title": "동아시아 세계의 형성",
+          "lessons": [
+            {
+              "id": "spring-autumn-warring-states",
+              "title": "춘추·전국과 제자백가",
+              "mdxPath": "world/east-asia/formation/spring-autumn-warring-states.mdx",
+              "order": 0
+            },
+            {
+              "id": "qin-unification",
+              "title": "진의 통일",
+              "mdxPath": "world/east-asia/formation/qin-unification.mdx",
+              "order": 1
+            },
+            {
+              "id": "han-empire",
+              "title": "한 제국과 호한 융합",
+              "mdxPath": "world/east-asia/formation/han-empire.mdx",
+              "order": 2
+            },
+            {
+              "id": "six-dynasties",
+              "title": "위진남북조",
+              "mdxPath": "world/east-asia/formation/six-dynasties.mdx",
+              "order": 3
+            },
+            {
+              "id": "sui-tang",
+              "title": "수·당과 율령 체제",
+              "mdxPath": "world/east-asia/formation/sui-tang.mdx",
+              "order": 4
+            },
+            {
+              "id": "east-asian-cultural-sphere",
+              "title": "동아시아 문화권",
+              "mdxPath": "world/east-asia/formation/east-asian-cultural-sphere.mdx",
+              "order": 5
+            },
+            {
+              "id": "ancient-japan",
+              "title": "일본 고대 국가의 형성",
+              "mdxPath": "world/east-asia/formation/ancient-japan.mdx",
+              "order": 6
+            }
+          ]
+        },
+        {
+          "id": "development",
+          "title": "동아시아 세계의 발전",
+          "lessons": [
+            {
+              "id": "song-society",
+              "title": "송의 문치와 사대부 사회",
+              "mdxPath": "world/east-asia/development/song-society.mdx",
+              "order": 0
+            },
+            {
+              "id": "northern-peoples",
+              "title": "요·서하·금과 이원 통치",
+              "mdxPath": "world/east-asia/development/northern-peoples.mdx",
+              "order": 1
+            },
+            {
+              "id": "mongol-yuan",
+              "title": "몽골의 팽창과 원",
+              "mdxPath": "world/east-asia/development/mongol-yuan.mdx",
+              "order": 2
+            },
+            {
+              "id": "kamakura-japan",
+              "title": "가마쿠라 막부와 일본 중세",
+              "mdxPath": "world/east-asia/development/kamakura-japan.mdx",
+              "order": 3
+            }
+          ]
+        },
+        {
+          "id": "transformation",
+          "title": "동아시아 세계의 변동",
+          "lessons": [
+            {
+              "id": "ming",
+              "title": "명 제국의 통치와 변화",
+              "mdxPath": "world/east-asia/transformation/ming.mdx",
+              "order": 0
+            },
+            {
+              "id": "qing",
+              "title": "청 제국과 만한 병용",
+              "mdxPath": "world/east-asia/transformation/qing.mdx",
+              "order": 1
+            },
+            {
+              "id": "edo-japan",
+              "title": "에도 막번 체제",
+              "mdxPath": "world/east-asia/transformation/edo-japan.mdx",
+              "order": 2
+            },
+            {
+              "id": "east-asia-trade",
+              "title": "동아시아 해역 교역망",
+              "mdxPath": "world/east-asia/transformation/east-asia-trade.mdx",
+              "order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "west-asia",
+      "title": "서아시아·인도 지역의 역사",
+      "description": "서아시아 제국과 이슬람 세계의 형성, 인도의 왕조와 종교·문화",
+      "units": [
+        {
+          "id": "pre-islam-empires",
+          "title": "이슬람 이전 제국",
+          "lessons": [
+            {
+              "id": "assyria",
+              "title": "아시리아",
+              "mdxPath": "world/west-asia/pre-islam-empires/assyria.mdx",
+              "order": 0
+            },
+            {
+              "id": "achaemenid-persia",
+              "title": "아케메네스 페르시아",
+              "mdxPath": "world/west-asia/pre-islam-empires/achaemenid-persia.mdx",
+              "order": 1
+            },
+            {
+              "id": "parthia-sasanian",
+              "title": "파르티아와 사산 왕조",
+              "mdxPath": "world/west-asia/pre-islam-empires/parthia-sasanian.mdx",
+              "order": 2
+            }
+          ]
+        },
         {
           "id": "islam",
           "title": "이슬람 세계의 형성",
@@ -16,6 +246,384 @@
               "title": "이슬람 세계의 형성",
               "mdxPath": "world/west-asia/islam/islam-formation.mdx",
               "order": 0
+            }
+          ]
+        },
+        {
+          "id": "gunpowder-empires",
+          "title": "근세 이슬람 제국",
+          "lessons": [
+            {
+              "id": "ottoman-empire",
+              "title": "오스만 제국",
+              "mdxPath": "world/west-asia/gunpowder-empires/ottoman-empire.mdx",
+              "order": 0
+            },
+            {
+              "id": "timurid-safavid",
+              "title": "티무르와 사파비",
+              "mdxPath": "world/west-asia/gunpowder-empires/timurid-safavid.mdx",
+              "order": 1
+            }
+          ]
+        },
+        {
+          "id": "india",
+          "title": "인도의 역사와 다양한 종교·문화",
+          "lessons": [
+            {
+              "id": "maurya-buddhism",
+              "title": "불교·자이나교와 마우리아",
+              "mdxPath": "world/west-asia/india/maurya-buddhism.mdx",
+              "order": 0
+            },
+            {
+              "id": "kushan-gupta",
+              "title": "쿠샨과 굽타",
+              "mdxPath": "world/west-asia/india/kushan-gupta.mdx",
+              "order": 1
+            },
+            {
+              "id": "delhi-mughal",
+              "title": "델리 술탄 왕조와 무굴",
+              "mdxPath": "world/west-asia/india/delhi-mughal.mdx",
+              "order": 2
+            },
+            {
+              "id": "southeast-asia-indianization",
+              "title": "동남아시아의 인도 문화 영향",
+              "mdxPath": "world/west-asia/india/southeast-asia-indianization.mdx",
+              "order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ancient-greece",
+      "title": "고대 그리스",
+      "description": "폴리스와 아테네 민주정, 헬레니즘 세계",
+      "units": [
+        {
+          "id": "polis",
+          "title": "폴리스와 헬레니즘",
+          "lessons": [
+            {
+              "id": "athenian-democracy",
+              "title": "아테네 민주 정치",
+              "mdxPath": "world/ancient-greece/polis/athenian-democracy.mdx",
+              "order": 0
+            },
+            {
+              "id": "sparta-persian-wars",
+              "title": "스파르타와 페르시아 전쟁",
+              "mdxPath": "world/ancient-greece/polis/sparta-persian-wars.mdx",
+              "order": 1
+            },
+            {
+              "id": "hellenism",
+              "title": "알렉산드로스와 헬레니즘",
+              "mdxPath": "world/ancient-greece/polis/hellenism.mdx",
+              "order": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ancient-rome",
+      "title": "고대 로마",
+      "description": "로마 공화정·제정과 크리스트교",
+      "units": [
+        {
+          "id": "rome",
+          "title": "공화정에서 제정까지",
+          "lessons": [
+            {
+              "id": "roman-republic",
+              "title": "로마 공화정",
+              "mdxPath": "world/ancient-rome/rome/roman-republic.mdx",
+              "order": 0
+            },
+            {
+              "id": "roman-empire",
+              "title": "로마 제정",
+              "mdxPath": "world/ancient-rome/rome/roman-empire.mdx",
+              "order": 1
+            },
+            {
+              "id": "christianity-rome",
+              "title": "로마 문화와 크리스트교",
+              "mdxPath": "world/ancient-rome/rome/christianity-rome.mdx",
+              "order": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "medieval-europe",
+      "title": "유럽 세계의 형성과 동요",
+      "description": "게르만족 이동부터 르네상스·종교 개혁까지",
+      "units": [
+        {
+          "id": "formation-and-church",
+          "title": "서유럽 세계와 교회",
+          "lessons": [
+            {
+              "id": "germanic-franks",
+              "title": "게르만족 이동과 프랑크 왕국",
+              "mdxPath": "world/medieval-europe/formation-and-church/germanic-franks.mdx",
+              "order": 0
+            },
+            {
+              "id": "feudalism",
+              "title": "서유럽 봉건제",
+              "mdxPath": "world/medieval-europe/formation-and-church/feudalism.mdx",
+              "order": 1
+            },
+            {
+              "id": "papacy-byzantium",
+              "title": "교황권과 비잔티움",
+              "mdxPath": "world/medieval-europe/formation-and-church/papacy-byzantium.mdx",
+              "order": 2
+            },
+            {
+              "id": "crusades",
+              "title": "십자군",
+              "mdxPath": "world/medieval-europe/formation-and-church/crusades.mdx",
+              "order": 3
+            }
+          ]
+        },
+        {
+          "id": "late-medieval-reform",
+          "title": "중세 후기와 세계관의 변동",
+          "lessons": [
+            {
+              "id": "late-medieval-crisis",
+              "title": "중세 후기 도시와 위기",
+              "mdxPath": "world/medieval-europe/late-medieval-reform/late-medieval-crisis.mdx",
+              "order": 0
+            },
+            {
+              "id": "renaissance-reformation",
+              "title": "르네상스와 종교 개혁",
+              "mdxPath": "world/medieval-europe/late-medieval-reform/renaissance-reformation.mdx",
+              "order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "early-modern-europe",
+      "title": "신항로 개척과 시민·산업 혁명",
+      "description": "신항로·절대 왕정에서 시민 혁명과 산업 혁명까지",
+      "units": [
+        {
+          "id": "exploration-absolutism",
+          "title": "신항로 개척과 절대 왕정",
+          "lessons": [
+            {
+              "id": "age-of-exploration",
+              "title": "신항로 개척",
+              "mdxPath": "world/early-modern-europe/exploration-absolutism/age-of-exploration.mdx",
+              "order": 0
+            },
+            {
+              "id": "americas-conquest",
+              "title": "아메리카 문명과 정복",
+              "mdxPath": "world/early-modern-europe/exploration-absolutism/americas-conquest.mdx",
+              "order": 1
+            },
+            {
+              "id": "western-absolutism",
+              "title": "서유럽 절대 왕정",
+              "mdxPath": "world/early-modern-europe/exploration-absolutism/western-absolutism.mdx",
+              "order": 2
+            },
+            {
+              "id": "eastern-absolutism",
+              "title": "동유럽의 절대 왕정",
+              "mdxPath": "world/early-modern-europe/exploration-absolutism/eastern-absolutism.mdx",
+              "order": 3
+            }
+          ]
+        },
+        {
+          "id": "revolution",
+          "title": "시민 혁명과 산업 혁명",
+          "lessons": [
+            {
+              "id": "science-enlightenment",
+              "title": "과학 혁명과 계몽사상",
+              "mdxPath": "world/early-modern-europe/revolution/science-enlightenment.mdx",
+              "order": 0
+            },
+            {
+              "id": "english-revolution",
+              "title": "영국 혁명",
+              "mdxPath": "world/early-modern-europe/revolution/english-revolution.mdx",
+              "order": 1
+            },
+            {
+              "id": "american-revolution",
+              "title": "미국 혁명",
+              "mdxPath": "world/early-modern-europe/revolution/american-revolution.mdx",
+              "order": 2
+            },
+            {
+              "id": "french-revolution",
+              "title": "프랑스 혁명",
+              "mdxPath": "world/early-modern-europe/revolution/french-revolution.mdx",
+              "order": 3
+            },
+            {
+              "id": "vienna-liberalism-nationalism",
+              "title": "빈 체제와 자유주의·민족주의",
+              "mdxPath": "world/early-modern-europe/revolution/vienna-liberalism-nationalism.mdx",
+              "order": 4
+            },
+            {
+              "id": "industrial-revolution",
+              "title": "산업 혁명과 사회주의",
+              "mdxPath": "world/early-modern-europe/revolution/industrial-revolution.mdx",
+              "order": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "imperialism-world-wars",
+      "title": "제국주의와 두 차례 세계 대전",
+      "description": "19세기 말 제국주의부터 두 차례 세계 대전까지",
+      "units": [
+        {
+          "id": "imperialism-nationalism",
+          "title": "제국주의와 민족 운동",
+          "lessons": [
+            {
+              "id": "imperialism-partition",
+              "title": "제국주의와 아프리카 분할",
+              "mdxPath": "world/imperialism-world-wars/imperialism-nationalism/imperialism-partition.mdx",
+              "order": 0
+            },
+            {
+              "id": "china-national-movement",
+              "title": "중국의 반식민 운동과 신해혁명",
+              "mdxPath": "world/imperialism-world-wars/imperialism-nationalism/china-national-movement.mdx",
+              "order": 1
+            },
+            {
+              "id": "meiji-japan",
+              "title": "메이지 유신과 일본의 제국주의",
+              "mdxPath": "world/imperialism-world-wars/imperialism-nationalism/meiji-japan.mdx",
+              "order": 2
+            },
+            {
+              "id": "india-national-movement",
+              "title": "인도의 민족 운동",
+              "mdxPath": "world/imperialism-world-wars/imperialism-nationalism/india-national-movement.mdx",
+              "order": 3
+            },
+            {
+              "id": "west-asia-africa-se-asia",
+              "title": "서아시아·아프리카·동남아시아의 민족 운동",
+              "mdxPath": "world/imperialism-world-wars/imperialism-nationalism/west-asia-africa-se-asia.mdx",
+              "order": 4
+            }
+          ]
+        },
+        {
+          "id": "world-wars",
+          "title": "두 차례의 세계 대전",
+          "lessons": [
+            {
+              "id": "world-war-i",
+              "title": "제1차 세계 대전",
+              "mdxPath": "world/imperialism-world-wars/world-wars/world-war-i.mdx",
+              "order": 0
+            },
+            {
+              "id": "russian-revolution",
+              "title": "러시아 혁명",
+              "mdxPath": "world/imperialism-world-wars/world-wars/russian-revolution.mdx",
+              "order": 1
+            },
+            {
+              "id": "interwar-asia",
+              "title": "전간기 아시아의 민족 운동",
+              "mdxPath": "world/imperialism-world-wars/world-wars/interwar-asia.mdx",
+              "order": 2
+            },
+            {
+              "id": "great-depression-totalitarianism",
+              "title": "대공황과 전체주의",
+              "mdxPath": "world/imperialism-world-wars/world-wars/great-depression-totalitarianism.mdx",
+              "order": 3
+            },
+            {
+              "id": "world-war-ii",
+              "title": "제2차 세계 대전",
+              "mdxPath": "world/imperialism-world-wars/world-wars/world-war-ii.mdx",
+              "order": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contemporary-world",
+      "title": "현대 세계의 변화",
+      "description": "냉전 체제의 형성과 붕괴, 21세기 세계화와 지구촌 과제",
+      "units": [
+        {
+          "id": "cold-war",
+          "title": "냉전과 탈냉전",
+          "lessons": [
+            {
+              "id": "cold-war-formation",
+              "title": "냉전 체제의 형성",
+              "mdxPath": "world/contemporary-world/cold-war/cold-war-formation.mdx",
+              "order": 0
+            },
+            {
+              "id": "cold-war-conflicts",
+              "title": "한국·쿠바·베트남과 냉전 갈등",
+              "mdxPath": "world/contemporary-world/cold-war/cold-war-conflicts.mdx",
+              "order": 1
+            },
+            {
+              "id": "third-world-nonalignment",
+              "title": "제3세계와 비동맹",
+              "mdxPath": "world/contemporary-world/cold-war/third-world-nonalignment.mdx",
+              "order": 2
+            },
+            {
+              "id": "detente-end-of-cold-war",
+              "title": "데탕트와 냉전의 종식",
+              "mdxPath": "world/contemporary-world/cold-war/detente-end-of-cold-war.mdx",
+              "order": 3
+            }
+          ]
+        },
+        {
+          "id": "twenty-first-century",
+          "title": "21세기의 세계",
+          "lessons": [
+            {
+              "id": "globalization-multipolarity",
+              "title": "세계화와 다극화",
+              "mdxPath": "world/contemporary-world/twenty-first-century/globalization-multipolarity.mdx",
+              "order": 0
+            },
+            {
+              "id": "global-issues",
+              "title": "환경·인권과 지구촌 과제",
+              "mdxPath": "world/contemporary-world/twenty-first-century/global-issues.mdx",
+              "order": 1
             }
           ]
         }
