@@ -1,20 +1,20 @@
 # History Ebook Progress
 
-**Updated:** 2026-09-14 08:00 KST
+**Updated:** 2026-09-14 09:00 KST
 
-## Status: CURRICULUM COMPLETE + hygiene pass
+## Status: LIVE + product polish
 
 - Live: https://history-ebook.vercel.app
 - Repo: https://github.com/tone7718-droid/History-Ebook
 
-## Content counts (curriculum JSON = source of truth)
+## Content
 
 - Korean: 55 lessons
 - World: 70 lessons
-- Orphan duplicate paths removed (old slugs redirect to official URLs)
+- Official curriculum JSON is the source of truth
 
-## Next (optional)
+## Product notes
 
-- Spot-check quiz quality
-- Era-level reading time estimates
-- OG share image
+- Progress lives in this browser only; `/progress` can clear it
+- Quiz choices are shuffled so the stored answer letter is not always first
+- `npm run validate:content` runs in GitHub Actions

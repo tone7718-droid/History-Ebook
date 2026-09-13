@@ -4,7 +4,7 @@ import { fileURLToPath } from "url";
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const contentRoot = path.join(root, "content");
-const REQUIRED_H2 = ["학습목표", "배경", "핵심사건(연표)", "인물", "인과·영향", "헷갈리기 쉬운 포인트", "요약"];
+const REQUIRED_H2 = ["학습목표", "배경", "핵심사건(연표)", "인물", "인과·영향", "헬갈리기 쉬운 포인트", "요약"];
 
 function loadCurriculum(track) {
   return JSON.parse(fs.readFileSync(path.join(contentRoot, "curriculum", `${track}.json`), "utf8"));
@@ -47,6 +47,7 @@ function walkMdx(dir, acc = []) {
 }
 
 const errors = [];
+const warnings = [];
 const canon = new Set();
 
 for (const track of ["korean", "world"]) {
@@ -80,9 +81,31 @@ for (const track of ["korean", "world"]) {
           continue;
         }
         const quiz = JSON.parse(fs.readFileSync(quizPath, "utf8"));
-        for (const q of quiz.questions || []) {
-          const ids = (q.choices || []).map((c) => c.id);
+        const questions = quiz.questions || [];
+        if (questions.length < 3 || questions.length > 5) {
+          errors.push(`quiz count ${questions.length}: ${rel}`);
+        }
+        const answers = [];
+        for (const q of questions) {
+          const choices = q.choices || [];
+          const ids = choices.map((c) => c.id);
+          if (choices.length < 3 || choices.length > 5) {
+            errors.push(`choice count ${rel} ${q.id}`);
+          }
+          if (new Set(ids).size !== ids.length) {
+            errors.push(`duplicate choices ${rel} ${q.id}`);
+          }
           if (!ids.includes(q.answer)) errors.push(`bad answer ${rel} ${q.id}`);
+          if (!q.prompt || String(q.prompt).trim().length < 8) {
+            errors.push(`short prompt ${rel} ${q.id}`);
+          }
+          if (!q.explanation || String(q.explanation).trim().length < 8) {
+            errors.push(`short explanation ${rel} ${q.id}`);
+          }
+          answers.push(q.answer);
+        }
+        if (answers.length >= 3 && new Set(answers).size === 1) {
+          warnings.push(`all answers ${answers[0]}: ${rel}`);
         }
       }
     }
@@ -92,6 +115,11 @@ for (const track of ["korean", "world"]) {
 for (const abs of walkMdx(contentRoot)) {
   const rel = path.relative(contentRoot, abs).replace(/\\/g, "/");
   if (!canon.has(rel)) errors.push(`orphan MDX: ${rel}`);
+}
+
+if (warnings.length) {
+  console.warn(`warnings (${warnings.length}):`);
+  for (const w of warnings) console.warn(" -", w);
 }
 
 if (errors.length) {
