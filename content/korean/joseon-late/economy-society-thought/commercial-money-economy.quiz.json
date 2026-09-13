@@ -1,0 +1,66 @@
+{
+  "lessonId": "korean/joseon-late/economy-society-thought/commercial-money-economy",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "공물을 현물 대신 미·포 등으로 거두어 공인 납품 구조를 키운 제도는?",
+      "choices": [
+        { "id": "a", "text": "대동법" },
+        { "id": "b", "text": "과거제" },
+        { "id": "c", "text": "호포제" },
+        { "id": "d", "text": "척화비" }
+      ],
+      "answer": "a",
+      "explanation": "대동법은 공납 방식을 바꿔 상품·화폐 유통을 촉진했다."
+    },
+    {
+      "id": "q2",
+      "prompt": "조선 후기에 널리 유통되며 장시 거래를 활발하게 한 동전은?",
+      "choices": [
+        { "id": "a", "text": "상평통보" },
+        { "id": "b", "text": "원화" },
+        { "id": "c", "text": "엔화" },
+        { "id": "d", "text": "달러" }
+      ],
+      "answer": "a",
+      "explanation": "상평통보는 조선 후기 대표 동전으로 소액 거래에 쓰였다."
+    },
+    {
+      "id": "q3",
+      "prompt": "대동법 아래 관청에 물품을 사서 납품하며 자본을 모은 상인층은?",
+      "choices": [
+        { "id": "a", "text": "공인" },
+        { "id": "b", "text": "화백회의" },
+        { "id": "c", "text": "집현전 학자" },
+        { "id": "d", "text": "의금부" }
+      ],
+      "answer": "a",
+      "explanation": "공인은 관수 물품을 조달·납품하며 상품 경제의 한 축이 되었다."
+    },
+    {
+      "id": "q4",
+      "prompt": "특정 상품을 사들여 시세·유통을 좌우하려 한 독점적 상인을 가리키는 말은?",
+      "choices": [
+        { "id": "a", "text": "도고" },
+        { "id": "b", "text": "향리" },
+        { "id": "c", "text": "대원군" },
+        { "id": "d", "text": "대간" }
+      ],
+      "answer": "a",
+      "explanation": "도고는 매점·독점에 가까운 상인 활동으로 학습된다."
+    },
+    {
+      "id": "q5",
+      "prompt": "논농사 생산력을 높여 잉여·상품작물 여지를 키운 농법은?",
+      "choices": [
+        { "id": "a", "text": "모내기법(이앙법)" },
+        { "id": "b", "text": "수렵만으로 동일시" },
+        { "id": "c", "text": "척화 정책" },
+        { "id": "d", "text": "과거 시험" }
+      ],
+      "answer": "a",
+      "explanation": "모내기법(이앙법) 보급은 농업 생산력과 상품 경제의 기반이 되었다."
+    }
+  ]
+}

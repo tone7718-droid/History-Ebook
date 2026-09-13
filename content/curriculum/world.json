@@ -122,27 +122,27 @@
             },
             {
               "id": "six-dynasties",
-              "title": "위진남북조와 호한 사회",
+              "title": "위진남북조",
               "mdxPath": "world/east-asia/formation/six-dynasties.mdx",
-              "order": 5
+              "order": 3
             },
             {
               "id": "sui-tang",
-              "title": "수·당 제국과 율령",
+              "title": "수·당과 율령 체제",
               "mdxPath": "world/east-asia/formation/sui-tang.mdx",
-              "order": 6
+              "order": 4
             },
             {
               "id": "east-asian-cultural-sphere",
-              "title": "동아시아 문화권의 형성",
+              "title": "동아시아 문화권",
               "mdxPath": "world/east-asia/formation/east-asian-cultural-sphere.mdx",
-              "order": 7
+              "order": 5
             },
             {
               "id": "ancient-japan",
               "title": "일본 고대 국가의 형성",
               "mdxPath": "world/east-asia/formation/ancient-japan.mdx",
-              "order": 8
+              "order": 6
             }
           ]
         },
@@ -154,7 +154,7 @@
               "id": "song-society",
               "title": "송의 문치와 사대부 사회",
               "mdxPath": "world/east-asia/development/song-society.mdx",
-              "order": 1
+              "order": 0
             },
             {
               "id": "northern-peoples",
