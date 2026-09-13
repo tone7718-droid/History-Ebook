@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { readProgress } from "@/lib/progress";
 import type { LessonMeta } from "@/lib/types";
@@ -36,12 +37,12 @@ export function ProgressSummary({ lessons }: { lessons: LessonMeta[] }) {
       <div className="rounded-xl border border-dashed border-slate-300 p-8 text-center text-slate-600 dark:border-slate-700 dark:text-slate-400">
         <p>아직 읽은 차시가 없습니다.</p>
         <p className="mt-4 flex flex-wrap justify-center gap-3">
-          <a href="/korean" className="inline-flex min-h-11 items-center rounded-lg bg-slate-900 px-4 text-sm font-medium text-white dark:bg-slate-100 dark:text-slate-900">
+          <Link href="/korean" className="inline-flex min-h-11 items-center rounded-lg bg-slate-900 px-4 text-sm font-medium text-white dark:bg-slate-100 dark:text-slate-900">
             한국사부터
-          </a>
-          <a href="/world" className="inline-flex min-h-11 items-center rounded-lg border border-slate-300 px-4 text-sm font-medium dark:border-slate-600">
+          </Link>
+          <Link href="/world" className="inline-flex min-h-11 items-center rounded-lg border border-slate-300 px-4 text-sm font-medium dark:border-slate-600">
             세계사부터
-          </a>
+          </Link>
         </p>
       </div>
     );
