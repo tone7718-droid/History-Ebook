@@ -1,0 +1,66 @@
+{
+  "lessonId": "korean/modern-colonial/opening-nation-building/enlightenment-imogapshin",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "1882년 구식 군인·민중의 불만이 폭발하고 청군이 개입한 사건은?",
+      "choices": [
+        { "id": "a", "text": "임오군란" },
+        { "id": "b", "text": "갑신정변" },
+        { "id": "c", "text": "갑오개혁" },
+        { "id": "d", "text": "을미사변" }
+      ],
+      "answer": "a",
+      "explanation": "임오군란은 1882년 사건으로 청의 영향력 확대로 이어졌다."
+    },
+    {
+      "id": "q2",
+      "prompt": "1884년 김옥균 등 급진 개화파가 일으켰으나 3일 천하로 끝난 정변은?",
+      "choices": [
+        { "id": "a", "text": "갑신정변" },
+        { "id": "b", "text": "임오군란" },
+        { "id": "c", "text": "병인양요" },
+        { "id": "d", "text": "만주 사변" }
+      ],
+      "answer": "a",
+      "explanation": "갑신정변은 급진 개화파의 정변으로 청군 개입에 실패했다."
+    },
+    {
+      "id": "q3",
+      "prompt": "개항·서양 문물에 반대하며 성리학적 질서를 지키려 한 사상·운동은?",
+      "choices": [
+        { "id": "a", "text": "위정척사" },
+        { "id": "b", "text": "실학만으로 동일시" },
+        { "id": "c", "text": "동학만으로 동일시" },
+        { "id": "d", "text": "개화당만으로 동일시" }
+      ],
+      "answer": "a",
+      "explanation": "위정척사는 개화에 맞선 대표적 대응 노선이다."
+    },
+    {
+      "id": "q4",
+      "prompt": "갑신정변을 주도한 급진 개화파 인물로 알맞은 것은?",
+      "choices": [
+        { "id": "a", "text": "김옥균" },
+        { "id": "b", "text": "전봉준" },
+        { "id": "c", "text": "안중근" },
+        { "id": "d", "text": "이순신" }
+      ],
+      "answer": "a",
+      "explanation": "김옥균 등은 갑신정변의 중심 인물이다."
+    },
+    {
+      "id": "q5",
+      "prompt": "임오군란·갑신정변 이후 조선 내정에 군대를 들이밀며 경쟁한 두 나라는?",
+      "choices": [
+        { "id": "a", "text": "청과 일본" },
+        { "id": "b", "text": "영국과 포르투갈" },
+        { "id": "c", "text": "미국과 스페인만" },
+        { "id": "d", "text": "러시아와 오스만만" }
+      ],
+      "answer": "a",
+      "explanation": "청·일 세력 경쟁이 임오·갑신을 계기로 본격화되었다."
+    }
+  ]
+}

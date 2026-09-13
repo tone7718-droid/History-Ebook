@@ -1,0 +1,66 @@
+{
+  "lessonId": "korean/modern-colonial/opening-nation-building/korean-empire-salvation",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "1897년 고종이 황제로 즉위하며 선포한 국호는?",
+      "choices": [
+        { "id": "a", "text": "대한 제국" },
+        { "id": "b", "text": "고려" },
+        { "id": "c", "text": "조선인민공화국" },
+        { "id": "d", "text": "발해" }
+      ],
+      "answer": "a",
+      "explanation": "1897년 대한 제국이 선포되었다."
+    },
+    {
+      "id": "q2",
+      "prompt": "1905년 외교권을 박탈하고 통감부를 두게 한 조약은?",
+      "choices": [
+        { "id": "a", "text": "을사늑약" },
+        { "id": "b", "text": "강화도 조약" },
+        { "id": "c", "text": "조·미 수호 통상 조약" },
+        { "id": "d", "text": "텐진 조약만으로 동일시" }
+      ],
+      "answer": "a",
+      "explanation": "을사늑약은 외교권 박탈과 통감부 설치로 이어졌다."
+    },
+    {
+      "id": "q3",
+      "prompt": "만민공동회 등으로 민권·자주를 주장한 단체는?",
+      "choices": [
+        { "id": "a", "text": "독립협회" },
+        { "id": "b", "text": "조선총독부" },
+        { "id": "c", "text": "일진회만으로 동일시" },
+        { "id": "d", "text": "별기군" }
+      ],
+      "answer": "a",
+      "explanation": "독립협회는 민권·의회·자주 외교를 내세웠다."
+    },
+    {
+      "id": "q4",
+      "prompt": "1907년 군대해산 전후 확산된 무장 항쟁을 가리키는 말은?",
+      "choices": [
+        { "id": "a", "text": "정미의병" },
+        { "id": "b", "text": "임오군란" },
+        { "id": "c", "text": "갑신정변" },
+        { "id": "d", "text": "만주 사변" }
+      ],
+      "answer": "a",
+      "explanation": "정미의병은 군대해산 등을 계기로 확산된 의병 항쟁이다."
+    },
+    {
+      "id": "q5",
+      "prompt": "1909년 하얼빈에서 이토 히로부미를 저격한 인물은?",
+      "choices": [
+        { "id": "a", "text": "안중근" },
+        { "id": "b", "text": "전봉준" },
+        { "id": "c", "text": "김옥균" },
+        { "id": "d", "text": "정도전" }
+      ],
+      "answer": "a",
+      "explanation": "안중근의 의거는 국권 회복 의지를 상징한다."
+    }
+  ]
+}

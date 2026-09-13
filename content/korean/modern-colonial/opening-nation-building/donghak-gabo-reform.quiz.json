@@ -1,0 +1,66 @@
+{
+  "lessonId": "korean/modern-colonial/opening-nation-building/donghak-gabo-reform",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "1894년 고부 봉기를 계기로 확대된 농민 항쟁을 가리키는 말은?",
+      "choices": [
+        { "id": "a", "text": "동학 농민 운동" },
+        { "id": "b", "text": "임오군란" },
+        { "id": "c", "text": "갑신정변" },
+        { "id": "d", "text": "병자호란" }
+      ],
+      "answer": "a",
+      "explanation": "동학 농민 운동은 1894년 전개된 대규모 농민 항쟁이다."
+    },
+    {
+      "id": "q2",
+      "prompt": "동학 농민군의 중심 지도자로 알려진 인물은?",
+      "choices": [
+        { "id": "a", "text": "전봉준" },
+        { "id": "b", "text": "김옥균" },
+        { "id": "c", "text": "이완용" },
+        { "id": "d", "text": "흥선 대원군" }
+      ],
+      "answer": "a",
+      "explanation": "전봉준은 고부 봉기·농민군을 이끈 대표 인물이다."
+    },
+    {
+      "id": "q3",
+      "prompt": "갑오개혁의 내용으로 가장 알맞은 것은?",
+      "choices": [
+        { "id": "a", "text": "신분제 폐지 등 근대적 제도 개혁" },
+        { "id": "b", "text": "위화도 회군" },
+        { "id": "c", "text": "훈민정음 창제" },
+        { "id": "d", "text": "대동법 시행만으로 동일시" }
+      ],
+      "answer": "a",
+      "explanation": "갑오개혁은 신분제 폐지·행정·사법 정비 등 근대 법제를 추진했다."
+    },
+    {
+      "id": "q4",
+      "prompt": "동학 농민 운동 때 청·일이 출병하며 벌어진 전쟁은?",
+      "choices": [
+        { "id": "a", "text": "청일전쟁" },
+        { "id": "b", "text": "러일전쟁" },
+        { "id": "c", "text": "임진왜란" },
+        { "id": "d", "text": "6·25 전쟁" }
+      ],
+      "answer": "a",
+      "explanation": "청일전쟁은 1894~1895년 조선을 무대로 전개되었다."
+    },
+    {
+      "id": "q5",
+      "prompt": "을미개혁에서 특히 반발을 산 생활·의례 관련 조치로 자주 거론되는 것은?",
+      "choices": [
+        { "id": "a", "text": "단발령" },
+        { "id": "b", "text": "과거제 부활만으로 동일시" },
+        { "id": "c", "text": "척화비 건립" },
+        { "id": "d", "text": "서원 철폐만으로 동일시" }
+      ],
+      "answer": "a",
+      "explanation": "단발령 등은 을미 시기 상징적 개혁으로 큰 반감을 불렀다."
+    }
+  ]
+}
