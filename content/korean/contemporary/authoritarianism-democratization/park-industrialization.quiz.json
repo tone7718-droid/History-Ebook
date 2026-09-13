@@ -1,0 +1,66 @@
+{
+  "lessonId": "korean/contemporary/authoritarianism-democratization/park-industrialization",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "1961년 군부가 장면 내각을 무너뜨리고 권력을 잡은 사건은?",
+      "choices": [
+        { "id": "a", "text": "5·16 군사정변" },
+        { "id": "b", "text": "4·19 혁명" },
+        { "id": "c", "text": "6월 민주 항쟁" },
+        { "id": "d", "text": "3·1 운동" }
+      ],
+      "answer": "a",
+      "explanation": "5·16은 박정희 등 군부의 쿠데타이다."
+    },
+    {
+      "id": "q2",
+      "prompt": "국가 주도로 수출·산업화를 이끈 박정희 시대의 계획 경제 틀은?",
+      "choices": [
+        { "id": "a", "text": "5년 경제개발계획" },
+        { "id": "b", "text": "산미 증식 계획만으로 동일시" },
+        { "id": "c", "text": "대동법" },
+        { "id": "d", "text": "과전법" }
+      ],
+      "answer": "a",
+      "explanation": "5년 경제개발계획은 고도성장의 정책 틀이었다."
+    },
+    {
+      "id": "q3",
+      "prompt": "1972년 영구 집권에 가까운 체제를 만든 개헌·통치 체제는?",
+      "choices": [
+        { "id": "a", "text": "유신" },
+        { "id": "b", "text": "장면 내각" },
+        { "id": "c", "text": "제헌 국회만으로 동일시" },
+        { "id": "d", "text": "신간회" }
+      ],
+      "answer": "a",
+      "explanation": "유신 체제는 긴급조치 등과 함께 장기 독재를 제도화했다."
+    },
+    {
+      "id": "q4",
+      "prompt": "1979년 부산·마산에서 일어난 유신 반대 시위는?",
+      "choices": [
+        { "id": "a", "text": "부마항쟁" },
+        { "id": "b", "text": "6·10 만세" },
+        { "id": "c", "text": "갑신정변" },
+        { "id": "d", "text": "임오군란" }
+      ],
+      "answer": "a",
+      "explanation": "부마항쟁은 유신 말기 대규모 민중 항쟁이다."
+    },
+    {
+      "id": "q5",
+      "prompt": "1979년 박정희 시대를 갑작스럽게 끝낸 사건은?",
+      "choices": [
+        { "id": "a", "text": "10·26" },
+        { "id": "b", "text": "5·10 총선거" },
+        { "id": "c", "text": "인천 상륙" },
+        { "id": "d", "text": "정전 협정" }
+      ],
+      "answer": "a",
+      "explanation": "10·26으로 박정희가 피살되며 유신 체제가 붕괴 국면으로 들어갔다."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "lessonId": "korean/contemporary/authoritarianism-democratization/gwangju-june-uprising",
+  "version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "1979년 신군부가 군 실권을 장악한 사건은?",
+      "choices": [
+        { "id": "a", "text": "12·12" },
+        { "id": "b", "text": "4·19 혁명" },
+        { "id": "c", "text": "3·1 운동" },
+        { "id": "d", "text": "6·10 만세" }
+      ],
+      "answer": "a",
+      "explanation": "12·12는 전두환 등 신군부의 군사 권력 장악이다."
+    },
+    {
+      "id": "q2",
+      "prompt": "1980년 광주에서 계엄군에 맞서 일어난 민주화 운동은?",
+      "choices": [
+        { "id": "a", "text": "5·18 민주화 운동" },
+        { "id": "b", "text": "부마항쟁만으로 동일시" },
+        { "id": "c", "text": "갑신정변" },
+        { "id": "d", "text": "임오군란" }
+      ],
+      "answer": "a",
+      "explanation": "5·18은 광주 시민·학생의 민주화 항쟁이다."
+    },
+    {
+      "id": "q3",
+      "prompt": "전두환 정부가 ‘사회 정화’를 내세워 강제 수용·폭력을 자행한 기구·조치는?",
+      "choices": [
+        { "id": "a", "text": "삼청교육대" },
+        { "id": "b", "text": "민립대학 설립 운동" },
+        { "id": "c", "text": "물산장려" },
+        { "id": "d", "text": "근우회" }
+      ],
+      "answer": "a",
+      "explanation": "삼청교육대는 인권 침해가 심각했던 강제 수용 조치이다."
+    },
+    {
+      "id": "q4",
+      "prompt": "1987년 전국에서 직선제 개헌을 요구하며 일어난 항쟁은?",
+      "choices": [
+        { "id": "a", "text": "6월 민주 항쟁" },
+        { "id": "b", "text": "5·16 군사정변" },
+        { "id": "c", "text": "산미 증식 계획" },
+        { "id": "d", "text": "창씨개명" }
+      ],
+      "answer": "a",
+      "explanation": "6월 민주 항쟁은 대통령 직선제 쟁취의 결정적 계기이다."
+    },
+    {
+      "id": "q5",
+      "prompt": "6월 항쟁의 압력으로 여당이 직선제 등을 수용한다고 발표한 것은?",
+      "choices": [
+        { "id": "a", "text": "6·29 선언" },
+        { "id": "b", "text": "정전 협정" },
+        { "id": "c", "text": "한일협정" },
+        { "id": "d", "text": "모스크바 3국 외상 회의" }
+      ],
+      "answer": "a",
+      "explanation": "6·29 선언으로 대통령 직선제 회복의 길이 열렸다."
+    }
+  ]
+}
