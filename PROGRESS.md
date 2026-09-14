@@ -1,14 +1,12 @@
 # History Ebook Progress
 
-**Updated:** 2026-09-14 23:01 KST
+**Updated:** 2026-09-14 23:20 KST
 
-## Status: H2 unicode patch applied on last batch (main)
+## Status: typo sweep on main (H2 + body + quiz)
 
 - Live: https://history-ebook.vercel.app
 - Official curriculum still 125 lessons; no lesson deleted
-- Latest: H2 `헷갈리기 쉬운 포인트` restored on
-  - silhak / commercial-money-economy / social-status-change
-  - detente-end-of-cold-war / third-world-nonalignment
-  - globalization-multipolarity / global-issues
-- Also fixed same-batch typos: 반둥, 흠흠신서, 레이건, 산천
-- Head is `f2a721b` after the patch commits
+- Latest: remaining 오탈자 sweep
+  - H2 `헧갈리기` → `헷갈리기` (8 lessons; validate:content now passes)
+  - 펭창/텘진/엕게스/썼원/벵골/보이콧/햇벽/위정척사/쇠국/베르뚴/훛날 등 본문·퀴즈 표기 교정
+- Head will move after this commit
