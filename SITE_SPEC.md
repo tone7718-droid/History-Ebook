@@ -43,7 +43,11 @@
 | `/korean/[era]/[unit]/[lesson]` | 한국사 차시 |
 | `/world/[era]/[unit]/[lesson]` | 세계사 차시 |
 | `/search?q=` | 검색 |
+| `/review` | 오답 노트 |
+| `/glossary` | 용어 사전 |
 | `/progress` | 진도 요약·기록 삭제 |
+| `/korean/[era]/[unit]` | 한국사 단원 복습 퀴즈 |
+| `/world/[era]/[unit]` | 세계사 단원 복습 퀴즈 |
 
 올드 슬러그는 `next.config.ts`에서 공식 경로로 301 리다이렉트한다.
 
@@ -102,7 +106,10 @@ type ProgressStore = {
 - 차시당 3–5문항 MCQ, sibling `*.quiz.json`
 - 제출 후 점수·해설, 오답만 다시 풀기
 - 화면에서 선택지 순서를 섞어 보여, JSON의 정답 문자가 항상 처 번째가 되지 않게 한다
-- 한국사 퀴즈 `version` 2: 정답 위치 회전, 오답은 같은 시대·인접 개념
+- 한국사·세계사 퀴즈 `version` 2: 정답 위치 회전, 오답은 같은 시대·인접 개념
+- 틀린 문항은 `localStorage` 오답 노트(`/review`)에 모인다
+- 단원 페이지에서 해당 단원 차시 문항을 모아 복습한다
+- 차시 본문 아래 핵심 용어 상자, 전체 목록은 `/glossary`
 
 ## 8. 품질 검사
 

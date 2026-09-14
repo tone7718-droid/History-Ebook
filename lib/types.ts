@@ -68,10 +68,26 @@ export interface LessonProgress {
   lastQuizAt?: string;
 }
 
+export interface QuizMistake {
+  id: string;
+  lessonKey: string;
+  questionId: string;
+  prompt: string;
+  choices: QuizChoice[];
+  answer: string;
+  chosen: string;
+  chosenText: string;
+  answerText: string;
+  explanation?: string;
+  href: string;
+  at: string;
+}
+
 export interface ProgressStore {
   version: 1;
   lessons: Record<string, LessonProgress>;
   lastVisited?: string;
+  mistakes?: QuizMistake[];
 }
 
 export interface LessonMeta {

@@ -55,6 +55,7 @@ export default async function WorldLessonPage({
       lessonKey={data.lessonKey}
       adjacent={adjacent}
       related={getRelatedLessons(data.lessonKey)}
+      keywords={data.frontmatter.keywords}
       trackHref="/world"
     />
   );
