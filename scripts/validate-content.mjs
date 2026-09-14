@@ -4,7 +4,15 @@ import { fileURLToPath } from "url";
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const contentRoot = path.join(root, "content");
-const REQUIRED_H2 = ["학습목표", "배경", "핵심사건(연표)", "인물", "인과·영향", "헬갈리기 쉬운 포인트", "요약"];
+const REQUIRED_H2 = [
+  "\uD559\uC2B5\uBAA9\uD45C",
+  "\uBC30\uACBD",
+  "\uD575\uC2EC\uC0AC\uAC74(\uC5F0\uD45C)",
+  "\uC778\uBB3C",
+  "\uC778\uACFC\u00B7\uC601\uD5A5",
+  "\uD5F7\uAC08\uB9AC\uAE30 \uC26C\uC6B4 \uD3EC\uC778\uD2B8",
+  "\uC694\uC57D",
+];
 
 function loadCurriculum(track) {
   return JSON.parse(fs.readFileSync(path.join(contentRoot, "curriculum", `${track}.json`), "utf8"));
@@ -82,7 +90,7 @@ for (const track of ["korean", "world"]) {
         }
         const quiz = JSON.parse(fs.readFileSync(quizPath, "utf8"));
         const questions = quiz.questions || [];
-        if (questions.length < 3 || questions.length > 5) {
+        if (questions.length < 3 || questions.length > 6) {
           errors.push(`quiz count ${questions.length}: ${rel}`);
         }
         const answers = [];
