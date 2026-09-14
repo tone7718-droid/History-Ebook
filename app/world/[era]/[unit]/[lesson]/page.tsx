@@ -7,6 +7,7 @@ import {
   getCurriculum,
   getLesson,
 } from "@/lib/content";
+import { getRelatedLessons } from "@/lib/related";
 
 type Params = { era: string; unit: string; lesson: string };
 
@@ -53,6 +54,7 @@ export default async function WorldLessonPage({
       quiz={data.quiz}
       lessonKey={data.lessonKey}
       adjacent={adjacent}
+      related={getRelatedLessons(data.lessonKey)}
       trackHref="/world"
     />
   );
