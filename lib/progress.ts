@@ -75,6 +75,78 @@ export function recordQuizScore(lessonKey: string, score: number) {
   return store;
 }
 
+export function recordQuizAttempt(
+  lessonKey: string,
+  score: number,
+  results: Array<{
+    questionId: string;
+    prompt: string;
+    choices: { id: string; text: string }[];
+    answer: string;
+    chosen: string;
+    explanation?: string;
+    href: string;
+  }>
+) {
+  const store = recordQuizScore(lessonKey, score);
+  const now = new Date().toISOString();
+  const mistakes = store.mistakes ?? [];
+  const remaining = mistakes.filter((m) => {
+    const hit = results.find(
+      (r) =>
+        r.questionId === m.id ||
+        (lessonKey === m.lessonKey && r.questionId === m.questionId)
+    );
+    if (!hit) return true;
+    return hit.chosen !== hit.answer;
+  });
+  store.mistakes = remaining.slice(0, 80);
+  if (lessonKey.startsWith("review/")) {
+    writeProgress(store);
+    return store;
+  }
+  for (const r of results) {
+    if (r.chosen === r.answer) continue;
+    const id = `${lessonKey}::${r.questionId}`;
+    const chosenText = r.choices.find((c) => c.id === r.chosen)?.text ?? r.chosen;
+    const answerText = r.choices.find((c) => c.id === r.answer)?.text ?? r.answer;
+    const next = {
+      id,
+      lessonKey,
+      questionId: r.questionId,
+      prompt: r.prompt,
+      choices: r.choices,
+      answer: r.answer,
+      chosen: r.chosen,
+      chosenText,
+      answerText,
+      explanation: r.explanation,
+      href: r.href,
+      at: now,
+    };
+    const idx = remaining.findIndex((m) => m.id === id);
+    if (idx >= 0) remaining[idx] = next;
+    else remaining.unshift(next);
+  }
+  store.mistakes = remaining.slice(0, 80);
+  writeProgress(store);
+  return store;
+}
+
+export function clearMistakes() {
+  const store = readProgress();
+  store.mistakes = [];
+  writeProgress(store);
+  return store;
+}
+
+export function removeMistake(id: string) {
+  const store = readProgress();
+  store.mistakes = (store.mistakes ?? []).filter((m) => m.id !== id);
+  writeProgress(store);
+  return store;
+}
+
 export function useProgressStore() {
   return { readProgress, writeProgress, clearProgress, PROGRESS_KEY };
 }

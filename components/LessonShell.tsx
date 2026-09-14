@@ -9,6 +9,8 @@ import { MarkReadButton } from "./MarkReadButton";
 import { MdxContent } from "./MdxContent";
 import { QuizPanel } from "./QuizPanel";
 import { RelatedLessons } from "./RelatedLessons";
+import { GlossaryBoxes } from "./GlossaryBoxes";
+import { getGlossaryForKeywords } from "@/lib/glossary";
 import type { RelatedLessonLink } from "@/lib/related";
 
 export function LessonShell({
@@ -25,6 +27,7 @@ export function LessonShell({
   adjacent,
   trackHref,
   related,
+  keywords,
 }: {
   curriculum: CurriculumFile;
   current: { era: string; unit: string; lesson: string };
@@ -39,6 +42,7 @@ export function LessonShell({
   adjacent: AdjacentLesson;
   trackHref: string;
   related?: RelatedLessonLink[];
+  keywords?: string[];
 }) {
   const images = getLessonImages(lessonKey);
 
@@ -70,8 +74,11 @@ export function LessonShell({
         <div className="prose prose-base prose-neutral max-w-none prose-headings:scroll-mt-28 prose-p:leading-relaxed dark:prose-invert sm:prose-lg">
           <MdxContent source={content} images={images} />
         </div>
+        <GlossaryBoxes terms={getGlossaryForKeywords(keywords ?? [])} />
         <RelatedLessons items={related ?? []} />
-        {quiz && <QuizPanel quiz={quiz} lessonKey={lessonKey} />}
+        {quiz && (
+          <QuizPanel quiz={quiz} lessonKey={lessonKey} href={`/${lessonKey}`} />
+        )}
         <nav
           className="mt-10 flex flex-col gap-3 border-t border-slate-200 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-4 dark:border-slate-800"
           aria-label="이전 다음 차시"
