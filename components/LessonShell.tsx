@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { CurriculumFile, Quiz } from "@/lib/types";
 import type { AdjacentLesson } from "@/lib/types";
+import { getLessonImages } from "@/lib/lesson-images";
 import { Breadcrumb } from "./Breadcrumb";
 import { CurriculumNav } from "./CurriculumNav";
 import { LessonToc } from "./LessonToc";
@@ -39,6 +40,8 @@ export function LessonShell({
   trackHref: string;
   related?: RelatedLessonLink[];
 }) {
+  const images = getLessonImages(lessonKey);
+
   return (
     <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-6 sm:gap-6 sm:py-8 lg:flex-row lg:gap-8">
       <CurriculumNav curriculum={curriculum} current={current} />
@@ -65,7 +68,7 @@ export function LessonShell({
         </header>
         <LessonToc />
         <div className="prose prose-base prose-neutral max-w-none prose-headings:scroll-mt-28 prose-p:leading-relaxed dark:prose-invert sm:prose-lg">
-          <MdxContent source={content} />
+          <MdxContent source={content} images={images} />
         </div>
         <RelatedLessons items={related ?? []} />
         {quiz && <QuizPanel quiz={quiz} lessonKey={lessonKey} />}
