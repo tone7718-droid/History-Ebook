@@ -1,41 +1,41 @@
 {
   "lessonId": "korean/joseon-late/politics-change/heungseon-reform",
-  "version": 1,
+  "version": 2,
   "questions": [
     {
       "id": "q1",
       "prompt": "어린 고종 즉위 후 실권을 쥐고 개혁을 추진한 인물은?",
       "choices": [
-        { "id": "a", "text": "흥선 대원군(섭정)" },
-        { "id": "b", "text": "정도전" },
+        { "id": "a", "text": "정도전" },
+        { "id": "b", "text": "흥선 대원군(섭정)" },
         { "id": "c", "text": "이순신" },
         { "id": "d", "text": "을지문덕" }
       ],
-      "answer": "a",
+      "answer": "b",
       "explanation": "흥선 대원군은 고종의 아버지로 섭정을 맡아 왕권 강화와 개혁을 주도했다."
     },
     {
       "id": "q2",
       "prompt": "면세·특권의 온상이 된 서원을 대폭 정리한 정책은?",
       "choices": [
-        { "id": "a", "text": "서원 철폐" },
-        { "id": "b", "text": "과거제 폐지" },
-        { "id": "c", "text": "과전법" },
+        { "id": "a", "text": "과거제 폐지" },
+        { "id": "b", "text": "과전법" },
+        { "id": "c", "text": "서원 철폐" },
         { "id": "d", "text": "경국대전 제정" }
       ],
-      "answer": "a",
+      "answer": "c",
       "explanation": "대원군은 서원 철폐로 사림·지방 유력층의 특권을 줄이려 했다."
     },
     {
       "id": "q3",
       "prompt": "양반에게도 군포를 부과해 군역 부담을 고르게 하려 한 제도는?",
       "choices": [
-        { "id": "a", "text": "호포제" },
-        { "id": "b", "text": "대동법" },
-        { "id": "c", "text": "과전법" },
-        { "id": "d", "text": "직전법" }
+        { "id": "a", "text": "대동법" },
+        { "id": "b", "text": "과전법" },
+        { "id": "c", "text": "직전법" },
+        { "id": "d", "text": "호포제" }
       ],
-      "answer": "a",
+      "answer": "d",
       "explanation": "호포제는 호 단위로 군포를 거두어 양반도 부담하게 한 정책이다."
     },
     {
@@ -48,18 +48,18 @@
         { "id": "d", "text": "임진왜란" }
       ],
       "answer": "a",
-      "explanation": "병인양요는 프랑스와의 충돌이고, 신미양요(1871)는 미국과의 충돌이다."
+      "explanation": "병인양요는 프랑스와의 충돌이고, 신미양요(1871)는 미국와의 충돌이다."
     },
     {
       "id": "q5",
       "prompt": "통상·수교 거부를 알리기 위해 세운 비석은?",
       "choices": [
-        { "id": "a", "text": "척화비" },
-        { "id": "b", "text": "광개토대왕비" },
+        { "id": "a", "text": "광개토대왕비" },
+        { "id": "b", "text": "척화비" },
         { "id": "c", "text": "독립문" },
         { "id": "d", "text": "첨성대" }
       ],
-      "answer": "a",
+      "answer": "b",
       "explanation": "척화비는 서양과의 화친·통상을 거부한다는 대원군 정책의 상징이다."
     }
   ]

@@ -1,41 +1,41 @@
 {
   "lessonId": "korean/modern-colonial/colonial-rule-resistance/1910s-military-rule",
-  "version": 1,
+  "version": 2,
   "questions": [
     {
       "id": "q1",
       "prompt": "1910년대 헌병 경찰 중심의 강압 통치를 가리키는 말은?",
       "choices": [
-        { "id": "a", "text": "무단 통치" },
-        { "id": "b", "text": "문화 통치만으로 동일시" },
+        { "id": "a", "text": "문화 통치" },
+        { "id": "b", "text": "무단 통치" },
         { "id": "c", "text": "광무개혁" },
-        { "id": "d", "text": "탕평책" }
+        { "id": "d", "text": "을사늑약" }
       ],
-      "answer": "a",
+      "answer": "b",
       "explanation": "무단 통치는 1910년대 헌병 경찰형 강압 통치를 뜻한다."
     },
     {
       "id": "q2",
       "prompt": "1910~1918년경 소유권 신고·측량으로 토지를 정리한 사업은?",
       "choices": [
-        { "id": "a", "text": "토지 조사 사업" },
-        { "id": "b", "text": "대동법" },
-        { "id": "c", "text": "호포제" },
+        { "id": "a", "text": "산미 증식 계획" },
+        { "id": "b", "text": "동양첩식주식회사" },
+        { "id": "c", "text": "토지 조사 사업" },
         { "id": "d", "text": "과거제" }
       ],
-      "answer": "a",
+      "answer": "c",
       "explanation": "토지 조사 사업은 식민지 토지·재정 재편의 핵심이었다."
     },
     {
       "id": "q3",
       "prompt": "회사 설립에 총독 허가를 요구해 한국인 기업을 억제한 법령은?",
       "choices": [
-        { "id": "a", "text": "회사령" },
-        { "id": "b", "text": "경국대전" },
-        { "id": "c", "text": "홍덕왕 교서" },
-        { "id": "d", "text": "대명률만으로 동일시" }
+        { "id": "a", "text": "조선태형령" },
+        { "id": "b", "text": "홍범 14조" },
+        { "id": "c", "text": "광무개혁" },
+        { "id": "d", "text": "회사령" }
       ],
-      "answer": "a",
+      "answer": "d",
       "explanation": "회사령은 허가제로 한국인 자본 성장을 제약했다."
     },
     {
@@ -43,8 +43,8 @@
       "prompt": "1910년 이후 식민지 최고 통치 기구는?",
       "choices": [
         { "id": "a", "text": "조선총독부" },
-        { "id": "b", "text": "의정부만으로 동일시" },
-        { "id": "c", "text": "중추원(고려)" },
+        { "id": "b", "text": "통감부" },
+        { "id": "c", "text": "의정부" },
         { "id": "d", "text": "도병마사" }
       ],
       "answer": "a",
@@ -54,12 +54,12 @@
       "id": "q5",
       "prompt": "무단 통치 시기 일상 감시·탄압의 상징으로 자주 거론되는 제도는?",
       "choices": [
-        { "id": "a", "text": "헌병 경찰" },
-        { "id": "b", "text": "집강소" },
-        { "id": "c", "text": "향약만으로 동일시" },
+        { "id": "a", "text": "집강소" },
+        { "id": "b", "text": "헌병 경찰" },
+        { "id": "c", "text": "향약" },
         { "id": "d", "text": "서원" }
       ],
-      "answer": "a",
+      "answer": "b",
       "explanation": "헌병 경찰은 무단 통치의 대표적 억압 장치였다."
     }
   ]
