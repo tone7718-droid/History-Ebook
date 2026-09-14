@@ -18,9 +18,17 @@ let cached: GlossaryTerm[] | null = null;
 export function getGlossaryTerms(): GlossaryTerm[] {
   if (cached) return cached;
   const filePath = path.join(process.cwd(), "content", "glossary.json");
-  const raw = fs.readFileSync(filePath, "utf8");
-  const data = JSON.parse(raw) as GlossaryFile;
-  cached = data.terms ?? [];
+  try {
+    if (!fs.existsSync(filePath)) {
+      cached = [];
+      return cached;
+    }
+    const raw = fs.readFileSync(filePath, "utf8");
+    const data = JSON.parse(raw) as GlossaryFile;
+    cached = data.terms ?? [];
+  } catch {
+    cached = [];
+  }
   return cached;
 }
 
