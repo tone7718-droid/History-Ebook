@@ -1,13 +1,14 @@
 # History Ebook Progress
 
-**Updated:** 2026-09-14 22:20 KST
+**Updated:** 2026-09-14 23:01 KST
 
-## Status: late-Joseon economy-society + cold-war/globalization polish on main
+## Status: H2 unicode patch applied on last batch (main)
 
 - Live: https://history-ebook.vercel.app
 - Official curriculum still 125 lessons; no lesson deleted
-- This pass (direct to main):
-  - Late-Joseon quiz v2 + body deepen: silhak, commercial-money-economy, social-status-change
-  - Cold-war deepen: detente-end-of-cold-war, third-world-nonalignment (Bandung spelling fix)
-  - 21c polish: globalization-multipolarity, global-issues
-- Official curriculum still 125 lessons
+- Latest: H2 `헷갈리기 쉬운 포인트` restored on
+  - silhak / commercial-money-economy / social-status-change
+  - detente-end-of-cold-war / third-world-nonalignment
+  - globalization-multipolarity / global-issues
+- Also fixed same-batch typos: 반둥, 흠흠신서, 레이건, 산천
+- Head is `f2a721b` after the patch commits
