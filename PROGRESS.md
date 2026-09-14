@@ -1,12 +1,12 @@
 # History Ebook Progress
 
-**Updated:** 2026-09-14 23:20 KST
+**Updated:** 2026-09-14 23:45 KST
 
 ## Status: typo sweep on main (H2 + body + quiz)
 
 - Live: https://history-ebook.vercel.app
 - Official curriculum still 125 lessons; no lesson deleted
-- Latest: remaining 오탈자 sweep
-  - H2 `헧갈리기` → `헷갈리기` (8 lessons; validate:content now passes)
-  - 펭창/텘진/엕게스/썼원/벵골/보이콧/햇벽/위정척사/쇠국/베르뚴/훛날 등 본문·퀴즈 표기 교정
-- Head will move after this commit
+- Latest: remaining typo sweep on main
+  - H2 heading restored to the standard form on the 8 lessons that had a broken first syllable
+  - Body/quiz spelling fixes: Engels, Tianjin, Sun Yat-sen, Bengal, boycott, sunshine policy, Wijeong cheoksa, sakoku, Verdun, expansion, later years, etc.
+- Remaining follow-up possible in WWI / interwar / Depression pages (Verdun spelling, Mao/Sun names, Jewish spelling)
