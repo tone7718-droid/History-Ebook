@@ -7,6 +7,7 @@ import type {
   LessonFrontmatter,
   LessonMeta,
   Quiz,
+  QuizQuestion,
   SearchDocument,
   TrackId,
 } from "./types";
@@ -49,12 +50,48 @@ function assertFrontmatter(
   }
 }
 
+const ANSWER_CYCLE = ["b", "c", "d", "a"] as const;
+
+export function mixQuizAnswers(quiz: Quiz): Quiz {
+  const questions = quiz.questions ?? [];
+  const letters = questions.map((q) => q.answer);
+  if (questions.length < 2 || new Set(letters).size > 1) {
+    return quiz;
+  }
+  return {
+    ...quiz,
+    questions: questions.map((q, index) => rotateQuestionAnswer(q, index)),
+  };
+}
+
+function rotateQuestionAnswer(question: QuizQuestion, index: number): QuizQuestion {
+  const choices = question.choices ?? [];
+  const correct = choices.find((choice) => choice.id === question.answer);
+  if (!correct || choices.length < 2) {
+    return question;
+  }
+  const others = choices.filter((choice) => choice.id !== question.answer);
+  const ids = choices.map((_, i) => ["a", "b", "c", "d", "e"][i]);
+  const wanted = ANSWER_CYCLE[index % ANSWER_CYCLE.length];
+  const target = ids.includes(wanted) ? wanted : ids[index % ids.length];
+  let nextOther = 0;
+  const rebuilt = ids.map((id) => {
+    if (id === target) {
+      return { id, text: correct.text };
+    }
+    const text = others[nextOther]?.text ?? "";
+    nextOther += 1;
+    return { id, text };
+  });
+  return { ...question, choices: rebuilt, answer: target };
+}
+
 function loadQuiz(mdxAbsPath: string, fm: LessonFrontmatter): Quiz | null {
   const quizPath = mdxAbsPath.replace(/\.mdx$/, ".quiz.json");
   if (fs.existsSync(quizPath)) {
-    return readJson<Quiz>(quizPath);
+    return mixQuizAnswers(readJson<Quiz>(quizPath));
   }
-  return fm.quiz ?? null;
+  return fm.quiz ? mixQuizAnswers(fm.quiz) : null;
 }
 
 export function getAllLessonParams(track: TrackId) {
