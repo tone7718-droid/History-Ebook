@@ -24,6 +24,14 @@ export function lessonHref(
   return `/${track}/${era}/${unit}/${lesson}`;
 }
 
+export function unitHref(track: TrackId, era: string, unit: string) {
+  return `/${track}/${era}/${unit}`;
+}
+
+export function unitReviewKey(track: TrackId, era: string, unit: string) {
+  return `${track}/${era}/${unit}/__unit__`;
+}
+
 export const TOC_HEADINGS = [
   "학습목표",
   "배경",
@@ -38,7 +46,7 @@ export function headingToId(text: string) {
   return text
     .trim()
     .toLowerCase()
-    .replace(/[·\s()（）]/g, "-")
+    .replace(/[·\s()(（）]/g, "-")
     .replace(/-+/g, "-")
     .replace(/^-|-$/g, "");
 }
