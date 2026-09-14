@@ -1,20 +1,12 @@
 # History Ebook Progress
 
-**Updated:** 2026-09-14 09:00 KST
+**Updated:** 2026-09-14 15:40 KST
 
-## Status: LIVE + product polish
+## Status: imperialism–contemporary deepening (in progress on PR #4)
 
 - Live: https://history-ebook.vercel.app
-- Repo: https://github.com/tone7718-droid/History-Ebook
-
-## Content
-
-- Korean: 55 lessons
-- World: 70 lessons
-- Official curriculum JSON is the source of truth
-
-## Product notes
-
-- Progress lives in this browser only; `/progress` can clear it
-- Quiz choices are shuffled so the stored answer letter is not always first
-- `npm run validate:content` runs in GitHub Actions
+- Official curriculum still 125 lessons; no lesson deleted
+- Pushed on this branch: WWI, WWII, China national movement, Russian Revolution body text
+- WWI/WWII quizzes already version 2 (same-era distractors, mixed answers)
+- Restored required H2 헷갈리기 쉬운 포인트 on WWI/WWII
+- Still queued on the same branch: partition, Meiji, India, West Asia/Africa/SE Asia, interwar Asia, Depression/totalitarianism, Cold War 4, 21st-century 2 + their quizzes
