@@ -1,10 +1,15 @@
 # History Ebook Progress
 
-**Updated:** 2026-09-14 21:10 KST
+**Updated:** 2026-09-14 21:40 KST
 
-## Status: imperialism–contemporary deepening in progress (PR #6)
+## Status: imperialism–contemporary deepening complete (PR #6)
 
 - Live: https://history-ebook.vercel.app
 - Official curriculum still 125 lessons; no lesson deleted
-- Done on this branch: partition, China, Meiji, India, West Asia/Africa/SE Asia, Russian Revolution + matching quiz v2
-- Still queued: interwar Asia, Depression/totalitarianism, Cold War 4, 21st-century 2 + quizzes
+- Expanded body + quiz v2:
+  - imperialism-nationalism: partition, China, Meiji, India, West Asia/Africa/SE Asia
+  - world-wars: Russian Revolution, interwar Asia, Depression/totalitarianism
+  - cold-war: formation, conflicts, nonalignment, detente
+  - twenty-first-century: globalization/multipolarity, global issues
+- Quiz v2: same-era distractors, mixed a/b/c/d, 5 items
+- Formulaic openers removed from touched lessons
