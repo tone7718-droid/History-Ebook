@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { Quiz } from "@/lib/types";
-import { recordQuizScore } from "@/lib/progress";
+import { recordQuizAttempt } from "@/lib/progress";
 import { cn } from "@/lib/utils";
 
 function hashSeed(input: string) {
@@ -30,9 +30,13 @@ function shuffle<T>(items: T[], seed: number) {
 export function QuizPanel({
   quiz,
   lessonKey,
+  href,
+  title,
 }: {
   quiz: Quiz;
   lessonKey: string;
+  href?: string;
+  title?: string;
 }) {
   const questions = quiz.questions;
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -55,7 +59,19 @@ export function QuizPanel({
     setRetryWrongOnly(false);
     const correct = questions.filter((q) => answers[q.id] === q.answer).length;
     const s = Math.round((correct / questions.length) * 100);
-    recordQuizScore(lessonKey, s);
+    recordQuizAttempt(
+      lessonKey,
+      s,
+      questions.map((q) => ({
+        questionId: q.id,
+        prompt: q.prompt,
+        choices: q.choices,
+        answer: q.answer,
+        chosen: answers[q.id],
+        explanation: q.explanation,
+        href: href ?? `/${lessonKey}`,
+      }))
+    );
   };
 
   const reset = (wrongOnly: boolean) => {
@@ -79,10 +95,10 @@ export function QuizPanel({
       aria-labelledby="quiz-heading"
     >
       <h2 id="quiz-heading" className="mb-1 text-xl font-bold text-slate-900 dark:text-slate-50">
-        퀴즈
+        {title ?? "퀴즈"}
       </h2>
       <p className="mb-6 text-sm text-slate-600 dark:text-slate-400">
-        객관식 {questions.length}문항 · 제출 후 정답과 해설을 확인합니다.
+        객관식 {questions.length}문항 · 제출 후 정답과 해설을 확인합니다. 틀린 문항은 오답 노트에 남습니다.
       </p>
 
       <div className="space-y-6">
