@@ -14,6 +14,16 @@ export function filePage(file: string): string {
   return `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(file.replace(/ /g, "_"))}`;
 }
 
+export function filenameFromSrc(src: string): string | null {
+  try {
+    const clean = src.split("?")[0];
+    const name = decodeURIComponent(clean.split("/").pop() || "");
+    return name || null;
+  } catch {
+    return null;
+  }
+}
+
 export function c(file: string, caption: string, after?: string): LessonImage {
   return {
     src: commons(file),
@@ -25,9 +35,18 @@ export function c(file: string, caption: string, after?: string): LessonImage {
 }
 
 export function u(src: string, caption: string, after?: string): LessonImage {
-  const clean = src.split("?")[0];
+  const file = filenameFromSrc(src);
+  if (file) {
+    return {
+      src: commons(file, 960),
+      caption,
+      credit: "위키미디어 공용",
+      href: filePage(file),
+      after,
+    };
+  }
   return {
-    src: clean,
+    src: src.split("?")[0],
     caption,
     credit: "위키미디어 공용",
     after,
