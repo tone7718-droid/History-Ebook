@@ -6,6 +6,7 @@ import { Breadcrumb } from "./Breadcrumb";
 import { CurriculumNav } from "./CurriculumNav";
 import { LessonToc } from "./LessonToc";
 import { MarkReadButton } from "./MarkReadButton";
+import { PrintLessonButton } from "./PrintLessonButton";
 import { MdxContent } from "./MdxContent";
 import { QuizPanel } from "./QuizPanel";
 import { RelatedLessons } from "./RelatedLessons";
@@ -66,8 +67,9 @@ export function LessonShell({
           {description && (
             <p className="mt-2 text-slate-600 dark:text-slate-400">{description}</p>
           )}
-          <div className="mt-4">
+          <div className="mt-4 flex flex-wrap gap-2">
             <MarkReadButton lessonKey={lessonKey} />
+            <PrintLessonButton />
           </div>
         </header>
         <LessonToc />
