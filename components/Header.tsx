@@ -11,8 +11,11 @@ const nav = [
   { href: "/", label: "홈", match: (p: string) => p === "/" },
   { href: "/korean", label: "한국사", match: (p: string) => p.startsWith("/korean") },
   { href: "/world", label: "세계사", match: (p: string) => p.startsWith("/world") },
+  { href: "/timeline", label: "연표", match: (p: string) => p.startsWith("/timeline") },
+  { href: "/review", label: "오답", match: (p: string) => p.startsWith("/review") },
+  { href: "/glossary", label: "용어", match: (p: string) => p.startsWith("/glossary") },
   { href: "/search", label: "검색", match: (p: string) => p.startsWith("/search") },
-  { href: "/progress", label: "내 진도", match: (p: string) => p.startsWith("/progress") },
+  { href: "/progress", label: "진도", match: (p: string) => p.startsWith("/progress") },
 ];
 
 export function Header() {
@@ -50,7 +53,7 @@ export function Header() {
           역사 e-book
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label="주요">
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="주요">
           {nav.map((item) => {
             const active = item.match(pathname);
             return (
@@ -59,7 +62,7 @@ export function Header() {
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={cn(
-                  "inline-flex min-h-11 items-center rounded-lg px-3 py-2 text-sm font-medium",
+                  "inline-flex min-h-11 items-center rounded-lg px-2.5 py-2 text-sm font-medium",
                   active
                     ? "bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900"
                     : "text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800"
@@ -73,7 +76,7 @@ export function Header() {
 
         <Link
           href="/search"
-          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800 md:hidden"
+          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800 lg:hidden"
           aria-label="검색"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5" aria-hidden="true">
@@ -82,7 +85,7 @@ export function Header() {
           </svg>
         </Link>
 
-        <div className="hidden w-56 md:block lg:w-72">
+        <div className="hidden w-44 lg:block xl:w-64">
           <SearchBox compact />
         </div>
 
@@ -90,7 +93,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-100 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800 md:hidden"
+          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-100 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800 lg:hidden"
           aria-label={open ? "메뉴 닫기" : "메뉴 열기"}
           aria-expanded={open}
           aria-controls="mobile-nav"
@@ -109,7 +112,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div id="mobile-nav" className="border-t border-slate-200 bg-white pb-[env(safe-area-inset-bottom)] dark:border-slate-800 dark:bg-slate-950 md:hidden">
+        <div id="mobile-nav" className="border-t border-slate-200 bg-white pb-[env(safe-area-inset-bottom)] dark:border-slate-800 dark:bg-slate-950 lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3" aria-label="모바일 주요">
             {nav.map((item) => {
               const active = item.match(pathname);

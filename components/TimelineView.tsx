@@ -2,9 +2,14 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { formatYear, type TimelineEvent } from "@/lib/timeline";
+import type { TimelineEvent } from "@/lib/timeline";
 
 type Filter = "all" | "korean" | "world";
+
+function formatYear(year: number): string {
+  if (year < 0) return `기원전 ${Math.abs(year)}`;
+  return `${year}`;
+}
 
 export function TimelineView({ events }: { events: TimelineEvent[] }) {
   const [filter, setFilter] = useState<Filter>("all");
@@ -62,14 +67,10 @@ export function TimelineView({ events }: { events: TimelineEvent[] }) {
                 href={ev.href}
                 className="mt-1 block rounded-xl border border-slate-200 p-3 hover:border-slate-400 dark:border-slate-800 dark:hover:border-slate-600"
               >
-                <span
-                  className={`mr-2 inline-flex rounded-full px-2 py-0.5 text-xs font-medium ${tone}`}
-                >
+                <span className={`mr-2 inline-flex rounded-full px-2 py-0.5 text-xs font-medium ${tone}`}>
                   {tag}
                 </span>
-                <span className="font-medium text-slate-900 dark:text-slate-100">
-                  {ev.label}
-                </span>
+                <span className="font-medium text-slate-900 dark:text-slate-100">{ev.label}</span>
               </Link>
             </li>
           );
