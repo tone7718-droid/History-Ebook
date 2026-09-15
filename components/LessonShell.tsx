@@ -76,7 +76,13 @@ export function LessonShell({
         <div className="prose prose-base prose-neutral max-w-none prose-headings:scroll-mt-28 prose-p:leading-relaxed dark:prose-invert sm:prose-lg">
           <MdxContent source={content} images={images} />
         </div>
-        <GlossaryBoxes terms={getGlossaryForKeywords(keywords ?? [])} />
+        <GlossaryBoxes
+          terms={getGlossaryForKeywords(keywords ?? [], {
+            title: lessonTitle,
+            description,
+            track: lessonKey.startsWith("world/") ? "world" : "korean",
+          })}
+        />
         <RelatedLessons items={related ?? []} />
         {quiz && (
           <QuizPanel quiz={quiz} lessonKey={lessonKey} href={`/${lessonKey}`} />
