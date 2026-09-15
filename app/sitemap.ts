@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/korean`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/world`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/search`, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${BASE}/timeline`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/review`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${BASE}/glossary`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${BASE}/progress`, changeFrequency: "monthly", priority: 0.3 },
