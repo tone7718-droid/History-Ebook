@@ -1,11 +1,126 @@
 {
   "lessonId": "korean/three-kingdoms-north-south/unification-north-south/balhae-rise",
-  "version": 2,
+  "version": 3,
   "questions": [
-    {"id": "q1", "prompt": "발해를 건국한 인물로 알맞은 것은?", "choices": [{"id": "a", "text": "김춘추"}, {"id": "b", "text": "대조영"}, {"id": "c", "text": "왕건"}, {"id": "d", "text": "장보고"}], "answer": "b", "explanation": "대조영이 698년경 발해를 세웠다."},
-    {"id": "q2", "prompt": "발해의 광역 통치 편제로 알맞은 것은?", "choices": [{"id": "a", "text": "9주 5소경"}, {"id": "b", "text": "8도"}, {"id": "c", "text": "5경 15부"}, {"id": "d", "text": "2성 6부"}], "answer": "c", "explanation": "발해는 5경 15부로 영토를 편성했다."},
-    {"id": "q3", "prompt": "‘해동성국’으로 평가받으며 전성기를 이끌 왕으로 알맞은 것은?", "choices": [{"id": "a", "text": "태종 무열왕"}, {"id": "b", "text": "광종"}, {"id": "c", "text": "세종"}, {"id": "d", "text": "문왕"}], "answer": "d", "explanation": "문왕 대에 당·일본 교류가 활발해지며 해동성국으로 불리었다."},
-    {"id": "q4", "prompt": "발해가 멸망할 때 공격한 세력으로 알맞은 것은?", "choices": [{"id": "a", "text": "거란(요)"}, {"id": "b", "text": "신라"}, {"id": "c", "text": "일본"}, {"id": "d", "text": "몽골"}], "answer": "a", "explanation": "10세기 초 거란(요)의 공격으로 발해가 멸망했다."},
-    {"id": "q5", "prompt": "신라와 발해가 병존한 시대를 가리키는 말로 알맞은 것은?", "choices": [{"id": "a", "text": "후삼국 시대"}, {"id": "b", "text": "남북국 시대"}, {"id": "c", "text": "원 간섭기"}, {"id": "d", "text": "임진왜란기"}], "answer": "b", "explanation": "통일 신라와 발해가 나란히 선 시기를 남북국 시대라 한다."}
+    {
+      "id": "q1",
+      "prompt": "발해를 건국한 인물로 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "김춘추"
+        },
+        {
+          "id": "b",
+          "text": "대조영"
+        },
+        {
+          "id": "c",
+          "text": "왕건"
+        },
+        {
+          "id": "d",
+          "text": "장보고"
+        }
+      ],
+      "answer": "b",
+      "explanation": "대조영이 698년경 발해를 세웠다."
+    },
+    {
+      "id": "q2",
+      "prompt": "발해의 광역 통치 편제로 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "9주 5소경"
+        },
+        {
+          "id": "b",
+          "text": "8도"
+        },
+        {
+          "id": "c",
+          "text": "5경 15부"
+        },
+        {
+          "id": "d",
+          "text": "2성 6부"
+        }
+      ],
+      "answer": "c",
+      "explanation": "발해는 5경 15부로 영토를 편성했다."
+    },
+    {
+      "id": "q3",
+      "prompt": "발해의 영토를 크게 넓혀 최전성기를 이끌고, 당에서 발해를 ‘해동성국’이라 부르게 한 왕은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "대조영"
+        },
+        {
+          "id": "b",
+          "text": "무왕"
+        },
+        {
+          "id": "c",
+          "text": "문왕"
+        },
+        {
+          "id": "d",
+          "text": "선왕"
+        }
+      ],
+      "answer": "d",
+      "explanation": "문왕은 제도와 대외 교류를 정비했고, 선왕은 영토를 크게 넓혀 발해의 최전성기를 이끌었다."
+    },
+    {
+      "id": "q4",
+      "prompt": "발해가 멸망할 때 공격한 세력으로 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "거란(요)"
+        },
+        {
+          "id": "b",
+          "text": "신라"
+        },
+        {
+          "id": "c",
+          "text": "일본"
+        },
+        {
+          "id": "d",
+          "text": "몽골"
+        }
+      ],
+      "answer": "a",
+      "explanation": "10세기 초 거란(요)의 공격으로 발해가 멸망했다."
+    },
+    {
+      "id": "q5",
+      "prompt": "신라와 발해가 병존한 시대를 가리키는 말로 알맞은 것은?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "후삼국 시대"
+        },
+        {
+          "id": "b",
+          "text": "남북국 시대"
+        },
+        {
+          "id": "c",
+          "text": "원 간섭기"
+        },
+        {
+          "id": "d",
+          "text": "임진왜란기"
+        }
+      ],
+      "answer": "b",
+      "explanation": "통일 신라와 발해가 나란히 선 시기를 남북국 시대라 한다."
+    }
   ]
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import type { Quiz } from "@/lib/types";
 import { recordQuizAttempt } from "@/lib/progress";
 import { cn } from "@/lib/utils";
@@ -27,7 +27,7 @@ function shuffle<T>(items: T[], seed: number) {
   return next;
 }
 
-export function QuizPanel({
+function QuizSession({
   quiz,
   lessonKey,
   href,
@@ -41,52 +41,32 @@ export function QuizPanel({
   const questions = quiz.questions;
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
-  const [retryWrongOnly, setRetryWrongOnly] = useState(false);
-
-  const visible = useMemo(() => {
-    if (!retryWrongOnly || !submitted) return questions;
-    return questions.filter((q) => answers[q.id] !== q.answer);
-  }, [questions, retryWrongOnly, submitted, answers]);
-
-  const score = useMemo(() => {
-    if (!submitted) return 0;
-    const correct = questions.filter((q) => answers[q.id] === q.answer).length;
-    return Math.round((correct / questions.length) * 100);
-  }, [submitted, answers, questions]);
+  const [activeIds, setActiveIds] = useState(() => questions.map((q) => q.id));
+  const [score, setScore] = useState(0);
+  const submitting = useRef(false);
+  const visible = useMemo(() => questions.filter((q) => activeIds.includes(q.id)), [questions, activeIds]);
 
   const onSubmit = () => {
+    if (submitting.current || !visible.length || visible.some((q) => !answers[q.id])) return;
+    submitting.current = true;
+    const correct = visible.filter((q) => answers[q.id] === q.answer).length;
+    setScore(Math.round((correct / visible.length) * 100));
     setSubmitted(true);
-    setRetryWrongOnly(false);
-    const correct = questions.filter((q) => answers[q.id] === q.answer).length;
-    const s = Math.round((correct / questions.length) * 100);
-    recordQuizAttempt(
-      lessonKey,
-      s,
-      questions.map((q) => ({
-        questionId: q.id,
-        prompt: q.prompt,
-        choices: q.choices,
-        answer: q.answer,
-        chosen: answers[q.id],
-        explanation: q.explanation,
-        href: href ?? `/${lessonKey}`,
-      }))
-    );
+    const totalCorrect = questions.filter((q) => answers[q.id] === q.answer).length;
+    recordQuizAttempt(lessonKey, Math.round((totalCorrect / questions.length) * 100), visible.map((q) => ({
+      questionId: q.id, prompt: q.prompt, choices: q.choices, answer: q.answer,
+      chosen: answers[q.id], explanation: q.explanation,
+      href: q.sourceHref ?? href ?? `/${lessonKey}`,
+      sourceLessonKey: q.sourceLessonKey, sourceQuestionId: q.sourceQuestionId,
+    })));
   };
 
   const reset = (wrongOnly: boolean) => {
-    if (wrongOnly) {
-      const next: Record<string, string> = {};
-      for (const q of questions) {
-        if (answers[q.id] === q.answer) next[q.id] = answers[q.id];
-      }
-      setAnswers(next);
-      setRetryWrongOnly(true);
-    } else {
-      setAnswers({});
-      setRetryWrongOnly(false);
-    }
+    const ids = wrongOnly ? visible.filter((q) => answers[q.id] !== q.answer).map((q) => q.id) : questions.map((q) => q.id);
+    setActiveIds(ids);
+    setAnswers((prev) => wrongOnly ? Object.fromEntries(Object.entries(prev).filter(([id]) => !ids.includes(id))) : {});
     setSubmitted(false);
+    submitting.current = false;
   };
 
   return (
@@ -98,7 +78,7 @@ export function QuizPanel({
         {title ?? "퀴즈"}
       </h2>
       <p className="mb-6 text-sm text-slate-600 dark:text-slate-400">
-        객관식 {questions.length}문항 · 제출 후 정답과 해설을 확인합니다. 틀린 문항은 오답 노트에 남습니다.
+        객관식 {visible.length}문항 · 제출 후 정답과 해설을 확인합니다. 틀린 문항은 오답 노트에 남습니다.
       </p>
 
       <div className="space-y-6">
@@ -169,14 +149,14 @@ export function QuizPanel({
           <button
             type="button"
             onClick={onSubmit}
-            disabled={visible.some((q) => !answers[q.id])}
+            disabled={!visible.length || visible.some((q) => !answers[q.id])}
             className="min-h-11 rounded-lg bg-indigo-700 px-5 text-sm font-medium text-white hover:bg-indigo-600 disabled:cursor-not-allowed disabled:opacity-50"
           >
             제출하기
           </button>
         ) : (
           <>
-            <p className="text-sm font-semibold text-slate-800 dark:text-slate-100">
+            <p role="status" className="text-sm font-semibold text-slate-800 dark:text-slate-100">
               점수: {score}점
             </p>
             <button
@@ -200,4 +180,9 @@ export function QuizPanel({
       </div>
     </section>
   );
+}
+
+
+export function QuizPanel(props: { quiz: Quiz; lessonKey: string; href?: string; title?: string }) {
+  return <QuizSession key={props.lessonKey} {...props} />;
 }

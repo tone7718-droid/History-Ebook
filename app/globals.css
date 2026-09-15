@@ -57,7 +57,8 @@ body {
 }
 
 @media print {
-  header,
+  body > header,
+  header[data-site-header],
   footer,
   nav,
   button {
@@ -83,4 +84,8 @@ body {
   article {
     padding: 0 !important;
   }
+  article h1, article h2, article h3, article p, article li, article td, article th { color: #111 !important; }
+  figure, fieldset, tr { break-inside: avoid; }
+  table { display: table !important; width: 100% !important; }
+  th, td { border: 1px solid #aaa !important; padding: 0.35rem !important; }
 }

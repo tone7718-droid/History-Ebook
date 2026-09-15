@@ -8,7 +8,7 @@
 ## 1. 제품
 
 한국사·세계사 학습용 정적 콘텐츠 e-book.
-시대 → 단원 → 차시로 읽고, 퀴즈로 복습하고, 이 브라우저에 진도를 남긴다.
+시대·지역 → 단원 → 차시로 읽고, 퀴즈로 복습하고, 이 브라우저에 진도를 남긴다.
 
 공개 차시: 한국사 55, 세계사 70. 정식 경로는 `content/curriculum/*.json`이 원천이다.
 
@@ -46,8 +46,8 @@
 | `/review` | 오답 노트 |
 | `/glossary` | 용어 사전 |
 | `/progress` | 진도 요약·기록 삭제 |
-| `/korean/[era]/[unit]` | 한국사 단원 복습 퀴즈 |
-| `/world/[era]/[unit]` | 세계사 단원 복습 퀴즈 |
+| `/korean/[era]/[unit]/review` | 한국사 단원 복습 퀴즈 |
+| `/world/[era]/[unit]/review` | 세계사 단원 복습 퀴즈 |
 
 올드 슬러그는 `next.config.ts`에서 공식 경로로 301 리다이렉트한다.
 
@@ -76,7 +76,7 @@
 
 ## 5. 검색
 
-런타임에 MDX를 파싱해 FlexSearch + 문자열 매칭을 쓰다.
+빌드 시 만든 검색 인덱스와 FlexSearch + 문자열 매칭을 사용한다.
 선택: `npm run build:search` → `public/search-index.json`.
 API: `GET /api/search?q=`.
 
@@ -103,10 +103,10 @@ type ProgressStore = {
 
 ## 7. 퀴즈
 
-- 차시당 3–5문항 MCQ, sibling `*.quiz.json`
+- 차시당 3–6문항 MCQ, sibling `*.quiz.json`
 - 제출 후 점수·해설, 오답만 다시 풀기
-- 화면에서 선택지 순서를 섞어 보여, JSON의 정답 문자가 항상 처 번째가 되지 않게 한다
-- 한국사·세계사 퀴즈 `version` 2: 정답 위치 회전, 오답은 같은 시대·인접 개념
+- 화면에서 선택지 순서를 섞어 보여, JSON의 정답 문자가 항상 첫 번째가 되지 않게 한다
+- 정답 위치를 분산하고, 개정하는 선택지는 같은 시대·인접 개념을 우선한다
 - 틀린 문항은 `localStorage` 오답 노트(`/review`)에 모인다
 - 단원 페이지에서 해당 단원 차시 문항을 모아 복습한다
 - 차시 본문 아래 핵심 용어 상자, 전체 목록은 `/glossary`
@@ -117,4 +117,4 @@ type ProgressStore = {
 npm run validate:content
 ```
 
-커리큘럼 경로, 7개 H2, 퀴즈 정합을 확인한다. GitHub Actions `ci` 워크플로에서 동일하게 돌린다.
+커리큘럼 경로, 7개 H2, 퀴즈 정합을 확인한다. GitHub Actions `ci` 워크플로에서 콘텐츠 검사, ESLint, 회귀 테스트, 프로덕션 빌드를 모두 실행한다.

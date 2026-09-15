@@ -18,7 +18,7 @@ export function TrackOverview({
         {curriculum.trackLabel}
       </h1>
       <p className="mt-2 text-slate-600 dark:text-slate-400">
-        시대 → 단원 → 차시 순으로 읽습니다. 공개 차시 {total}개.
+        시대·지역 → 단원 → 차시 순으로 읽습니다. 공개 차시 {total}개.
       </p>
 
       <nav className="mt-6 flex flex-wrap gap-2" aria-label="시대 바로가기">
@@ -59,6 +59,9 @@ export function TrackOverview({
                     <h3 className="font-medium text-slate-800 dark:text-slate-200">
                       {unit.title}
                     </h3>
+                    <Link href={`/${curriculum.track}/${era.id}/${unit.id}/review`} className="mt-1 inline-flex min-h-10 items-center text-sm font-medium text-indigo-700 underline-offset-2 hover:underline dark:text-indigo-300">
+                      단원 종합 퀴즈
+                    </Link>
                     <ul className="mt-2 space-y-1">
                       {unit.lessons.map((lesson) => (
                         <li key={lesson.id}>

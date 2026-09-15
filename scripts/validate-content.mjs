@@ -125,6 +125,30 @@ for (const abs of walkMdx(contentRoot)) {
   if (!canon.has(rel)) errors.push(`orphan MDX: ${rel}`);
 }
 
+const lessonHrefs = new Set([...canon].map((rel) => `/${rel.replace(/\.mdx$/, "")}`));
+const timeline = JSON.parse(fs.readFileSync(path.join(contentRoot, "timeline.json"), "utf8"));
+for (const event of timeline.events ?? []) {
+  if (!Number.isFinite(event.year) || !event.label || !lessonHrefs.has(event.href)) {
+    errors.push(`bad timeline event: ${JSON.stringify(event)}`);
+  }
+}
+
+const imageCredits = JSON.parse(fs.readFileSync(path.join(contentRoot, "image-credits.json"), "utf8"));
+if (!/^\d{4}-\d{2}-\d{2}$/.test(imageCredits.checkedAt ?? "")) {
+  errors.push("image credits: missing checkedAt");
+}
+const imageSources = fs.readdirSync(path.join(root, "lib")).filter((name) => /^lesson-images.*\.ts$/.test(name));
+for (const filename of imageSources) {
+  const source = fs.readFileSync(path.join(root, "lib", filename), "utf8");
+  for (const match of source.matchAll(/(?:u\("https:\/\/upload\.wikimedia\.org\/[^"]+\/([^/"?]+)|c\("([^"]+)"\s*,)/g)) {
+    const raw = decodeURIComponent(match[1] || match[2]);
+    const normalized = raw.replace(/_/g, " ");
+    if (!imageCredits.files?.[raw] && !imageCredits.files?.[normalized]) {
+      errors.push(`missing image credit: ${raw}`);
+    }
+  }
+}
+
 if (warnings.length) {
   console.warn(`warnings (${warnings.length}):`);
   for (const w of warnings) console.warn(" -", w);

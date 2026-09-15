@@ -29,7 +29,7 @@ export default function OpenGraphImage() {
           한국사 55차시 · 세계사 70차시
         </div>
         <div style={{ marginTop: 12, fontSize: 24, color: "#94a3b8" }}>
-          시대 → 단원 → 차시 · 퀴즈 · 브라우저 진도
+          시대·지역 → 단원 → 차시 · 퀴즈 · 브라우저 진도
         </div>
       </div>
     ),

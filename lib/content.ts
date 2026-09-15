@@ -9,6 +9,7 @@ import type {
   Quiz,
   QuizQuestion,
   SearchDocument,
+  LessonReference,
   TrackId,
 } from "./types";
 import { lessonHref, lessonKey } from "./utils";
@@ -251,4 +252,68 @@ export function buildSearchDocuments(): SearchDocument[] {
 
 export function getLessonCount(track?: TrackId) {
   return getFlatLessons(track).length;
+}
+
+export function getQuizQuestionBank(): Record<string, QuizQuestion> {
+  const bank: Record<string, QuizQuestion> = {};
+  for (const meta of getFlatLessons()) {
+    const abs = path.join(CONTENT_ROOT, meta.mdxPath);
+    const fm = matter(fs.readFileSync(abs, "utf8")).data as LessonFrontmatter;
+    for (const q of loadQuiz(abs, fm)?.questions ?? []) {
+      bank[`${meta.lessonKey}::${q.id}`] = q;
+    }
+  }
+  return bank;
+}
+
+export function getLessonReferences(lessonKeyValue: string): LessonReference[] {
+  const track: TrackId = lessonKeyValue.startsWith("world/") ? "world" : "korean";
+  if (track === "korean") {
+    const references: LessonReference[] = [
+      { title: "신편 한국사", publisher: "국사편찬위원회 우리역사넷", url: "https://contents.history.go.kr/front/nh/main.do", note: "시대별 연구 개설과 사료 해설" },
+      { title: "한국사 연대기", publisher: "국사편찬위원회 우리역사넷", url: "https://contents.history.go.kr/front/kc/main.do", note: "인물·사건별 추가 읽기" },
+    ];
+    if (lessonKeyValue.endsWith("/balhae-rise")) references.unshift(
+      { title: "선왕: 발해의 최전성기를 이끈 군주", publisher: "국사편찬위원회 우리역사넷", url: "https://contents.history.go.kr/mobile/kc/view.do?code=kc_age_10&levelId=kc_n101175", note: "선왕·해동성국 교정 근거" }
+    );
+    if (lessonKeyValue.endsWith("/gojoseon-rise")) references.unshift(
+      { title: "위만 조선", publisher: "국사편찬위원회 우리역사넷", url: "https://contents.history.go.kr/mobile/ta/view.do?levelId=ta_m71_0020_0020_0010_0020", note: "위만의 집권 연대 참고" }
+    );
+    return references;
+  }
+  const references: LessonReference[] = [
+    { title: "World History, Volume 1", publisher: "OpenStax, Rice University", url: "https://openstax.org/details/books/world-history-volume-1", note: "선사 시대부터 중세까지의 추가 읽기" },
+    { title: "World History, Volume 2", publisher: "OpenStax, Rice University", url: "https://openstax.org/details/books/world-history-volume-2", note: "근세부터 현대까지의 추가 읽기" },
+  ];
+  if (lessonKeyValue.endsWith("/english-revolution")) references.unshift(
+    { title: "The Rump dissolved", publisher: "UK Parliament", url: "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/civilwar/overview/rump-dissolved/", note: "크롬웰의 호국경 지위 참고" }
+  );
+  if (lessonKeyValue.endsWith("/mesopotamia-civilization")) references.unshift(
+    { title: "The Code of Hammurabi", publisher: "Musée du Louvre", url: "https://www.louvre.fr/en/the-code-of-hammurabi", note: "법전 편찬 시기 참고" }
+  );
+  return references;
+}
+
+export function getAllUnitParams(track: TrackId) {
+  return getCurriculum(track).eras.flatMap((era) =>
+    era.units.map((unit) => ({ era: era.id, unit: unit.id }))
+  );
+}
+
+export function getUnitReview(track: TrackId, eraId: string, unitId: string) {
+  const curriculum = getCurriculum(track);
+  const era = curriculum.eras.find((item) => item.id === eraId);
+  const unit = era?.units.find((item) => item.id === unitId);
+  if (!era || !unit) return null;
+  const questions: QuizQuestion[] = [];
+  for (const lesson of unit.lessons) {
+    const abs = path.join(CONTENT_ROOT, lesson.mdxPath);
+    if (!fs.existsSync(abs)) continue;
+    const fm = matter(fs.readFileSync(abs, "utf8")).data as LessonFrontmatter;
+    const lessonKeyValue = lessonKey(track, eraId, unitId, lesson.id);
+    for (const q of (loadQuiz(abs, fm)?.questions ?? []).slice(0, 2)) {
+      questions.push({ ...q, id: `${lesson.id}::${q.id}`, sourceLessonKey: lessonKeyValue, sourceQuestionId: q.id, sourceHref: lessonHref(track, eraId, unitId, lesson.id) });
+    }
+  }
+  return { trackLabel: curriculum.trackLabel, eraTitle: era.title, unitTitle: unit.title, quiz: { lessonId: `${track}/${eraId}/${unitId}/review`, version: 1, questions: questions.slice(0, 10) } as Quiz };
 }

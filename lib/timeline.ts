@@ -7,6 +7,7 @@ export type TimelineEvent = {
   label: string;
   track: TrackId | "both";
   href: string;
+  approximate?: boolean;
 };
 
 export function getTimelineEvents(): TimelineEvent[] {
@@ -20,7 +21,7 @@ export function getTimelineEvents(): TimelineEvent[] {
   }
 }
 
-export function formatYear(year: number): string {
-  if (year < 0) return `기원전 ${Math.abs(year)}`;
-  return `${year}`;
+export function formatYear(year: number, approximate = false): string {
+  const label = year < 0 ? `기원전 ${Math.abs(year)}` : `${year}`;
+  return approximate ? `약 ${label}` : label;
 }

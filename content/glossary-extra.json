@@ -1,21 +1,227 @@
 {
   "terms": [
-    {"id": "tang", "term": "당", "definition": "국제 도시 장안을 중심으로 한 동아시아 질서의 한 축.", "track": "world", "aliases": ["견당사", "당 왕조", "율령", "장안"]},
-    {"id": "division", "term": "분단", "definition": "북위 38도를 경계로 미·소가 분할 점령하면서 시작된 분단.", "track": "korean", "aliases": ["38선", "군정", "통일 논의"]},
-    {"id": "inter-korean", "term": "남북 관계", "definition": "분단 이후 화해·협력과 긴장이 교차한 남·북한 관계. 7·4 공동성명과 6·15 선언이 이정표다.", "track": "korean", "aliases": ["10·4 선언", "6·15 선언", "7·4 남북공동성명", "개성공단", "남북기본합의서", "통일 논의", "한미 관계", "한중 관계"]},
-    {"id": "joseon-admin", "term": "의정부", "definition": "조선의 최고 행정 기구. 6조와 함께 중앙 관제를 이뤘다.", "track": "korean", "aliases": ["6조", "8도", "관찰사", "사헌부", "삼사", "수령", "승정원"]},
-    {"id": "kamakura", "term": "가마쿠라 막부", "definition": "미나모토노 요리토모가 연 무사 정권. 원의 일본 원정을 막아냈다.", "track": "world", "aliases": ["가마쿠라", "무사 정권"]},
-    {"id": "liao-jin", "term": "요·금", "definition": "거란의 요와 여진의 금. 이원 통치로 정복 왕조를 운영했다.", "track": "world", "aliases": ["거란", "금", "여진", "요", "이원 통치"]},
-    {"id": "yamato", "term": "야마토", "definition": "일본 고대 국가의 중심. 아스카 문화와 다이카 개신, 견당사로 율령 국가가 된다.", "track": "world", "aliases": ["견당사", "국풍 문화", "다이카 개신", "아스카 문화"]},
-    {"id": "nukes", "term": "북핵", "definition": "북한의 핵 개발이 남북 관계와 동북아 안보를 제약해 온 문제.", "track": "korean", "aliases": ["북한 핵", "핵 문제"]},
-    {"id": "samsa", "term": "삼사", "definition": "사헌부·사간원·홍문관. 조선 언론·감찰 기능을 맞은 중앙 기구.", "track": "korean", "aliases": ["사간원", "홍문관"]},
-    {"id": "owi", "term": "5위", "definition": "조선 전기 중앙군 편제. 의흥·용양·호분·충좌·충무 등으로 왕실과 도성을 지켰다.", "track": "korean", "aliases": ["오위", "중앙군"]},
-    {"id": "xixia", "term": "서하", "definition": "탕구트가 세운 북방 국가. 요·송·금 사이에서 독자 문자와 불교 문화를 유지했다.", "track": "world", "aliases": ["탕구트"]},
-    {"id": "kokufu", "term": "국풍 문화", "definition": "견당사 폐지 이후 헤이안 시대에 일본화한 문화. 가나 문자가 대표적이다.", "track": "world", "aliases": ["헤이안", "가나"]},
-    {"id": "paleolithic", "term": "구석기", "definition": "사냥·채집과 이동 생활이 중심인 선사 시대. 주먹도끼·찍개 등 뗤석기를 쓰다.", "track": "both", "aliases": ["주먹도끼", "찍개", "뗤석기"]},
-    {"id": "neolithic", "term": "신석기", "definition": "간석기와 토기를 쓰고 농경과 정착이 시작된 시기. 빗살무늬 토기와 움집이 대표적이다.", "track": "both", "aliases": ["빗살무늬 토기", "움집", "신석기 혁명"]},
-    {"id": "bronze-age", "term": "청동기", "definition": "청동 무기와 고인돌로 계급 분화가 드러난 시기. 군장 사회로 이어진다.", "track": "korean", "aliases": ["고인돌", "비파형 동검", "민무늬 토기"]},
-    {"id": "gupta", "term": "긽타", "definition": "고전 인도 문화가 꽃핀 왕조. 힌두교와 산스크리트가 정착했다.", "track": "world", "aliases": ["쿠샠", "간다라", "힌두교"]},
-    {"id": "xinhai", "term": "신해혁명", "definition": "1911년 청을 무너뜨린 혁명. 쎑원의 삼민주의가 이념이 되었다.", "track": "world", "aliases": ["쎑원", "손문", "삼민주의", "신해"]}
+    {
+      "id": "tang",
+      "term": "당",
+      "definition": "국제 도시 장안을 중심으로 한 동아시아 질서의 한 축.",
+      "track": "world",
+      "aliases": [
+        "견당사",
+        "당 왕조",
+        "율령",
+        "장안"
+      ]
+    },
+    {
+      "id": "division",
+      "term": "분단",
+      "definition": "북위 38도를 경계로 미·소가 분할 점령하면서 시작된 분단.",
+      "track": "korean",
+      "aliases": [
+        "38선",
+        "군정",
+        "통일 논의"
+      ]
+    },
+    {
+      "id": "inter-korean",
+      "term": "남북 관계",
+      "definition": "분단 이후 화해·협력과 긴장이 교차한 남·북한 관계. 7·4 공동성명과 6·15 선언이 이정표다.",
+      "track": "korean",
+      "aliases": [
+        "10·4 선언",
+        "6·15 선언",
+        "7·4 남북공동성명",
+        "개성공단",
+        "남북기본합의서",
+        "통일 논의",
+        "한미 관계",
+        "한중 관계"
+      ]
+    },
+    {
+      "id": "joseon-admin",
+      "term": "의정부",
+      "definition": "조선의 최고 행정 기구. 6조와 함께 중앙 관제를 이뤘다.",
+      "track": "korean",
+      "aliases": [
+        "6조",
+        "8도",
+        "관찰사",
+        "사헌부",
+        "삼사",
+        "수령",
+        "승정원"
+      ]
+    },
+    {
+      "id": "kamakura",
+      "term": "가마쿠라 막부",
+      "definition": "미나모토노 요리토모가 연 무사 정권. 원의 일본 원정을 막아냈다.",
+      "track": "world",
+      "aliases": [
+        "가마쿠라",
+        "무사 정권"
+      ]
+    },
+    {
+      "id": "liao-jin",
+      "term": "요·금",
+      "definition": "거란의 요와 여진의 금. 이원 통치로 정복 왕조를 운영했다.",
+      "track": "world",
+      "aliases": [
+        "거란",
+        "금",
+        "여진",
+        "요",
+        "이원 통치"
+      ]
+    },
+    {
+      "id": "yamato",
+      "term": "야마토",
+      "definition": "일본 고대 국가의 중심. 아스카 문화와 다이카 개신, 견당사로 율령 국가가 된다.",
+      "track": "world",
+      "aliases": [
+        "야마토 정권"
+      ]
+    },
+    {
+      "id": "nukes",
+      "term": "북핵",
+      "definition": "북한의 핵 개발이 남북 관계와 동북아 안보를 제약해 온 문제.",
+      "track": "korean",
+      "aliases": [
+        "북한 핵",
+        "핵 문제"
+      ]
+    },
+    {
+      "id": "samsa",
+      "term": "삼사",
+      "definition": "사헌부·사간원·홍문관. 조선 언론·감찰 기능을 맡은 중앙 기구.",
+      "track": "korean",
+      "aliases": [
+        "사간원",
+        "홍문관"
+      ]
+    },
+    {
+      "id": "owi",
+      "term": "5위",
+      "definition": "조선 전기 중앙군 편제. 의흥·용양·호분·충좌·충무 등으로 왕실과 도성을 지켰다.",
+      "track": "korean",
+      "aliases": [
+        "오위",
+        "중앙군"
+      ]
+    },
+    {
+      "id": "xixia",
+      "term": "서하",
+      "definition": "탕구트가 세운 북방 국가. 요·송·금 사이에서 독자 문자와 불교 문화를 유지했다.",
+      "track": "world",
+      "aliases": [
+        "탕구트"
+      ]
+    },
+    {
+      "id": "kokufu",
+      "term": "국풍 문화",
+      "definition": "견당사 폐지 이후 헤이안 시대에 일본화한 문화. 가나 문자가 대표적이다.",
+      "track": "world",
+      "aliases": [
+        "헤이안",
+        "가나"
+      ]
+    },
+    {
+      "id": "paleolithic",
+      "term": "구석기",
+      "definition": "사냥·채집과 이동 생활이 중심인 선사 시대. 주먹도끼·찍개 등 뗀석기를 쓰다.",
+      "track": "both",
+      "aliases": [
+        "주먹도끼",
+        "찍개",
+        "뗀석기"
+      ]
+    },
+    {
+      "id": "neolithic",
+      "term": "신석기",
+      "definition": "간석기와 토기를 쓰고 농경과 정착이 시작된 시기. 빗살무늬 토기와 움집이 대표적이다.",
+      "track": "both",
+      "aliases": [
+        "빗살무늬 토기",
+        "움집",
+        "신석기 혁명"
+      ]
+    },
+    {
+      "id": "bronze-age",
+      "term": "청동기",
+      "definition": "청동 무기와 고인돌로 계급 분화가 드러난 시기. 군장 사회로 이어진다.",
+      "track": "korean",
+      "aliases": [
+        "고인돌",
+        "비파형 동검",
+        "민무늬 토기"
+      ]
+    },
+    {
+      "id": "gupta",
+      "term": "굽타",
+      "definition": "고전 인도 문화가 꽃핀 왕조. 힌두교와 산스크리트가 정착했다.",
+      "track": "world",
+      "aliases": [
+        "굽타 왕조"
+      ]
+    },
+    {
+      "id": "xinhai",
+      "term": "신해혁명",
+      "definition": "1911년 청을 무너뜨린 혁명. 쑨원의 삼민주의가 이념이 되었다.",
+      "track": "world",
+      "aliases": [
+        "신해"
+      ]
+    },
+    {
+      "id": "petition-of-right",
+      "term": "권리청원",
+      "definition": "1628년 영국 의회가 의회 동의 없는 과세와 자의적 구금에 반대하며 찰스 1세에게 승인시킨 문서.",
+      "track": "world",
+      "aliases": [
+        "Petition of Right"
+      ]
+    },
+    {
+      "id": "bill-of-rights",
+      "term": "권리 장전",
+      "definition": "1689년 영국에서 국왕의 자의적 권력 행사를 제한하고 의회의 권리를 확인한 문서.",
+      "track": "world",
+      "aliases": [
+        "권리장전",
+        "Bill of Rights"
+      ]
+    },
+    {
+      "id": "constitutional-monarchy",
+      "term": "입헌 군주제",
+      "definition": "군주의 권력이 헌법과 법률에 의해 제한되는 정치 체제.",
+      "track": "world",
+      "aliases": [
+        "입헌군주제"
+      ]
+    },
+    {
+      "id": "lord-protector",
+      "term": "호국경",
+      "definition": "영국 공화정기에 올리버 크롬웰이 맡았던 국가원수 직위.",
+      "track": "world",
+      "aliases": [
+        "Lord Protector"
+      ]
+    }
   ]
 }

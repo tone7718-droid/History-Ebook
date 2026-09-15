@@ -23,7 +23,7 @@ export default function HomePage() {
           역사 e-book
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-slate-600 dark:text-slate-400">
-          한국사와 세계사를 시대 → 단원 → 차시로 읽고, 퀴즈로 복습하고, 이
+          한국사와 세계사를 시대·지역 → 단원 → 차시로 읽고, 퀴즈로 복습하고, 이
           브라우저에 진도를 저장하는 학습용 e-book입니다.
         </p>
         <div className="mt-6 w-full max-w-xl">
@@ -78,7 +78,7 @@ export default function HomePage() {
 
       <section className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
         <EraList track="korean" title="한국사 시대" curriculum={korean} />
-        <EraList track="world" title="세계사 시대" curriculum={world} />
+        <EraList track="world" title="세계사 시대·지역" curriculum={world} />
       </section>
     </div>
   );

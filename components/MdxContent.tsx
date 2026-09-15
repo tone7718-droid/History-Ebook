@@ -1,4 +1,5 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import type { MDXComponents } from "mdx/types";
 import { headingToId } from "@/lib/utils";
 import { LessonFigure } from "./LessonFigure";
@@ -58,7 +59,7 @@ export function MdxContent({
   images?: LessonImage[];
 }) {
   if (!images.length) {
-    return <MDXRemote source={source} components={components} />;
+    return <MDXRemote source={source} components={components} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />;
   }
 
   const sections = splitSections(source);
@@ -66,7 +67,7 @@ export function MdxContent({
     <>
       {sections.map((section, i) => (
         <div key={`${section.heading ?? "lead"}-${i}`}>
-          <MDXRemote source={section.markdown} components={components} />
+          <MDXRemote source={section.markdown} components={components} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
           {images
             .filter((img) => img.after && img.after === section.heading)
             .map((img) => (
@@ -76,6 +77,8 @@ export function MdxContent({
                 caption={img.caption}
                 credit={img.credit}
                 href={img.href}
+                license={img.license}
+                licenseHref={img.licenseHref}
               />
             ))}
         </div>

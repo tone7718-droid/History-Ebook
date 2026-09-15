@@ -16,10 +16,17 @@ export function ContinueLearning({
   } | null>(null);
 
   useEffect(() => {
-    const store = readProgress();
-    if (store.lastVisited && hrefByKey[store.lastVisited]) {
-      setItem(hrefByKey[store.lastVisited]);
-    }
+    const sync = () => {
+      const store = readProgress();
+      setItem(store.lastVisited ? hrefByKey[store.lastVisited] ?? null : null);
+    };
+    sync();
+    window.addEventListener("history-ebook:progress", sync);
+    window.addEventListener("storage", sync);
+    return () => {
+      window.removeEventListener("history-ebook:progress", sync);
+      window.removeEventListener("storage", sync);
+    };
   }, [hrefByKey]);
 
   if (!item) return null;

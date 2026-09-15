@@ -38,7 +38,16 @@ export interface LessonFrontmatter {
   description?: string;
   order?: number;
   draft?: boolean;
+  reviewStatus?: "references-added" | "fact-checked";
+  reviewedAt?: string;
   quiz?: Quiz;
+}
+
+export interface LessonReference {
+  title: string;
+  publisher: string;
+  url: string;
+  note?: string;
 }
 
 export interface QuizChoice {
@@ -47,6 +56,9 @@ export interface QuizChoice {
 }
 
 export interface QuizQuestion {
+  sourceLessonKey?: string;
+  sourceQuestionId?: string;
+  sourceHref?: string;
   id: string;
   prompt: string;
   choices: QuizChoice[];

@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { clearProgress, readProgress } from "@/lib/progress";
-import type { LessonMeta } from "@/lib/types";
+import type { LessonMeta, ProgressStore } from "@/lib/types";
 
 export function ProgressSummary({ lessons }: { lessons: LessonMeta[] }) {
-  const [store, setStore] = useState(readProgress());
+  const [store, setStore] = useState<ProgressStore>({ version: 1, lessons: {} });
 
   useEffect(() => {
     const sync = () => setStore(readProgress());

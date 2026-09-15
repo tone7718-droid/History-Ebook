@@ -6,9 +6,9 @@ import type { TimelineEvent } from "@/lib/timeline";
 
 type Filter = "all" | "korean" | "world";
 
-function formatYear(year: number): string {
-  if (year < 0) return `기원전 ${Math.abs(year)}`;
-  return `${year}`;
+function formatYear(year: number, approximate = false): string {
+  const label = year < 0 ? `기원전 ${Math.abs(year)}` : `${year}`;
+  return approximate ? `약 ${label}` : label;
 }
 
 export function TimelineView({ events }: { events: TimelineEvent[] }) {
@@ -61,7 +61,7 @@ export function TimelineView({ events }: { events: TimelineEvent[] }) {
             <li key={`${ev.year}-${ev.label}-${i}`} className="mb-6 last:mb-0">
               <span className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full bg-slate-400 dark:bg-slate-500" />
               <p className="text-sm font-semibold tabular-nums text-slate-500 dark:text-slate-400">
-                {formatYear(ev.year)}
+                {formatYear(ev.year, ev.approximate)}
               </p>
               <Link
                 href={ev.href}

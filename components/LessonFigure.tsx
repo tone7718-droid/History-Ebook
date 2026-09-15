@@ -7,11 +7,15 @@ export function LessonFigure({
   caption,
   credit,
   href,
+  license,
+  licenseHref,
 }: {
   src: string;
   caption: string;
   credit?: string;
   href?: string;
+  license?: string;
+  licenseHref?: string;
 }) {
   const [hidden, setHidden] = useState(false);
   if (hidden) return null;
@@ -40,6 +44,17 @@ export function LessonFigure({
               </a>
             ) : (
               <>출처: {credit}</>
+            )}
+          </p>
+        )}
+        {license && (
+          <p className="text-xs">
+            {licenseHref ? (
+              <a href={licenseHref} target="_blank" rel="noreferrer" className="underline-offset-2 hover:underline">
+                이용 조건: {license}
+              </a>
+            ) : (
+              <>이용 조건: {license}</>
             )}
           </p>
         )}

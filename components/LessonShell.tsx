@@ -12,6 +12,8 @@ import { QuizPanel } from "./QuizPanel";
 import { RelatedLessons } from "./RelatedLessons";
 import { GlossaryBoxes } from "./GlossaryBoxes";
 import { getGlossaryForKeywords } from "@/lib/glossary";
+import { getLessonReferences } from "@/lib/content";
+import { LessonReferences } from "./LessonReferences";
 import type { RelatedLessonLink } from "@/lib/related";
 
 export function LessonShell({
@@ -84,6 +86,7 @@ export function LessonShell({
           })}
         />
         <RelatedLessons items={related ?? []} />
+        <LessonReferences items={getLessonReferences(lessonKey)} checkedAt="2026-09-15" />
         {quiz && (
           <QuizPanel quiz={quiz} lessonKey={lessonKey} href={`/${lessonKey}`} />
         )}

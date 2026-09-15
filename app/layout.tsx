@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
+import Link from "next/link";
 import { Noto_Sans_KR } from "next/font/google";
 import { Header } from "@/components/Header";
+import { ProgressStorageNotice } from "@/components/ProgressStorageNotice";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
@@ -47,10 +49,11 @@ export default function RootLayout({
     <html lang="ko" suppressHydrationWarning>
       <body className={`${noto.variable} min-h-screen antialiased`}>
         <ThemeProvider>
-          <Header />
+        <Header />
+        <ProgressStorageNotice />
           <main>{children}</main>
           <footer className="mt-16 border-t border-slate-200 py-8 pb-[max(2rem,env(safe-area-inset-bottom))] text-center text-sm text-slate-500 dark:border-slate-800">
-            교육용 원작 요약 · 교과서 원문 복제 금지 · MIT
+            교육용 원작 요약 · 교과서 원문 복제 금지 · <Link href="/editorial-policy" className="underline">편집·출처 정책</Link> · MIT
           </footer>
         </ThemeProvider>
       </body>

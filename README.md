@@ -1,7 +1,7 @@
 # 역사 e-book
 
 한국사·세계사 학습용 **정적 콘텐츠 중심 e-book** 웹앱입니다.  
-커리큘럼 트리(시대 → 단원 → 차시)로 이동하고, MDX 본문을 읽으며, localStorage 진도·검색·퀴즈로 복습합니다.
+커리큘럼 트리(시대·지역 → 단원 → 차시)로 이동하고, MDX 본문을 읽으며, localStorage 진도·검색·퀴즈로 복습합니다.
 
 UI와 본문은 **한국어**입니다. 교과서·참고서 원문 복제는 하지 않으며, 교육용 **원작 요약**만 포함합니다.
 
@@ -33,6 +33,10 @@ npm run dev
 | `/world/[era]/[unit]/[lesson]` | 세계사 차시 |
 | `/search?q=` | 검색 |
 | `/progress` | 내 진도 |
+| `/review` | 오답 복습 |
+| `/korean/[era]/[unit]/review` | 한국사 단원 종합 퀴즈 |
+| `/world/[era]/[unit]/review` | 세계사 단원 종합 퀴즈 |
+| `/editorial-policy` | 편집·출처 정책 |
 
 예시:
 
@@ -100,4 +104,6 @@ API: `GET /api/search?q=`
 | `npm run start` | 빌드 결과 실행 |
 | `npm run lint` | ESLint |
 | `npm run validate:content` | 커리큘럼·MDX·퀴즈 정합 검사 |
+| `npm test` | 진도·퀴즈 회귀 테스트 |
+| `node scripts/sync-image-credits.mjs` | 위키미디어 공용 저작자·라이선스 정보 갱신 |
 | `npm run build:search` | 검색 인덱스 JSON 생성 |
