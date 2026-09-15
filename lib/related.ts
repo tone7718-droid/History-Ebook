@@ -298,7 +298,7 @@ export function getRelatedLessons(lessonKey: string): RelatedLessonLink[] {
 
   for (const pair of RELATED_PAIRS) {
     let other: string | null = null;
-    let note = pair.note;
+    const note = pair.note;
     if (pair.a === lessonKey) other = pair.b;
     else if (pair.b === lessonKey) other = pair.a;
     if (!other || seen.has(other)) continue;
