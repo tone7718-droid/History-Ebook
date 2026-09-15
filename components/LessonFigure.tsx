@@ -23,9 +23,10 @@ export function LessonFigure({
         <img
           src={src}
           alt={caption}
-          className="mx-auto max-h-[28rem] w-full object-contain"
+          className="mx-auto max-h-[28rem] w-full object-contain print:max-h-64"
           loading="lazy"
           decoding="async"
+          referrerPolicy="no-referrer"
           onError={() => setHidden(true)}
         />
       </div>

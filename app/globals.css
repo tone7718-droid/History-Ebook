@@ -49,10 +49,38 @@ body {
   outline-offset: 2px;
 }
 
-/* Prose tables: allow horizontal scroll on narrow screens */
 .prose :where(table) {
   display: block;
   max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+@media print {
+  header,
+  footer,
+  nav,
+  button {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #111 !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  .prose {
+    max-width: none !important;
+  }
+
+  article {
+    padding: 0 !important;
+  }
 }
