@@ -1,1 +1,66 @@
-{"lessonId":"korean/joseon-early/foundation/joseon-founding","version":2,"questions":[{"id":"q1","prompt":"위화도 회군 이후 군사력으로 조선 건국을 이끌 인물은?","choices":[{"id":"a","text":"최충헌"},{"id":"b","text":"이성계"},{"id":"c","text":"공민왕"},{"id":"d","text":"묘청"}],"answer":"b","explanation":"이성계는 위화도 회군으로 실권을 잡은 뒤 1392년 조선을 건국했다."},{"id":"q2","prompt":"조선 건국 초 권문 겸병을 억제하며 관료 수조와 연결한 토지 질서는?","choices":[{"id":"a","text":"전시과"},{"id":"b","text":"대동법"},{"id":"c","text":"과전법"},{"id":"d","text":"균역법"}],"answer":"c","explanation":"과전법은 조선 건국 초 토지·수조 질서이다. 전시과는 고려, 대동법·균역법은 조선 후기 개혁이다."},{"id":"q3","prompt":"조선이 개경을 떠나 새 수도로 옮긴 곳은?","choices":[{"id":"a","text":"강화도"},{"id":"b","text":"서경(평양)만으로 영구 천도"},{"id":"c","text":"경주"},{"id":"d","text":"한양"}],"answer":"d","explanation":"태조대 한양으로 천도하여 새 왕조의 정치·상징 중심을 잡았다."},{"id":"q4","prompt":"사병 혁파·호패법·육조직계제로 왕권을 강화한 국왕은?","choices":[{"id":"a","text":"태종"},{"id":"b","text":"태조만으로 전부 설명"},{"id":"c","text":"공민왕"},{"id":"d","text":"무신 집권자"}],"answer":"a","explanation":"태종은 사적 무력·호적·행정 계통을 정리해 왕권을 집중시켰다."},{"id":"q5","prompt":"6조가 왕에게 직접 보고하는 행정 계통으로 알맞은 것은?","choices":[{"id":"a","text":"의정부서사제"},{"id":"b","text":"육조직계제"},{"id":"c","text":"정동행성"},{"id":"d","text":"교정도감"}],"answer":"b","explanation":"육조직계제는 6조→왕 직속이다. 의정부서사제는 의정부가 6조를 총괄하는 대비 개념이다."}]}
+{
+  "lessonId": "korean/joseon-early/foundation/joseon-founding",
+  "version": 2,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "위화도 회군 이후 군사력으로 조선 건국을 이끈 인물은?",
+      "choices": [
+        { "id": "a", "text": "최충헌" },
+        { "id": "b", "text": "이성계" },
+        { "id": "c", "text": "공민왕" },
+        { "id": "d", "text": "묘청" }
+      ],
+      "answer": "b",
+      "explanation": "이성계는 위화도 회군으로 실권을 잡은 뒤 1392년 조선을 건국했다."
+    },
+    {
+      "id": "q2",
+      "prompt": "조선 건국 초 권문 겸병을 억제하며 관료 수조와 연결한 토지 질서는?",
+      "choices": [
+        { "id": "a", "text": "전시과" },
+        { "id": "b", "text": "대동법" },
+        { "id": "c", "text": "과전법" },
+        { "id": "d", "text": "균역법" }
+      ],
+      "answer": "c",
+      "explanation": "과전법은 조선 건국 초 토지·수조 질서이다. 전시과는 고려, 대동법·균역법은 조선 후기 개혁이다."
+    },
+    {
+      "id": "q3",
+      "prompt": "조선이 개경을 떠나 새 수도로 옮긴 곳은?",
+      "choices": [
+        { "id": "a", "text": "강화도" },
+        { "id": "b", "text": "서경(평양)만으로 영구 천도" },
+        { "id": "c", "text": "경주" },
+        { "id": "d", "text": "한양" }
+      ],
+      "answer": "d",
+      "explanation": "태조대 한양으로 천도하여 새 왕조의 정치·상징 중심을 잡았다."
+    },
+    {
+      "id": "q4",
+      "prompt": "사병 혁파·호패법·육조직계제로 왕권을 강화한 국왕은?",
+      "choices": [
+        { "id": "a", "text": "태종" },
+        { "id": "b", "text": "태조만으로 전부 설명" },
+        { "id": "c", "text": "공민왕" },
+        { "id": "d", "text": "무신 집권자" }
+      ],
+      "answer": "a",
+      "explanation": "태종은 사적 무력·호적·행정 계통을 정리해 왕권을 집중시켰다."
+    },
+    {
+      "id": "q5",
+      "prompt": "6조가 왕에게 직접 보고하는 행정 계통으로 알맞은 것은?",
+      "choices": [
+        { "id": "a", "text": "의정부서사제" },
+        { "id": "b", "text": "육조직계제" },
+        { "id": "c", "text": "정동행성" },
+        { "id": "d", "text": "교정도감" }
+      ],
+      "answer": "b",
+      "explanation": "육조직계제는 6조→왕 직속이다. 의정부서사제는 의정부가 6조를 총괄하는 대비 개념이다."
+    }
+  ]
+}

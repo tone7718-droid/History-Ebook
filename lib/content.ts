@@ -294,6 +294,15 @@ export function getLessonReferences(lessonKeyValue: string): LessonReference[] {
   return references;
 }
 
+export function getLessonReviewStatus(lessonKeyValue: string) {
+  const review = readJson<{
+    reviewedAt: string;
+    lessons: Array<{ lessonId: string; coreFacts: string; quiz: string; questions: number; choices: number }>;
+  }>(path.join(CONTENT_ROOT, "review-status.json"));
+  const lesson = review.lessons.find((item) => item.lessonId === lessonKeyValue);
+  return lesson ? { ...lesson, reviewedAt: review.reviewedAt } : null;
+}
+
 export function getAllUnitParams(track: TrackId) {
   return getCurriculum(track).eras.flatMap((era) =>
     era.units.map((unit) => ({ era: era.id, unit: unit.id }))

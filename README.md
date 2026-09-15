@@ -49,7 +49,8 @@ npm run dev
 2. `content/<track>/<era>/<unit>/<lesson>.mdx`와 sibling `.quiz.json`을 추가합니다.
 3. `content/curriculum/korean.json` 또는 `world.json`에 노드를 등록합니다.
 4. `draft: false`로 두면 목록·SSG에 포함됩니다.
-5. `npm run validate:content`로 경로·H2·퀴즈 정합을 확인합니다.
+5. `npm run validate:content`로 경로·H2·퀴즈·검수 해시 정합을 확인합니다.
+6. 본문 핵심 사실과 퀴즈 선택지를 사람이 다시 검토한 경우에만 `npm run review:stamp`로 검수 해시를 갱신합니다. 단순 콘텐츠 수정 뒤 해시만 갱신하면 안 됩니다.
 
 자세한 스키마: [`CONTENT_SCHEMA.md`](./CONTENT_SCHEMA.md)  
 제품·기술 명세: [`SITE_SPEC.md`](./SITE_SPEC.md)
@@ -104,6 +105,7 @@ API: `GET /api/search?q=`
 | `npm run start` | 빌드 결과 실행 |
 | `npm run lint` | ESLint |
 | `npm run validate:content` | 커리큘럼·MDX·퀴즈 정합 검사 |
+| `npm run review:stamp` | 사람의 전수 검토가 끝난 뒤 검수 해시 갱신 |
 | `npm test` | 진도·퀴즈 회귀 테스트 |
 | `node scripts/sync-image-credits.mjs` | 위키미디어 공용 저작자·라이선스 정보 갱신 |
 | `npm run build:search` | 검색 인덱스 JSON 생성 |

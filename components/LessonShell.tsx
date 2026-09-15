@@ -12,7 +12,7 @@ import { QuizPanel } from "./QuizPanel";
 import { RelatedLessons } from "./RelatedLessons";
 import { GlossaryBoxes } from "./GlossaryBoxes";
 import { getGlossaryForKeywords } from "@/lib/glossary";
-import { getLessonReferences } from "@/lib/content";
+import { getLessonReferences, getLessonReviewStatus } from "@/lib/content";
 import { LessonReferences } from "./LessonReferences";
 import type { RelatedLessonLink } from "@/lib/related";
 
@@ -48,6 +48,7 @@ export function LessonShell({
   keywords?: string[];
 }) {
   const images = getLessonImages(lessonKey);
+  const review = getLessonReviewStatus(lessonKey);
 
   return (
     <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-6 sm:gap-6 sm:py-8 lg:flex-row lg:gap-8">
@@ -86,7 +87,7 @@ export function LessonShell({
           })}
         />
         <RelatedLessons items={related ?? []} />
-        <LessonReferences items={getLessonReferences(lessonKey)} checkedAt="2026-09-15" />
+        <LessonReferences items={getLessonReferences(lessonKey)} review={review} />
         {quiz && (
           <QuizPanel quiz={quiz} lessonKey={lessonKey} href={`/${lessonKey}`} />
         )}

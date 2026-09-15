@@ -9,6 +9,7 @@
     "lint": "eslint",
     "build:search": "node scripts/build-search-index.mjs",
     "validate:content": "node scripts/validate-content.mjs",
+    "review:stamp": "node scripts/generate-review-status.mjs --write",
     "test": "vitest run"
   },
   "dependencies": {
