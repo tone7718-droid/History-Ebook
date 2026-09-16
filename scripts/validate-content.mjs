@@ -1,3 +1,4 @@
+import { validReview } from "../lib/review-evidence.mjs";
 import fs from "fs";
 import path from "path";
 import crypto from "crypto";
@@ -168,7 +169,8 @@ if (!fs.existsSync(reviewPath)) {
 } else {
   const review = JSON.parse(fs.readFileSync(reviewPath, "utf8"));
   const entries = new Map((review.lessons ?? []).map((entry) => [entry.lessonId, entry]));
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(review.reviewedAt ?? "")) errors.push("review status: bad reviewedAt");
+  if (review.version !== 2) errors.push("review status: unsupported version");
+  if (entries.size !== review.lessons.length) errors.push("duplicate review lesson ID");
   for (const [lessonId, expected] of reviewTargets) {
     const actual = entries.get(lessonId);
     if (!actual) {
@@ -178,8 +180,8 @@ if (!fs.existsSync(reviewPath)) {
     for (const field of ["contentSha256", "quizSha256", "questions", "choices"]) {
       if (actual[field] !== expected[field]) errors.push(`stale review status: ${lessonId} ${field}`);
     }
-    if (actual.coreFacts !== "reviewed" || actual.quiz !== "reviewed") {
-      errors.push(`incomplete review status: ${lessonId}`);
+    for (const field of ["coreFacts", "quiz"]) {
+      if (!validReview(actual[field])) errors.push(`invalid review evidence: ${lessonId} ${field}`);
     }
   }
   for (const lessonId of entries.keys()) {

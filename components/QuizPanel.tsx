@@ -32,11 +32,13 @@ function QuizSession({
   lessonKey,
   href,
   title,
+  onNewAttempt,
 }: {
   quiz: Quiz;
   lessonKey: string;
   href?: string;
   title?: string;
+  onNewAttempt?: () => void;
 }) {
   const questions = quiz.questions;
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -161,10 +163,10 @@ function QuizSession({
             </p>
             <button
               type="button"
-              onClick={() => reset(false)}
+              onClick={() => onNewAttempt ? onNewAttempt() : reset(false)}
               className="min-h-11 rounded-lg border border-slate-300 px-4 text-sm dark:border-slate-600"
             >
-              다시 풀기
+              {onNewAttempt ? "새 문제로 다시 풀기" : "다시 풀기"}
             </button>
             {score < 100 && (
               <button
@@ -183,6 +185,6 @@ function QuizSession({
 }
 
 
-export function QuizPanel(props: { quiz: Quiz; lessonKey: string; href?: string; title?: string }) {
+export function QuizPanel(props: { quiz: Quiz; lessonKey: string; href?: string; title?: string; onNewAttempt?: () => void }) {
   return <QuizSession key={props.lessonKey} {...props} />;
 }

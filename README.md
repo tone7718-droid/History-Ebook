@@ -50,7 +50,9 @@ npm run dev
 3. `content/curriculum/korean.json` 또는 `world.json`에 노드를 등록합니다.
 4. `draft: false`로 두면 목록·SSG에 포함됩니다.
 5. `npm run validate:content`로 경로·H2·퀴즈·검수 해시 정합을 확인합니다.
-6. 본문 핵심 사실과 퀴즈 선택지를 사람이 다시 검토한 경우에만 `npm run review:stamp`로 검수 해시를 갱신합니다. 단순 콘텐츠 수정 뒤 해시만 갱신하면 안 됩니다.
+6. 콘텐츠 수정 후 `npm run review:sync`를 실행합니다. 변경된 본문·퀴즈는 각각 `pending`으로 전환되며, 이 명령은 검수 완료를 부여하지 않습니다.
+7. 출처 대조를 실제 수행한 뒤에만 해당 차시의 `coreFacts` 또는 `quiz`를 `reviewed`로 기록합니다. `reviewedAt`(실제 YYYY-MM-DD), `reviewer`, `scope`(확인 범위), `sources`(title, url, locator: 장·절·쪽 또는 확인 구절)가 필수입니다. 해시는 정확성을 증명하지 않습니다. 기존 일괄 완료 표시는 근거 기록이 없어 철회했습니다.
+8. `npm run build`는 콘텐츠 검증을 먼저 실행합니다. 대기 상태는 허용하지만 오래된 해시와 근거 없는 완료 기록은 실패합니다.
 
 자세한 스키마: [`CONTENT_SCHEMA.md`](./CONTENT_SCHEMA.md)  
 제품·기술 명세: [`SITE_SPEC.md`](./SITE_SPEC.md)
@@ -105,7 +107,7 @@ API: `GET /api/search?q=`
 | `npm run start` | 빌드 결과 실행 |
 | `npm run lint` | ESLint |
 | `npm run validate:content` | 커리큘럼·MDX·퀴즈 정합 검사 |
-| `npm run review:stamp` | 사람의 전수 검토가 끝난 뒤 검수 해시 갱신 |
+| `npm run review:sync` | 파일 해시 갱신 및 변경 항목의 검수 상태 초기화 |
 | `npm test` | 진도·퀴즈 회귀 테스트 |
 | `node scripts/sync-image-credits.mjs` | 위키미디어 공용 저작자·라이선스 정보 갱신 |
 | `npm run build:search` | 검색 인덱스 JSON 생성 |

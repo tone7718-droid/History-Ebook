@@ -1,3 +1,6 @@
+import crypto from "crypto";
+import { validReview } from "./review-evidence.mjs";
+import type { ReviewEvidence } from "./types";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -296,11 +299,20 @@ export function getLessonReferences(lessonKeyValue: string): LessonReference[] {
 
 export function getLessonReviewStatus(lessonKeyValue: string) {
   const review = readJson<{
-    reviewedAt: string;
-    lessons: Array<{ lessonId: string; coreFacts: string; quiz: string; questions: number; choices: number }>;
+    version: number;
+    lessons: Array<{ lessonId: string; contentSha256: string; quizSha256: string; coreFacts: ReviewEvidence; quiz: ReviewEvidence }>;
   }>(path.join(CONTENT_ROOT, "review-status.json"));
   const lesson = review.lessons.find((item) => item.lessonId === lessonKeyValue);
-  return lesson ? { ...lesson, reviewedAt: review.reviewedAt } : null;
+  const meta = getFlatLessons().find((item) => item.lessonKey === lessonKeyValue);
+  if (review.version !== 2 || !lesson || !meta) return null;
+  const abs = path.join(CONTENT_ROOT, meta.mdxPath);
+  const hash = (file: string) => crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
+  const verified = (evidence: ReviewEvidence, file: string, expected: string) =>
+    validReview(evidence) && evidence.status === "reviewed" && fs.existsSync(file) && hash(file) === expected ? evidence : null;
+  return {
+    coreFacts: verified(lesson.coreFacts, abs, lesson.contentSha256),
+    quiz: verified(lesson.quiz, abs.replace(/\.mdx$/, ".quiz.json"), lesson.quizSha256),
+  };
 }
 
 export function getAllUnitParams(track: TrackId) {
@@ -320,9 +332,9 @@ export function getUnitReview(track: TrackId, eraId: string, unitId: string) {
     if (!fs.existsSync(abs)) continue;
     const fm = matter(fs.readFileSync(abs, "utf8")).data as LessonFrontmatter;
     const lessonKeyValue = lessonKey(track, eraId, unitId, lesson.id);
-    for (const q of (loadQuiz(abs, fm)?.questions ?? []).slice(0, 2)) {
+    for (const q of (loadQuiz(abs, fm)?.questions ?? [])) {
       questions.push({ ...q, id: `${lesson.id}::${q.id}`, sourceLessonKey: lessonKeyValue, sourceQuestionId: q.id, sourceHref: lessonHref(track, eraId, unitId, lesson.id) });
     }
   }
-  return { trackLabel: curriculum.trackLabel, eraTitle: era.title, unitTitle: unit.title, quiz: { lessonId: `${track}/${eraId}/${unitId}/review`, version: 1, questions: questions.slice(0, 10) } as Quiz };
+  return { trackLabel: curriculum.trackLabel, eraTitle: era.title, unitTitle: unit.title, quiz: { lessonId: `${track}/${eraId}/${unitId}/review`, version: 1, questions } as Quiz };
 }

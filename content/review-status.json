@@ -1,12 +1,5 @@
 {
-  "version": 1,
-  "reviewedAt": "2026-09-15",
-  "scope": "125개 차시의 핵심 연대·인물·제도·인과관계와 모든 퀴즈의 정답·해설·선택지",
-  "methodology": [
-    "국사편찬위원회 우리역사넷 및 OpenStax 세계사 개설서와 대조",
-    "정답 유일성, 선택지 중복, 시대·개념 적합성, 해설 일치 여부 검토",
-    "본문 또는 퀴즈 파일이 바뀌면 SHA-256 검증이 실패하도록 기록"
-  ],
+  "version": 2,
   "totals": {
     "lessons": 125,
     "questions": 631,
@@ -19,8 +12,12 @@
       "quizSha256": "e6b11e087cb7cf26c83bfd9417d8917dc94e4a88466989276a40b2ebd8cf0f55",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/prehistoric-early/prehistoric-culture/neolithic-life",
@@ -28,8 +25,12 @@
       "quizSha256": "50367641164d06ae43ae85f133df8acabd830ecf80642ab669a81a89a978e9a3",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/prehistoric-early/prehistoric-culture/bronze-iron-culture",
@@ -37,8 +38,12 @@
       "quizSha256": "caf8d246d3099a89de722547e1df9145914b80a42c6c2dab5954c8633d61b8bf",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/prehistoric-early/gojoseon-neighbors/gojoseon-rise",
@@ -46,8 +51,12 @@
       "quizSha256": "82fdf0c7d2076e2b00b47e7b45f2b284d5d1d5ad8bd2b0be8ca6d6b6e3d4c1f1",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/prehistoric-early/gojoseon-neighbors/buyeo-samhan-states",
@@ -55,8 +64,12 @@
       "quizSha256": "5229e04499f5fbb43c10b9f5dd95da6fd1e4b01de8399082d1991219175e48f2",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/three-kingdoms-north-south/three-kingdoms-gaya/goguryeo-growth",
@@ -64,8 +77,12 @@
       "quizSha256": "1c03ae393146bfebf8639620ee54f0ed12de31ff3694bf748fa1d472406b39a6",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/three-kingdoms-north-south/three-kingdoms-gaya/baekje-growth",
@@ -73,8 +90,12 @@
       "quizSha256": "c3fd9ad31948d2863e7fd1b004fc05673f2397b349b0dd98decf17aa2e9a1913",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/three-kingdoms-north-south/three-kingdoms-gaya/silla-centralization",
@@ -82,8 +103,12 @@
       "quizSha256": "f8a5e2836d67bcebce3837bef23217bdcdc438ad26baf89f0df3e9b3cfb3a1c3",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/three-kingdoms-north-south/three-kingdoms-gaya/gaya-confederacy",
@@ -91,8 +116,12 @@
       "quizSha256": "4e587b3bff68af062892587c66184846748ddab3c7d02ec0cf0805713e2bd9e8",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/three-kingdoms-north-south/unification-north-south/silla-unification",
@@ -100,8 +129,12 @@
       "quizSha256": "846cd23f506f7b2ea1c648e8ac0d47e39fb19812133cec9de39adc736e4b2967",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/three-kingdoms-north-south/unification-north-south/unified-silla-society",
@@ -109,8 +142,12 @@
       "quizSha256": "2c75a8c3304c4134619060583cb79e178b320bb2da6ebcf40ccd9e37b44626a4",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/three-kingdoms-north-south/unification-north-south/balhae-rise",
@@ -118,8 +155,12 @@
       "quizSha256": "4953f4c3b213ef0380b1985d8b4bff557cdf40c1cc0486cde7fb05ebd38664e7",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/three-kingdoms-north-south/ancient-economy-culture/ancient-economy-society",
@@ -127,8 +168,12 @@
       "quizSha256": "1f0022ae4d1256ceaf039a31e5784a44fc65df8fa110a0792e0d3869b7486c66",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/three-kingdoms-north-south/ancient-economy-culture/ancient-thought-culture",
@@ -136,8 +181,12 @@
       "quizSha256": "57573e5a822668c86904ee3e9d6b09d0be642a7a996174c6d045aa7ec7f3c770",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/goryeo/politics/goryeo-politics-overview",
@@ -145,8 +194,12 @@
       "quizSha256": "6f50b0417976505e10346c5a2c03749c54275fab6006c3e631d6b52a35c9a934",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/goryeo/politics/central-local-system",
@@ -154,8 +207,12 @@
       "quizSha256": "9153ddfa82233fe34c132489c70d40e3bb964f610ccc02a697a20e74ba2a67d5",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/goryeo/politics/northern-policy",
@@ -163,8 +220,12 @@
       "quizSha256": "ffc1a7c8e5d739c8c65dee289b3e0d5614e92a143370555fd88521d1781e1dfe",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/goryeo/social-change/aristocratic-rebellions",
@@ -172,8 +233,12 @@
       "quizSha256": "298eb609f2df62e0593f002008bf90778e518fae0ee8ad18b9a4e6b0e8f7f4a4",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/goryeo/social-change/military-regime",
@@ -181,8 +246,12 @@
       "quizSha256": "507cbe2079bf41da08eb334f39a66ccdd397e19d87b8c1383fe64b0dd5db2fa8",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/goryeo/social-change/mongol-yuan",
@@ -190,8 +259,12 @@
       "quizSha256": "32976203580bcd487ad7488c1b959146720970931d135987c749f007ca763c9d",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/goryeo/social-change/gongmin-reform",
@@ -199,8 +272,12 @@
       "quizSha256": "c66d77b58cf29610fb8c34d5bb43cbbde1099bb48855bb7fb203d14f640f4d23",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/goryeo/economy-culture/economy-status",
@@ -208,8 +285,12 @@
       "quizSha256": "689e680dad7ac3b0e326e825149505d2feabff4469ff437b47ae951a34656496",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/goryeo/economy-culture/thought-culture",
@@ -217,8 +298,12 @@
       "quizSha256": "261e6e32aed657ecd4bb3c01124dcb9b99a85f5d38d61eed125972e1947abed3",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/joseon-early/foundation/joseon-founding",
@@ -226,8 +311,12 @@
       "quizSha256": "50d3730f72cb22b3a943bfde0d1e4a08447d59b027395c77bf5c89a56a14c8d0",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/joseon-early/foundation/administration-military",
@@ -235,8 +324,12 @@
       "quizSha256": "3da5191ee020f4baa6453db55a6d0389ddf11ff16118865a0a4c9e74297a4cc8",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/joseon-early/foundation/sejong-policy-culture",
@@ -244,8 +337,12 @@
       "quizSha256": "ccef0d8d3514864299fcdacee635964a4aef122ebf8b8021f95d49f35234f9fb",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/joseon-early/sarim-factions/hungu-sarim-purges",
@@ -253,8 +350,12 @@
       "quizSha256": "4c859e302da81bcf1ffab710f58b1be7303c3f6606e1ed8bbc93583abb55c0a1",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/joseon-early/sarim-factions/factional-politics",
@@ -262,8 +363,12 @@
       "quizSha256": "3ca7374468e2c1c9ce435163f7a7942f4090a274891dded518e2fff461af642f",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/joseon-early/two-wars-society/imjin-byeongja-wars",
@@ -271,8 +376,12 @@
       "quizSha256": "b5cda8185ccef8c3d05c3816d87be8092b89737858732cdd3635d6c5af9a7a42",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/joseon-early/two-wars-society/early-joseon-society-culture",
@@ -280,8 +389,12 @@
       "quizSha256": "817ff00206fbafea7b6215f3e0a225e367a89072e6087572cf7af2241586011f",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/joseon-late/politics-change/factional-politics-hwanguk",
@@ -289,8 +402,12 @@
       "quizSha256": "d6c36a6918edf4dfa445ce0a94eb4ce1663ccc2d57c290457b1f17878def7b25",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/joseon-late/politics-change/tangpyeong-politics",
@@ -298,8 +415,12 @@
       "quizSha256": "027671d2d34c659641598d6a31f5d25bdd4087055b3b71f379b687beedd58cde",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/joseon-late/politics-change/sedo-peasant-uprisings",
@@ -307,8 +428,12 @@
       "quizSha256": "7d4d9ff4aa5d1b3b53e1a041690ed44c19c2869140f0b80e0eebcfaae2e28758",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/joseon-late/politics-change/heungseon-reform",
@@ -316,8 +441,12 @@
       "quizSha256": "aaada429c212d3902f52e897d21df19421a923d9362c7028e516eb6c9ff249d8",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/joseon-late/economy-society-thought/commercial-money-economy",
@@ -325,8 +454,12 @@
       "quizSha256": "82b6eaea8cdf7c338a59c0980e13adfbded10d3995c79ea4268a42db044178de",
       "questions": 6,
       "choices": 24,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/joseon-late/economy-society-thought/social-status-change",
@@ -334,8 +467,12 @@
       "quizSha256": "ed707188fb9e4d556a1431d0daf5ab5021055fe1a8768e13515a01ffb7692193",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/joseon-late/economy-society-thought/silhak-new-culture",
@@ -343,8 +480,12 @@
       "quizSha256": "bc73f61e05ac062ebb85fc4150f605522ca283cfe86c43e525f8c3af6dd00ce6",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/modern-colonial/opening-nation-building/opening-unequal-treaties",
@@ -352,8 +493,12 @@
       "quizSha256": "1e823629ac2900045e37911f9b43bd7ecdedd7cb9570067545149dccd4b6ed1f",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/modern-colonial/opening-nation-building/enlightenment-imogapshin",
@@ -361,8 +506,12 @@
       "quizSha256": "cedad4180a4ed1a3f18c4b3d43952d70b832ead14e361349191f2dbc643b70ce",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/modern-colonial/opening-nation-building/donghak-gabo-reform",
@@ -370,8 +519,12 @@
       "quizSha256": "44f27348cc9acbfa9ce2cd3a2295faeed5e1b8ee707c73aff5cff7c64c28c0db",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/modern-colonial/opening-nation-building/korean-empire-salvation",
@@ -379,8 +532,12 @@
       "quizSha256": "a8424607fca6e064b14ca6a88523190c48ff9206a891e7e1d94b981172034e2d",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/modern-colonial/colonial-rule-resistance/1910s-military-rule",
@@ -388,8 +545,12 @@
       "quizSha256": "98820f23e07c296c0fc3033fc740a965f83b665b568c49f9facb61f125f3b395",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/modern-colonial/colonial-rule-resistance/march-first-provisional-gov",
@@ -397,8 +558,12 @@
       "quizSha256": "bd3318d4bb3e4960af9b7aba3b150c565cd2dfdd20f96f09494c431f60c8bc83",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/modern-colonial/colonial-rule-resistance/1920s-cultural-rule",
@@ -406,8 +571,12 @@
       "quizSha256": "96a4c7079266a39abc273ba60b05fa8aa3ccdd164e56c2cd284c73bba84d7b31",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/modern-colonial/colonial-rule-resistance/1930s-40s-independence",
@@ -415,8 +584,12 @@
       "quizSha256": "be2e475c4756a6660dc826642d8c02d28a232b9f12072ccec9965ada88278c2a",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/modern-colonial/colonial-rule-resistance/modern-colonial-society",
@@ -424,8 +597,12 @@
       "quizSha256": "3c0ba83b36af81d9fb8e59d4275ca0eabbd9fb2fa51622e01657d954eda7eef3",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/contemporary/liberation-government/liberation-occupation",
@@ -433,8 +610,12 @@
       "quizSha256": "fa2438931f4183af8b851f11e62cdb6fb91cb1556b55cfb11519b253ea04b6e6",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/contemporary/liberation-government/government-division",
@@ -442,8 +623,12 @@
       "quizSha256": "14e9384466ac582d9a4a9b4b5484d58a07bc7fb389fc8a2664a1cf60a2dea3af",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/contemporary/korean-war-aftermath/korean-war",
@@ -451,8 +636,12 @@
       "quizSha256": "c6d14c21c4d0b94485f15055226fb72d59b913402e32936959b9d482236bc098",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/contemporary/korean-war-aftermath/rhee-april-revolution",
@@ -460,8 +649,12 @@
       "quizSha256": "1ed441a34af0f825237a8854cd0ac83f333bc555e673089c85ae674813f06829",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/contemporary/authoritarianism-democratization/park-industrialization",
@@ -469,8 +662,12 @@
       "quizSha256": "e9eac3c540cc495e4eff8b384ccd335debeec03c445a919be5c261c94c1c1831",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/contemporary/authoritarianism-democratization/gwangju-june-uprising",
@@ -478,8 +675,12 @@
       "quizSha256": "a655abb84dd59ae615f5a4b7e02cab43f9a6d78e5c0f5591c59ca975c9456e13",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/contemporary/authoritarianism-democratization/civilian-government-change",
@@ -487,8 +688,12 @@
       "quizSha256": "0fec98889699fac9ba43728afd738fb3d28dbdd3014067187d451139ea851daa",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/contemporary/contemporary-challenges/growth-social-change",
@@ -496,8 +701,12 @@
       "quizSha256": "1dab8d5e531b67a24adae094d91a69b7af77cab644fbd7adab32133e1841e7c5",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "korean/contemporary/contemporary-challenges/inter-korean-world",
@@ -505,8 +714,12 @@
       "quizSha256": "8527c58cad6ca0fd2698aa06611727e581da130b57f7f40bba6471d64b008258",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/origins/world-history-meaning/meaning-of-world-history",
@@ -514,8 +727,12 @@
       "quizSha256": "88c9315b8551c3e2866630e77bde6c7e055d0581424e1d1af3b4a60a0cd443e7",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/origins/prehistory/human-origins",
@@ -523,8 +740,12 @@
       "quizSha256": "fa3f4cc5e82527468d57b0704b16eee29218f2a0e4ca44dce66fb8b786023901",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/origins/mesopotamia/mesopotamia-civilization",
@@ -532,8 +753,12 @@
       "quizSha256": "499b5cc4aa22868d4c8499874d4bdfdb7c0cd3f6b5afa61edab04b24b839e264",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/origins/egypt/egypt-civilization",
@@ -541,8 +766,12 @@
       "quizSha256": "bc481a36d050ce95b2b228c3d3704b9b2b8ed9d57bc1dd8878a5a88dab183788",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/origins/mediterranean/mediterranean-neighbors",
@@ -550,8 +779,12 @@
       "quizSha256": "6efb4fcfb84c0f8364e3dcf0b7382e67769d8444a61f3c03cac96ed644517000",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/origins/indus/indus-civilization",
@@ -559,8 +792,12 @@
       "quizSha256": "c8c6f2278a567ffe4339752d8f2c1066119fe46163c695c9a22b6b7e86983a2d",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/origins/china/yellow-river-civilization",
@@ -568,8 +805,12 @@
       "quizSha256": "ca2a768ed466788f418f39666af025e24c011a01d057eb2f3eeb1ed4103eff62",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/east-asia/formation/spring-autumn-warring-states",
@@ -577,8 +818,12 @@
       "quizSha256": "65d29d1d28dfaaf927ad67c0b1154aad27f9b5a8688579c7ae737c361e5fb056",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/east-asia/formation/qin-unification",
@@ -586,8 +831,12 @@
       "quizSha256": "f1889a6135c84dbf7644628afea9ff7d1ff8194509df3b1c84156b06efe5c9e9",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/east-asia/formation/han-empire",
@@ -595,8 +844,12 @@
       "quizSha256": "a2a6b4efd407671b95cc881744fc30eb6ae8c49e6909aa09ae1562559babdfe4",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/east-asia/formation/six-dynasties",
@@ -604,8 +857,12 @@
       "quizSha256": "008f45bd189b39e7edc594ae472d292fdb25ea0cbd0dae765e0bafa6752f31df",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/east-asia/formation/sui-tang",
@@ -613,8 +870,12 @@
       "quizSha256": "417e86af32e165202f66d6a115da90d9b2fd0023171bbed0e5aff460ecc4724a",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/east-asia/formation/east-asian-cultural-sphere",
@@ -622,8 +883,12 @@
       "quizSha256": "9f863f257a7766e0e75e9d6a1e4ed4c953d9d332806ee87f9c2863a101d04a4d",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/east-asia/formation/ancient-japan",
@@ -631,8 +896,12 @@
       "quizSha256": "9a9596b5905205a15650497aa4480ee21cd68d24f4449d26374ab081afcb94ca",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/east-asia/development/song-society",
@@ -640,8 +909,12 @@
       "quizSha256": "0e78d2e505aaf846368e7cbba965cac2c76f1e2cc52531d7555ee87c385d88e0",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/east-asia/development/northern-peoples",
@@ -649,8 +922,12 @@
       "quizSha256": "25c57c985fed742a7099fa7ae515f04a142d8ea81047ade07885f8ef162f7c6f",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/east-asia/development/mongol-yuan",
@@ -658,8 +935,12 @@
       "quizSha256": "5fb9608689807fa4b776fce30cb0374d024429a148def57ae3a0a4c7109b5db0",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/east-asia/development/kamakura-japan",
@@ -667,8 +948,12 @@
       "quizSha256": "9769927120ae9b16a71a55920e401dfc764f4560eb9a3c238bc50ece7c2830d9",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/east-asia/transformation/ming",
@@ -676,8 +961,12 @@
       "quizSha256": "d6650d2b9301f99ebf6cd20ab4c7b6c925305fa7c20090645d5b914d79343e46",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/east-asia/transformation/qing",
@@ -685,8 +974,12 @@
       "quizSha256": "921c25da0b6bd7bdf4e4ec45402b8186868c886dcb60132087c8852b2e0ab34b",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/east-asia/transformation/edo-japan",
@@ -694,8 +987,12 @@
       "quizSha256": "4a0c590e6e40615794e77f1e7467071084ef663f17d682da4591358c8fc4e2be",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/east-asia/transformation/east-asia-trade",
@@ -703,8 +1000,12 @@
       "quizSha256": "9f99a6c20d2f2f024fa6da4d690ffcc8017b84018568e8f71c4ddfa8f3ebd00d",
       "questions": 6,
       "choices": 24,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/west-asia/pre-islam-empires/assyria",
@@ -712,8 +1013,12 @@
       "quizSha256": "25c7e5b9a42859a8d1bfac581c84e4abc831871859a5d5f4e7c1a2711562acb5",
       "questions": 6,
       "choices": 24,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/west-asia/pre-islam-empires/achaemenid-persia",
@@ -721,8 +1026,12 @@
       "quizSha256": "a490fa518348c80315adeb291aa99703c480200562914517d88cf0956004ed18",
       "questions": 6,
       "choices": 24,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/west-asia/pre-islam-empires/parthia-sasanian",
@@ -730,8 +1039,12 @@
       "quizSha256": "12273bf99c8aa7bfd23678d96fae342ec585ca07a0febba835642fbf43b6dead",
       "questions": 6,
       "choices": 24,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/west-asia/islam/islam-formation",
@@ -739,8 +1052,12 @@
       "quizSha256": "3fe66508c3cf82e0f40531d17c76b902525cadef49d98ee36633917e936f396a",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/west-asia/gunpowder-empires/ottoman-empire",
@@ -748,8 +1065,12 @@
       "quizSha256": "86aba895dca0da86ad7b2c178010770a864112be18a6c360867dd6e95cdb627b",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/west-asia/gunpowder-empires/timurid-safavid",
@@ -757,8 +1078,12 @@
       "quizSha256": "e8754fd0fbf344ed642e3543a396cf240da168c28e3c9d11dafa17e5e4e4cb0e",
       "questions": 6,
       "choices": 24,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/west-asia/india/maurya-buddhism",
@@ -766,8 +1091,12 @@
       "quizSha256": "6cc62de6cc4da87fa2a0b56b0c292b83244192656f0350b70eb2aa3970ccaf95",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/west-asia/india/kushan-gupta",
@@ -775,8 +1104,12 @@
       "quizSha256": "0ee8d113c0fe0205090f296554b213c6609c6facfeee275bb47cfef0016cc4bd",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/west-asia/india/delhi-mughal",
@@ -784,8 +1117,12 @@
       "quizSha256": "d9fd554f16266d3fe59172a30b7b3077b177bb554999689d320e18a3d8a7c5c3",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/west-asia/india/southeast-asia-indianization",
@@ -793,8 +1130,12 @@
       "quizSha256": "c017d3002283b5429ba016714b278dc03d09436bc54037a53f42c441387a804c",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/ancient-greece/polis/athenian-democracy",
@@ -802,8 +1143,12 @@
       "quizSha256": "586e5dd9617083d7e59b107a469c5c28b0581dc727d74c9476948fde230314ee",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/ancient-greece/polis/sparta-persian-wars",
@@ -811,8 +1156,12 @@
       "quizSha256": "f8a1c3a7d095e106654960c1c1eb596e54a1311c5a91b814820ecdf1c1e5c6af",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/ancient-greece/polis/hellenism",
@@ -820,8 +1169,12 @@
       "quizSha256": "d104df39f8c16dc26e40bc80eab639563fee7add5943ffa8e293cd18c8404ce4",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/ancient-rome/rome/roman-republic",
@@ -829,8 +1182,12 @@
       "quizSha256": "4a2064fe34a887d8b2b9807624d80e54a4591a34cfeb9eeef88533fa24269af2",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/ancient-rome/rome/roman-empire",
@@ -838,8 +1195,12 @@
       "quizSha256": "4380ce98dfed97cba87cd1d2553477b4a92b8b721374b36b5bfe49c279d7a5df",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/ancient-rome/rome/christianity-rome",
@@ -847,8 +1208,12 @@
       "quizSha256": "646331e94dd19cefa132d164bdf05dc5036e28b0a1edb129646c3df1e5e4456d",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/medieval-europe/formation-and-church/germanic-franks",
@@ -856,8 +1221,12 @@
       "quizSha256": "0ff495c37c6dfbdb8bcdb687cc8bf0fcd96a750f19974c48d4369f2da8012944",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/medieval-europe/formation-and-church/feudalism",
@@ -865,8 +1234,12 @@
       "quizSha256": "5d3881ea42370c29559083297d967d702d6c7bb5f1f72c5e3a25eac6648e0e0b",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/medieval-europe/formation-and-church/papacy-byzantium",
@@ -874,8 +1247,12 @@
       "quizSha256": "0daf3d3026c49202ce39cbd66dcb98c03fe4a56d1472c835d97df0b1b7228e6d",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/medieval-europe/formation-and-church/crusades",
@@ -883,8 +1260,12 @@
       "quizSha256": "eda028f5431ce391a2118242312b8e25f8eee8c687066d74acb55932eff8fe54",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/medieval-europe/late-medieval-reform/late-medieval-crisis",
@@ -892,8 +1273,12 @@
       "quizSha256": "a1e3898078522c3b83fa7eeab941e9866d8189a83e1d01cbbc9413ac588236d6",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/medieval-europe/late-medieval-reform/renaissance-reformation",
@@ -901,8 +1286,12 @@
       "quizSha256": "83eeea4cb4cca35ee2bdb446ee574b75edd44103dfbb22353ed256754e6222e7",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/early-modern-europe/exploration-absolutism/age-of-exploration",
@@ -910,8 +1299,12 @@
       "quizSha256": "e42e63d4341d7f8a299358d2996ae82360aba9ce2e297b755aebcf239ef2fdf9",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/early-modern-europe/exploration-absolutism/americas-conquest",
@@ -919,8 +1312,12 @@
       "quizSha256": "0d2d3f90590b80b4d7a8658433963d65bc7b13116724bfd0ce7add86fb4f5b15",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/early-modern-europe/exploration-absolutism/western-absolutism",
@@ -928,8 +1325,12 @@
       "quizSha256": "c18f43f77fd85883d7bda07e6e1d5b8b920e0f6910efa3f4beaca6f0979b93da",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/early-modern-europe/exploration-absolutism/eastern-absolutism",
@@ -937,8 +1338,12 @@
       "quizSha256": "f3a9dae6a1aa39d8d0c4f57140620c5fba2bc41218dc0562b32a467bfadade3f",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/early-modern-europe/revolution/science-enlightenment",
@@ -946,8 +1351,12 @@
       "quizSha256": "91b8fb64d49c349a634f8b8809fae4fa8b565b00582d7acd0c4901df61bcc0ea",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/early-modern-europe/revolution/english-revolution",
@@ -955,8 +1364,12 @@
       "quizSha256": "e78f68237124ae04702e888fc3240c433cb11b160416a5475e69edeb3870fffd",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/early-modern-europe/revolution/american-revolution",
@@ -964,8 +1377,12 @@
       "quizSha256": "0793dcf1217f5eb3f2e1be701ad69611cad302e7f8607d4d15b738ece11cb477",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/early-modern-europe/revolution/french-revolution",
@@ -973,8 +1390,12 @@
       "quizSha256": "c824ce3cd486cadbf058f06d6bab1f28dac360871b08a0858b2e4aabfa3aa0b0",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/early-modern-europe/revolution/vienna-liberalism-nationalism",
@@ -982,8 +1403,12 @@
       "quizSha256": "1f324b3550a1449371c9b16186a290f017be461b1e39ecec8582b26c9d35e515",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/early-modern-europe/revolution/industrial-revolution",
@@ -991,8 +1416,12 @@
       "quizSha256": "a408c8ea634998c4c7639b53e80bd871f34122e83cac76e011e83abc1c76de4c",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/imperialism-world-wars/imperialism-nationalism/imperialism-partition",
@@ -1000,8 +1429,12 @@
       "quizSha256": "8c009757f68c5bb8130e95f18ec9520cb9479c9ff4167d25e9c7ac0d25404031",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/imperialism-world-wars/imperialism-nationalism/china-national-movement",
@@ -1009,8 +1442,12 @@
       "quizSha256": "317f2cd22136827cddb93bb3608d3794b038d65ce806257dc32a9baccee08995",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/imperialism-world-wars/imperialism-nationalism/meiji-japan",
@@ -1018,8 +1455,12 @@
       "quizSha256": "69554163b4683db9323b6ccfd0fd18398832bb8915d5ac5b4593c9c19fdc99f2",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/imperialism-world-wars/imperialism-nationalism/india-national-movement",
@@ -1027,8 +1468,12 @@
       "quizSha256": "6d5f0a14d7a2fc3e9d079acb2b43f524cddf1d5d56609b5f3254c519ae5fcacd",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/imperialism-world-wars/imperialism-nationalism/west-asia-africa-se-asia",
@@ -1036,8 +1481,12 @@
       "quizSha256": "a6293e841b267d90f87f6a5419284e3d0d1e9b840b9b8aee852dbb32714cf911",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/imperialism-world-wars/world-wars/world-war-i",
@@ -1045,8 +1494,12 @@
       "quizSha256": "d67dabe0e1781e5386f6f0eb32e72673363d67a77bae2afc02a8ce5741e3c77e",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/imperialism-world-wars/world-wars/russian-revolution",
@@ -1054,8 +1507,12 @@
       "quizSha256": "0c89887ce7320d24d66300c7227da47476e375bd496bccf39818ccb38789645e",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/imperialism-world-wars/world-wars/interwar-asia",
@@ -1063,8 +1520,12 @@
       "quizSha256": "aa44098a79affb46018e2deb89fc6c1ba21943cbbd77615c01269e2961510bfd",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/imperialism-world-wars/world-wars/great-depression-totalitarianism",
@@ -1072,8 +1533,12 @@
       "quizSha256": "01d219bc0ec0594e98cb7de422f7fba45bf2e20cfb97fb91859747ac5f8154ce",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/imperialism-world-wars/world-wars/world-war-ii",
@@ -1081,8 +1546,12 @@
       "quizSha256": "86227b5363310757a70499676667d4179aa1907e99369f2a2eebd518ebc09265",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/contemporary-world/cold-war/cold-war-formation",
@@ -1090,8 +1559,12 @@
       "quizSha256": "2523f5aa3a49c0cdb611dfb408a9de1a4fb764c6892a08e59c61f6b539d7e96b",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/contemporary-world/cold-war/cold-war-conflicts",
@@ -1099,8 +1572,12 @@
       "quizSha256": "c3123541e0488b63f0d9c5cbcf80dfab9692b9d7828f43607958d8bb42cf8ef1",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/contemporary-world/cold-war/third-world-nonalignment",
@@ -1108,8 +1585,12 @@
       "quizSha256": "69d71aad4fa7f24d9e4130381f43339172cc6b5688caa5a837828897290dd93b",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/contemporary-world/cold-war/detente-end-of-cold-war",
@@ -1117,8 +1598,12 @@
       "quizSha256": "c66d386ff218c19a23fb02a17bcacda30f19d46dfac66ed6289fec599e464c6e",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/contemporary-world/twenty-first-century/globalization-multipolarity",
@@ -1126,8 +1611,12 @@
       "quizSha256": "3fc9ea7ecccaa79d3be54c6b28e85410b33178f56de5ba491b5e0ea30b4e6db6",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     },
     {
       "lessonId": "world/contemporary-world/twenty-first-century/global-issues",
@@ -1135,8 +1624,13 @@
       "quizSha256": "491c4d970fd18684cf6e131f5d82248d350d7bdf4e44d09d14ddd51ef4c171f2",
       "questions": 5,
       "choices": 20,
-      "coreFacts": "reviewed",
-      "quiz": "reviewed"
+      "coreFacts": {
+        "status": "pending"
+      },
+      "quiz": {
+        "status": "pending"
+      }
     }
-  ]
+  ],
+  "note": "이전 일괄 검수 표시를 철회했습니다. 출처 대조 기록이 있는 항목만 개별 완료 처리합니다."
 }

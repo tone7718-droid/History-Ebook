@@ -138,3 +138,11 @@ export interface AdjacentLesson {
   prev: LessonMeta | null;
   next: LessonMeta | null;
 }
+
+export interface ReviewEvidence {
+  status: "pending" | "reviewed";
+  reviewedAt?: string;
+  reviewer?: string;
+  scope?: string;
+  sources?: Array<{ title: string; url: string; locator: string }>;
+}
