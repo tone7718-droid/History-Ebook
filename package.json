@@ -10,7 +10,8 @@
     "build:search": "node scripts/build-search-index.mjs",
     "validate:content": "node scripts/validate-content.mjs",
     "test": "vitest run",
-    "review:sync": "node scripts/generate-review-status.mjs --write"
+    "review:sync": "node scripts/generate-review-status.mjs --write",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.20",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@playwright/test": "^1.63.0",
     "@tailwindcss/postcss": "^4",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
