@@ -68,7 +68,7 @@ test("invalid files, cancelled replacement and failed persistence keep existing 
   await page.getByRole("button", { name: "복원 적용" }).click();
   const before = await readStore(page);
   await upload(page, { ...backupData, version: 999 });
-  await expect(page.getByRole("alert")).toContainText("지원하는");
+  await expect(page.getByRole("region", { name: "학습 기록 백업·복원" }).getByRole("alert")).toContainText("지원하는");
   expect(await readStore(page)).toEqual(before);
   await upload(page, { ...backupData, progress: { version: 1, lessons: {}, mistakes: [] } });
   await page.getByLabel("백업 내용으로 교체", { exact: true }).check();
@@ -78,7 +78,7 @@ test("invalid files, cancelled replacement and failed persistence keep existing 
   await page.evaluate(() => { Storage.prototype.setItem = () => { throw new DOMException("Full", "QuotaExceededError"); }; });
   page.once("dialog", (dialog) => dialog.accept());
   await page.getByRole("button", { name: "복원 적용" }).click();
-  await expect(page.getByRole("alert")).toContainText("복원을 적용하지 않았습니다");
+  await expect(page.getByRole("region", { name: "학습 기록 백업·복원" }).getByRole("alert")).toContainText("복원을 적용하지 않았습니다");
   expect(await readStore(page)).toEqual(before);
   await page.reload();
   expect(await readStore(page)).toEqual(before);
@@ -88,6 +88,6 @@ test("learning continues with a visible warning when browser storage is blocked"
   await page.goto(`/${key}`);
   await page.getByRole("button", { name: "읽음으로 표시", exact: true }).click();
   await expect(page.getByRole("button", { name: "읽음 완료 ✓" })).toBeVisible();
-  await expect(page.getByRole("alert")).toContainText("이번 실행에서만");
+  await expect(page.getByRole("alert").filter({ hasText: "브라우저 저장 공간" })).toContainText("이번 실행에서만");
   expect(await readStore(page)).toBeNull();
 });
