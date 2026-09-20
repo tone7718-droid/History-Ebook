@@ -73,7 +73,13 @@ API: `GET /api/search?q=`
 - 키: `history-ebook:progress:v1`
 - 본문이 충분히 길 때 스크롤 80%, 또는 「읽음으로 표시」로 읽음 처리
 - 퀴즈 제출 시 최고 점수·시도 횟수 반영
-- `/progress`에서 기록 삭제 가능
+- `/progress`에서 기록 삭제와 백업·복원 가능
+- 백업: 읽음·퀴즈 점수/횟수·오답·마지막 방문 차시를 JSON으로 저장 (최대 5MB, 오답 1,000개)
+- 복원: 파일 검증 → 미리보기 → 병합(기본값) 또는 교체. 교체는 별도 확인 후 적용
+- 병합: 읽음은 OR, 최고 점수와 시도 횟수는 큰 값, 최초 읽음 날짜와 최신 퀴즈 날짜를 유지. 같은 오답은 최신 기록을 유지하며 동일 백업을 반복 병합해도 횟수를 더하지 않음
+- 시도별 고유 ID와 정답 처리 이력이 없으므로 서로 다른 기기의 시도 횟수를 합산하지 않으며, 백업의 과거 오답이 다시 추가될 수 있음
+- 저장 실패 시 복원을 적용하지 않고 기존 영구·임시 기록을 유지. 잘못된 파일을 일부만 복원하지 않음
+- 복원한 오답을 다음 퀴즈에서 잃지 않도록 기존 80개 자동 삭제 제한을 제거
 - 서버 동기화 없음 (브라우저별 독립)
 
 ## 다크 모드
@@ -108,6 +114,20 @@ API: `GET /api/search?q=`
 | `npm run lint` | ESLint |
 | `npm run validate:content` | 커리큘럼·MDX·퀴즈 정합 검사 |
 | `npm run review:sync` | 파일 해시 갱신 및 변경 항목의 검수 상태 초기화 |
-| `npm test` | 진도·퀴즈 회귀 테스트 |
+| `npm test` | 진도·퀴즈·검수·백업 회귀 테스트 |
+| `npm run test:e2e` | Chromium·모바일 WebKit 학습 흐름 테스트 (먼저 빌드 필요) |
 | `node scripts/sync-image-credits.mjs` | 위키미디어 공용 저작자·라이선스 정보 갱신 |
 | `npm run build:search` | 검색 인덱스 JSON 생성 |
+
+## 브라우저 테스트
+
+[Playwright webServer](https://playwright.dev/docs/test-webserver)로 로컬 빌드 서버를 실행합니다. 실제 사용자 기록과 운영 사이트를 사용하지 않습니다.
+
+```bash
+npm ci
+npx playwright install --with-deps chromium webkit
+npm run build
+npm run test:e2e
+```
+
+검색 → 차시 → 퀴즈 → 오답 복습 → 새로고침, 백업 다운로드 → 새 브라우저에서 복원, 잘못된 파일·교체 취소·저장 실패를 검증합니다. CI에서 동일 테스트를 실행하고 실패 시 화면과 trace를 아티팩트로 남깁니다.

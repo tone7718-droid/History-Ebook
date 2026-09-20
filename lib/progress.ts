@@ -1,4 +1,5 @@
 "use client";
+import { mergeProgress, validateProgress, type RestoreMode } from "./progress-backup";
 import type { ProgressStore, LessonProgress } from "./types";
 export const PROGRESS_KEY = "history-ebook:progress:v1";
 const emptyStore = (): ProgressStore => ({ version: 1, lessons: {} });
@@ -15,11 +16,11 @@ export function readProgress(): ProgressStore {
     return { version: 1, lessons, lastVisited: parsed.lastVisited && isLessonKey(parsed.lastVisited) ? parsed.lastVisited : undefined, mistakes: Array.isArray(parsed.mistakes) ? parsed.mistakes : [] };
   } catch { return emptyStore(); }
 }
-export function writeProgress(store: ProgressStore): boolean {
+export function writeProgress(store: ProgressStore, requirePersistent = false): boolean {
   if (typeof window === "undefined") return false;
   let saved = true;
   try { localStorage.setItem(PROGRESS_KEY, JSON.stringify(store)); unsaved = null; }
-  catch { unsaved = structuredClone(store); saved = false; }
+  catch { if (requirePersistent) return false; unsaved = structuredClone(store); saved = false; }
   window.dispatchEvent(new CustomEvent("history-ebook:storage-status", { detail: { saved } }));
   window.dispatchEvent(new Event("history-ebook:progress"));
   return saved;
@@ -33,8 +34,15 @@ export function recordQuizScore(key:string,score:number){const store=readProgres
 export function recordQuizAttempt(lessonKey:string,score:number,results:Array<{questionId:string;prompt:string;choices:{id:string;text:string}[];answer:string;chosen:string;explanation?:string;href:string;sourceLessonKey?:string;sourceQuestionId?:string}>){
  const store=readProgress(); applyQuizScore(store,lessonKey,score); const now=new Date().toISOString(); let mistakes=store.mistakes??[];
  for(const r of results){ const existing=mistakes.find(m=>m.id===r.questionId); const origin=r.sourceLessonKey??existing?.lessonKey??lessonKey; const qid=r.sourceQuestionId??existing?.questionId??r.questionId; if(!isLessonKey(origin)) continue; const id=`${origin}::${qid}`; mistakes=mistakes.filter(m=>m.id!==id); if(r.chosen===r.answer) continue; mistakes.unshift({id,lessonKey:origin,questionId:qid,prompt:r.prompt,choices:r.choices,answer:r.answer,chosen:r.chosen,chosenText:r.choices.find(c=>c.id===r.chosen)?.text??r.chosen,answerText:r.choices.find(c=>c.id===r.answer)?.text??r.answer,explanation:r.explanation,href:r.href,at:now}); }
- store.mistakes=mistakes.slice(0,80); writeProgress(store); return store;
+ store.mistakes=mistakes; writeProgress(store); return store;
 }
 export function clearMistakes(){const s=readProgress();s.mistakes=[];writeProgress(s);return s;}
 export function removeMistake(id:string){const s=readProgress();s.mistakes=(s.mistakes??[]).filter(m=>m.id!==id);writeProgress(s);return s;}
 export function useProgressStore(){return{readProgress,writeProgress,clearProgress,PROGRESS_KEY};}
+
+// A failed restore must not replace either persistent or in-memory records.
+export function restoreProgress(incoming: ProgressStore, mode: RestoreMode): boolean {
+  const validated = validateProgress(incoming);
+  const next = mode === "merge" ? mergeProgress(readProgress(), validated) : validated;
+  return writeProgress(next, true);
+}

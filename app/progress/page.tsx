@@ -1,3 +1,4 @@
+import { ProgressBackup } from "@/components/ProgressBackup";
 import { ProgressSummary } from "@/components/ProgressSummary";
 import { getFlatLessons } from "@/lib/content";
 
@@ -14,6 +15,7 @@ export default function ProgressPage() {
         않습니다.
       </p>
       <ProgressSummary lessons={lessons} />
+      <ProgressBackup />
     </div>
   );
 }
