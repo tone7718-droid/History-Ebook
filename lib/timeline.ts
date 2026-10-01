@@ -20,8 +20,3 @@ export function getTimelineEvents(): TimelineEvent[] {
     return [];
   }
 }
-
-export function formatYear(year: number, approximate = false): string {
-  const label = year < 0 ? `기원전 ${Math.abs(year)}` : `${year}`;
-  return approximate ? `약 ${label}` : label;
-}

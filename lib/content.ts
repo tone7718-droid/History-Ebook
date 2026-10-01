@@ -29,7 +29,7 @@ export function getCurriculum(track: TrackId): CurriculumFile {
   );
 }
 
-export function getAllCurricula(): CurriculumFile[] {
+function getAllCurricula(): CurriculumFile[] {
   return [getCurriculum("korean"), getCurriculum("world")];
 }
 
@@ -56,7 +56,7 @@ function assertFrontmatter(
 
 const ANSWER_CYCLE = ["b", "c", "d", "a"] as const;
 
-export function mixQuizAnswers(quiz: Quiz): Quiz {
+function mixQuizAnswers(quiz: Quiz): Quiz {
   const questions = quiz.questions ?? [];
   const letters = questions.map((q) => q.answer);
   if (questions.length < 2 || new Set(letters).size > 1) {

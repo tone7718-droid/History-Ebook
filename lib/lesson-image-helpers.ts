@@ -19,15 +19,15 @@ function metadata(file: string) {
     : { credit: "저작자 정보 확인 필요", license: "라이선스 정보 확인 필요", href: filePage(file) };
 }
 
-export function commons(file: string, width = 960): string {
+function commons(file: string, width = 960): string {
   return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=${width}`;
 }
 
-export function filePage(file: string): string {
+function filePage(file: string): string {
   return `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(file.replace(/ /g, "_"))}`;
 }
 
-export function filenameFromSrc(src: string): string | null {
+function filenameFromSrc(src: string): string | null {
   try {
     const clean = src.split("?")[0];
     const name = decodeURIComponent(clean.split("/").pop() || "");
@@ -35,16 +35,6 @@ export function filenameFromSrc(src: string): string | null {
   } catch {
     return null;
   }
-}
-
-export function c(file: string, caption: string, after?: string): LessonImage {
-  const meta = metadata(file);
-  return {
-    src: commons(file),
-    caption,
-    ...meta,
-    after,
-  };
 }
 
 export function u(src: string, caption: string, after?: string): LessonImage {

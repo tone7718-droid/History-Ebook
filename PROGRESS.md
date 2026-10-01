@@ -1,15 +1,14 @@
 # History Ebook Progress
 
-**Updated:** 2026-09-15 12:00 KST
+**Updated:** 2026-10-01
 
-## Status: remaining 5 glossary gaps closed
+## Status: full content review done, progress backup added
 
 - Live: https://history-ebook.vercel.app
-- 125 lessons; glossary boxes now have a match on every lesson
-- Five leftover lessons now show 2–3 terms each:
-  - 남북 관계 → 남북 관계 / 분단 / 북핵
-  - 조선 행정·군사 → 의정부 / 삼사 / 5위
-  - 가마쿠라 → 가마쿠라 막부 / 원
-  - 요·서하·금 → 요·금 / 서하
-  - 일본 고대 → 야마토 / 국풍 문화 / 당
-- Extra terms live in content/glossary-extra.json and merge at runtime
+- 125 lessons; glossary boxes match every lesson (extra terms in content/glossary-extra.json)
+- 2026-09-16: full content and quiz review; review status now requires evidence; unit quiz retries balanced
+- 2026-09-21: progress backup/restore (validated JSON export/import, merge or confirmed replace,
+  existing records kept when storage fails) with 14 unit tests and Chromium/mobile WebKit e2e scenarios
+- 2026-10-01: cleanup — removed the unused search-index build step (search builds its index from MDX
+  at runtime), a one-off quiz wording script and dead helpers; next 15.5.27, postcss pinned to a patched
+  version (production npm audit: 0)

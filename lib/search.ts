@@ -108,7 +108,3 @@ export function searchLessons(q: string, limit = 20): SearchResult[] {
     ),
   }));
 }
-
-export function getSearchIndexJson() {
-  return buildSearchDocuments();
-}

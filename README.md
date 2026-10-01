@@ -59,12 +59,7 @@ npm run dev
 
 ## 검색 인덱스
 
-검색은 런타임에 MDX를 파싱하는 FlexSearch(+단순 문자열 매칭)를 사용합니다.
-
-```bash
-npm run build:search
-# → public/search-index.json
-```
+검색은 서버에서 MDX를 읽어 FlexSearch 인덱스(+단순 문자열 매칭)를 만들어 사용합니다. 별도 인덱스 파일은 만들지 않습니다.
 
 API: `GET /api/search?q=`
 
@@ -117,7 +112,6 @@ API: `GET /api/search?q=`
 | `npm test` | 진도·퀴즈·검수·백업 회귀 테스트 |
 | `npm run test:e2e` | Chromium·모바일 WebKit 학습 흐름 테스트 (먼저 빌드 필요) |
 | `node scripts/sync-image-credits.mjs` | 위키미디어 공용 저작자·라이선스 정보 갱신 |
-| `npm run build:search` | 검색 인덱스 JSON 생성 |
 
 ## 브라우저 테스트
 

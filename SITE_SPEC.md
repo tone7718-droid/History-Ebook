@@ -76,8 +76,7 @@
 
 ## 5. 검색
 
-빌드 시 만든 검색 인덱스와 FlexSearch + 문자열 매칭을 사용한다.
-선택: `npm run build:search` → `public/search-index.json`.
+서버에서 MDX로 만든 FlexSearch 인덱스 + 문자열 매칭을 사용한다(별도 인덱스 파일 없음).
 API: `GET /api/search?q=`.
 
 ## 6. 진도

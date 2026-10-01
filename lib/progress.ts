@@ -30,7 +30,6 @@ export function getLessonProgress(key:string):LessonProgress|undefined { return 
 export function markLessonRead(key:string) { const store=readProgress(); if(!isLessonKey(key)) return store; const prev=store.lessons[key]??{read:false}; if(prev.read) return store; store.lessons[key]={...prev,read:true,readAt:new Date().toISOString()}; writeProgress(store); return store; }
 export function setLastVisited(key:string) { const store=readProgress(); if(!isLessonKey(key)||store.lastVisited===key) return store; store.lastVisited=key; writeProgress(store); return store; }
 function applyQuizScore(store:ProgressStore,key:string,score:number){ if(!isLessonKey(key)) return; const prev=store.lessons[key]??{read:false}; const safe=Math.max(0,Math.min(100,Number.isFinite(score)?score:0)); store.lessons[key]={...prev,quizBestScore:Math.max(prev.quizBestScore??0,safe),quizAttempts:(prev.quizAttempts??0)+1,lastQuizAt:new Date().toISOString()}; store.lastVisited=key; }
-export function recordQuizScore(key:string,score:number){const store=readProgress();applyQuizScore(store,key,score);writeProgress(store);return store;}
 export function recordQuizAttempt(lessonKey:string,score:number,results:Array<{questionId:string;prompt:string;choices:{id:string;text:string}[];answer:string;chosen:string;explanation?:string;href:string;sourceLessonKey?:string;sourceQuestionId?:string}>){
  const store=readProgress(); applyQuizScore(store,lessonKey,score); const now=new Date().toISOString(); let mistakes=store.mistakes??[];
  for(const r of results){ const existing=mistakes.find(m=>m.id===r.questionId); const origin=r.sourceLessonKey??existing?.lessonKey??lessonKey; const qid=r.sourceQuestionId??existing?.questionId??r.questionId; if(!isLessonKey(origin)) continue; const id=`${origin}::${qid}`; mistakes=mistakes.filter(m=>m.id!==id); if(r.chosen===r.answer) continue; mistakes.unshift({id,lessonKey:origin,questionId:qid,prompt:r.prompt,choices:r.choices,answer:r.answer,chosen:r.chosen,chosenText:r.choices.find(c=>c.id===r.chosen)?.text??r.chosen,answerText:r.choices.find(c=>c.id===r.answer)?.text??r.answer,explanation:r.explanation,href:r.href,at:now}); }
@@ -38,7 +37,6 @@ export function recordQuizAttempt(lessonKey:string,score:number,results:Array<{q
 }
 export function clearMistakes(){const s=readProgress();s.mistakes=[];writeProgress(s);return s;}
 export function removeMistake(id:string){const s=readProgress();s.mistakes=(s.mistakes??[]).filter(m=>m.id!==id);writeProgress(s);return s;}
-export function useProgressStore(){return{readProgress,writeProgress,clearProgress,PROGRESS_KEY};}
 
 // A failed restore must not replace either persistent or in-memory records.
 export function restoreProgress(incoming: ProgressStore, mode: RestoreMode): boolean {
